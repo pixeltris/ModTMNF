@@ -1,0 +1,2550 @@
+List of virtual functions for CMwNod types
+
+[CMwNod]
+CMwNod::GetMwClassId - 00401960
+CMwNod::MwIsKindOf - 00401970
+CMwNod::GetUidMessageFromIndex - 00401980
+CMwNod::GetUidHeaderChunkFromIndex - 00401980
+CMwNod::GetUidChunkFromIndex - 00401980
+CMwNod::CreateDefaultData - 0042B500
+CMwNod::CMwNod_FirstVirtualMethodVTable_DoNotDerive - 0042B500
+CMwNod::OnNodLoaded - 0042B500
+CMwNod::MwGetId - 0078F270
+CMwNod::GetMessageCount - 0078F270
+CMwNod::MwReceiveMessage - 007BCCE0
+CMwNod::HeaderChunk - 007BCCE0
+CMwNod::ApplyFidParameters - 007BCCE0
+CMwNod::MwGetClassInfo - 00923EB0
+CMwNod::SetIdName - 00923F40
+CMwNod::VirtualParam_Set - 009240E0
+CMwNod::Archive - 00924120
+CMwNod::VirtualParam_Add - 00924AD0
+CMwNod::VirtualParam_Sub - 00924AF0
+CMwNod::Chunk - 00924B10
+CMwNod::GetChunkInfo - 00924C00
+CMwNod::OnCrashDump - 00925060
+CMwNod::MwIsUnreferenced - 00925130
+CMwNod::VirtualParam_Get - 00925140
+CMwNod::GetHeaderChunkCount - 00925BE0
+CMwNod::GetChunkCount - 00925BE0
+CMwNod::OnPackAvailable - 00961D70
+CMwNod::CopyFrom - 00961DD0
+CMwNod::MwIsKilled - 00961DD0
+
+[CMwCmdScriptVar] - CMwNod
+CMwCmdScriptVar::SetVariable - 00942580
+
+[CMwParam] - CMwNod
+CMwParam::IndexedGetCount - 004B0750
+CMwParam::StructGetCount - 004B0750
+CMwParam::IsBufferCat - 0078F270
+CMwParam::IsArray - 0078F270
+CMwParam::IsBuffer - 0078F270
+CMwParam::IsStruct - 0078F270
+CMwParam::VCanGetValueFromString - 0078F270
+CMwParam::VCanGetStringFromValue - 0078F270
+CMwParam::IsRefBuffer - 0078F270
+CMwParam::VGetStringFromValue - 007BCCE0
+CMwParam::VGetValueFromString - 007BCCE0
+CMwParam::GetIcon - 00925C80
+CMwParam::ParseSubParams - 00925CA0
+CMwParam::VAddValue - 00926120
+CMwParam::VSetValue - 00926120
+CMwParam::VSubValue - 00926120
+CMwParam::VGetValue - 00926120
+CMwParam::VGetNextNod - 00926120
+
+[CMwRefBuffer] - CMwNod
+CMwRefBuffer::Remove - 0093C030
+
+[CMwCmdContainer] - CMwNod
+CMwCmdContainer::Install - 0093AAC0
+CMwCmdContainer::Uninstall - 0093AB10
+
+[CGameControlPlayer] - CGameRule
+CGameControlPlayer::InstallUpdate - 00710EF0
+CGameControlPlayer::UninstallUpdate - 00710F00
+CGameControlPlayer::UpdateControlAsync - 00961DD0
+CGameControlPlayer::UpdateControl - 00961DD0
+
+[CTrackManiaControlPlayerInput] - CGameControlPlayerInput
+CTrackManiaControlPlayerInput::NotifyInput - 004FE800
+CTrackManiaControlPlayerInput::CreateCamera - 00961D70
+CTrackManiaControlPlayerInput::RegisterInputs - 00961D70
+
+[CGameApp] - CGameProcess
+CGameApp::OnGraphicSettings - 0042B500
+CGameApp::QuitGame - 0042B500
+CGameApp::RegisterMenuActions - 0042B500
+CGameApp::CmdLineFile_Open - 0042B500
+CGameApp::UpdateBlockMobils - 0042B500
+CGameApp::GetNetwork - 00458D00
+CGameApp::CreatePlayerMobilInstance - 004B0750
+CGameApp::GetInterface - 004FE3D0
+CGameApp::OnStartGame - 0059B030
+CGameApp::CanUseManialinkAnywhere - 0059B080
+CGameApp::UpdatePacksAvailabilityAndUse - 0059B0F0
+CGameApp::ResetGame - 0059B570
+CGameApp::ApplySystemConfig - 0059B680
+CGameApp::ProcessMenuInput - 0059BA00
+CGameApp::RegisterPlayer - 0059CC20
+CGameApp::UnregisterPlayers - 0059CC80
+CGameApp::OnMenuDisplayed - 0059F0E0
+CGameApp::OnMenuHiden - 0059F430
+CGameApp::Start - 0059F630
+CGameApp::Destroy - 0059F660
+CGameApp::CmdLineUrlTmtp_JoinServer - 005B06B0
+CGameApp::VehicleSetVisibility - 005B06B0
+CGameApp::GetStateVersion - 0078F270
+CGameApp::CanUseMessenger - 0078F270
+CGameApp::CanUseMoney - 0078F270
+CGameApp::CameraSetCreate - 0078F270
+CGameApp::GetChallenge - 0078F270
+CGameApp::UrlLinkProcess - 0079BFB0
+CGameApp::RestoreStaticState - 007BCCE0
+CGameApp::UpdateFromDynamicState - 00961D70
+CGameApp::ReleasePlayerMobilInstance - 00961D70
+CGameApp::UrlLinkTransform - 00961D70
+CGameApp::SaveState - 00961D70
+CGameApp::CmdLineUrlTmtp_StartDirectScore - 00961DD0
+CGameApp::CmdLineUrlTmtp_AddFavourite - 00961DD0
+CGameApp::CmdLineUrlTmtp_InviteBuddy - 00961DD0
+CGameApp::CmdLineUrlTmtp_AddBuddy - 00961DD0
+CGameApp::OpenMessenger - 00961DD0
+CGameApp::GetCollectorVehicle - 00961DE0
+
+[CGameCtnApp] - CGameApp
+CGameCtnApp::OnPlayFieldModified - 0042B500
+CGameCtnApp::PrepareEditorChallengeSave - 0042B500
+CGameCtnApp::ScanDiskForMatchSettings - 0042B500
+CGameCtnApp::QuitGameAndExit - 005E41D0
+CGameCtnApp::AskConnectionType - 005E42F0
+CGameCtnApp::SetMessengerActivated - 005E4490
+CGameCtnApp::CloseMessenger - 005E44F0
+CGameCtnApp::LoadChallenge_PostLoading - 005E4590
+CGameCtnApp::InitCampaigns - 005E5BB0
+CGameCtnApp::PlayerMobilDecorateMobil - 005E6360
+CGameCtnApp::GetVehicleNameFont - 005E6380
+CGameCtnApp::SaveProfileAndScore - 005E6A00
+CGameCtnApp::GetDefaultVehicleIdentifier - 005E8660
+CGameCtnApp::ScanDiskForCampaigns - 005E8890
+CGameCtnApp::InitShadows - 005E9040
+CGameCtnApp::FillAllowedCtnMediaBlockClassIds - 005E9BE0
+CGameCtnApp::GetAllSoloCampaigns - 005E9C40
+CGameCtnApp::GetChallengesScoresAndPlayerRecords_OnFailure - 005E9E20
+CGameCtnApp::GetChallengesScoresAndPlayerRecords_OnSuccess - 005E9E20
+CGameCtnApp::ScanDiskForCollectors - 005EBEE0
+CGameCtnApp::MediaTrackerGhostLoad - 005F01C0
+CGameCtnApp::OnTrackReceivedForManiaCodePlayTrack - 005F1290
+CGameCtnApp::OnReplayReceivedForManiaCodePlayReplay - 005F1A30
+CGameCtnApp::OnReplayReceivedForManiaCodeViewReplay - 005F1A90
+CGameCtnApp::OnManiaCodeJoinServer - 005F1AF0
+CGameCtnApp::OnManiaCodeAddBuddy - 005F1BB0
+CGameCtnApp::OnManiaCodeInviteBuddy - 005F1C20
+CGameCtnApp::OnManiaCodeAddFavourite - 005F1C90
+CGameCtnApp::OnManiaCodePlayScore - 005F1D00
+CGameCtnApp::QuitGameInternal - 005F4620
+CGameCtnApp::StartUpShowIntroSlidesAndRollingDemo - 005F46C0
+CGameCtnApp::ConnectToInternetAccount - 005F4A00
+CGameCtnApp::OnTrackReceivedForManiaCodePlayTrack - 005FAFE0
+CGameCtnApp::AssociateCampaignOfficialRecords - 005FCCB0
+CGameCtnApp::ChallengeCreateSceneGraph - 005FE560
+CGameCtnApp::ExitChallenge - 005FF2A0
+CGameCtnApp::ScanDiskForProfilesAndScores - 00600320
+CGameCtnApp::OnChallengeInfoDeleted - 006021B0
+CGameCtnApp::LoadChallenge - 00602690
+CGameCtnApp::InitAfterProfiles - 006057E0
+CGameCtnApp::ScanDiskForChallenges - 006060B0
+CGameCtnApp::LaunchMoveFromLeagueRequest - 006298F0
+CGameCtnApp::GetPlayground - 0078F270
+CGameCtnApp::PlayerMobilInstanceFillUpStruct - 00961D70
+CGameCtnApp::MediaTrackerGhostSave - 00961DD0
+
+[CTrackMania] - CGameCtnApp
+CTrackMania::StopOfficialRecord_OnSuccess - 004BB570
+CTrackMania::UploadOfficialRecord_OnSuccess - 004BB590
+CTrackMania::OfficialRecord_OnFailure - 004BB590
+CTrackMania::StartOfficialRecord_OnFailureImmediate - 004BCCC0
+CTrackMania::StopOrUploadOfficialRecord_OnFailureImmediate - 004BCD90
+
+[CMotionTrack] - CMwCmdContainer
+CMotionTrack::GetLength - 004B0750
+CMotionTrack::WantRenderBefore - 0078F270
+CMotionTrack::AreTreeLocationChanged - 00925BE0
+CMotionTrack::SetOwner - 0093BD20
+CMotionTrack::OnRenderBefore - 00961D70
+CMotionTrack::GetNodsNotToDuplicate - 00961DD0
+CMotionTrack::SetIsPhysics - 00961DD0
+
+[CMotionPlay] - CMotionTrack
+CMotionPlay::GetKeys - 0078F270
+
+[CMotionPlaySound] - CMotionPlay
+CMotionPlaySound::PlayKey - 00582660
+CMotionPlaySound::PlaySound - 00961DD0
+
+[CMotionPlayCmd] - CMotionPlay
+CMotionPlayCmd::PlayKey - 00581970
+
+[CMotionSkelSimple] - CMotionTrack
+CMotionSkelSimple::ComputeSkelValues - 00581170
+
+[CMotionSkel] - CMotionSkelSimple
+CMotionSkel::SetKeysSkel - 00580640
+
+[CMwCmd] - CMwNod
+CMwCmd::Run - 0042B500
+CMwCmd::Install - 00925730
+CMwCmd::Uninstall - 00925750
+
+[CMwCmdScript] - CMwCmd
+CMwCmdScript::SetParent - 004390B0
+CMwCmdScript::GetThis - 0078F270
+CMwCmdScript::SetThis - 00961DD0
+
+[CMwCmdBlock] - CMwCmdScript
+CMwCmdBlock::Return - 009408A0
+CMwCmdBlock::Sleep - 009408D0
+CMwCmdBlock::Wait - 00940900
+CMwCmdBlock::GetThisClassId - 00940940
+CMwCmdBlock::GetVariable - 00941330
+CMwCmdBlock::CreateNewContext - 00941540
+CMwCmdBlock::RestoreContext - 00941580
+
+[CMwCmdBlockMain] - CMwCmdBlock
+CMwCmdBlockMain::SetThisClassId - 00938850
+
+[CMwCmdExp] - CMwCmdScript
+CMwCmdExp::SetExp - 0042B500
+CMwCmdExp::IsConst - 00925BE0
+
+[CMwCmdExpBool] - CMwCmdExp
+CMwCmdExpBool::GetDataPointer - 00697B70
+CMwCmdExpBool::GetExpPointer - 00697B70
+CMwCmdExpBool::SetData - 00945060
+CMwCmdExpBool::GetConstValue - 0094EF90
+CMwCmdExpBool::Compare - 00953690
+CMwCmdExpBool::ToString - 00953740
+
+[CMwCmdExpSup] - CMwCmdExpBool
+CMwCmdExpSup::SetValue - 00950840
+
+[CMwCmdExpSupEgal] - CMwCmdExpBool
+CMwCmdExpSupEgal::SetValue - 00950430
+
+[CMwCmdExpBoolBin] - CMwCmdExpBool
+CMwCmdExpBoolBin::SetValue - 00961D70
+
+[CMwCmdExpNum] - CMwCmdExp
+CMwCmdExpNum::GetExpPointer - 00942880
+CMwCmdExpNum::GetDataPointer - 00942880
+CMwCmdExpNum::Compare - 00951A70
+CMwCmdExpNum::ToString - 00951AB0
+CMwCmdExpNum::SetData - 00951AE0
+CMwCmdExpNum::GetConstValue - 00951BC0
+
+[CMwCmdExpSub] - CMwCmdExpNum
+CMwCmdExpSub::SetValue - 00950E90
+
+[CMwCmdExpNumBin] - CMwCmdExpNum
+CMwCmdExpNumBin::SetValue - 00961D70
+
+[CMwCmdExpString] - CMwCmdExp
+CMwCmdExpString::ToString - 0043C5A0
+CMwCmdExpString::GetDataPointer - 00697B70
+CMwCmdExpString::GetExpPointer - 00697B70
+CMwCmdExpString::SetData - 00942E10
+CMwCmdExpString::Compare - 00950620
+CMwCmdExpString::GetConstValue - 00950660
+
+[CMwCmdExpEnum] - CMwCmdExp
+CMwCmdExpEnum::GetExpPointer - 00697B70
+CMwCmdExpEnum::GetDataPointer - 00697B70
+CMwCmdExpEnum::SetData - 00945060
+CMwCmdExpEnum::GetConstValue - 0094EF90
+CMwCmdExpEnum::ToString - 0094EFA0
+CMwCmdExpEnum::Compare - 00953690
+
+[CMwCmdExpVec2] - CMwCmdExp
+CMwCmdExpVec2::GetDataPointer - 009444E0
+CMwCmdExpVec2::GetExpPointer - 009444E0
+CMwCmdExpVec2::SetData - 00944660
+CMwCmdExpVec2::Compare - 0094E170
+CMwCmdExpVec2::GetConstValue - 0094E220
+CMwCmdExpVec2::ToString - 0094E260
+
+[CMwCmdExpVec3] - CMwCmdExp
+CMwCmdExpVec3::GetDataPointer - 009441B0
+CMwCmdExpVec3::GetExpPointer - 009441B0
+CMwCmdExpVec3::SetData - 00944330
+CMwCmdExpVec3::Compare - 0094DC40
+CMwCmdExpVec3::GetConstValue - 0094DD10
+CMwCmdExpVec3::ToString - 0094DD60
+
+[CMwCmdExpIso4] - CMwCmdExp
+CMwCmdExpIso4::Compare - 004B0750
+CMwCmdExpIso4::GetDataPointer - 00737DA0
+CMwCmdExpIso4::GetExpPointer - 00737DA0
+CMwCmdExpIso4::SetData - 00944EB0
+CMwCmdExpIso4::GetConstValue - 0094CFF0
+CMwCmdExpIso4::ToString - 00961DD0
+
+[CMwCmdExpClass] - CMwCmdExp
+CMwCmdExpClass::GetDataPointer - 00697B70
+CMwCmdExpClass::GetExpPointer - 00697B70
+CMwCmdExpClass::ToString - 00938670
+CMwCmdExpClass::SetData - 00945060
+CMwCmdExpClass::GetConstValue - 0094EF90
+CMwCmdExpClass::Compare - 00953690
+
+[CMwCmdInst] - CMwCmdScript
+CMwCmdInst::Break - 00961DD0
+CMwCmdInst::Continue - 00961DD0
+CMwCmdInst::ResumeSleep - 00961DD0
+
+[CMwCmdAffectIdent] - CMwCmdInst
+CMwCmdAffectIdent::SetValue - 0042B500
+
+[CMwCmdAffectParam] - CMwCmdInst
+CMwCmdAffectParam::SetValue - 0042B500
+
+[CMwEngine] - CMwNod
+CMwEngine::Init - 0042B500
+CMwEngine::GetResourceFid - 0078F270
+CMwEngine::GetNumberOfGroups - 0078F270
+CMwEngine::CreateInstance - 007BCCE0
+CMwEngine::Destroy - 009253F0
+
+[CSceneEngine] - CMwEngine
+CSceneEngine::Stop - 0042B500
+CSceneEngine::Start - 0042B500
+
+[CXmlNod] - CMwNod
+CXmlNod::IsValidUI - 004B0750
+CXmlNod::GetUINod - 0050A100
+CXmlNod::UpdateUI - 0079BFB0
+CXmlNod::Init - 009223C0
+
+[CXmlDocument] - CXmlNod
+CXmlDocument::HasError - 00921840
+
+[CInputDeviceMouse] - CInputDevice
+CInputDeviceMouse::GetDeviceKind - 00925BE0
+
+[CInputDeviceDx8Mouse] - CInputDeviceMouse
+CInputDeviceDx8Mouse::GetObjectsCount - 0080A4A0
+CInputDeviceDx8Mouse::ReacquireInput - 008FDFF0
+CInputDeviceDx8Mouse::UnacquireInput - 008FE000
+CInputDeviceDx8Mouse::Tick - 008FE010
+CInputDeviceDx8Mouse::FindObject - 008FE030
+CInputDeviceDx8Mouse::ReadHardwareCurState - 008FE160
+CInputDeviceDx8Mouse::GetObjectState - 008FE1E0
+CInputDeviceDx8Mouse::GetObjectW - 008FE690
+
+[CInputDeviceDx8Keyboard] - CInputDevice
+CInputDeviceDx8Keyboard::GetDeviceKind - 0078F270
+CInputDeviceDx8Keyboard::GetObjectsCount - 008FE7A0
+CInputDeviceDx8Keyboard::FindObject - 008FE7B0
+CInputDeviceDx8Keyboard::ReadHardwareCurState - 008FE820
+CInputDeviceDx8Keyboard::GetObjectState - 008FE860
+CInputDeviceDx8Keyboard::GetObjectW - 008FE890
+CInputDeviceDx8Keyboard::ReacquireInput - 008FEA20
+CInputDeviceDx8Keyboard::UnacquireInput - 008FEA40
+CInputDeviceDx8Keyboard::Tick - 008FEA60
+
+[CInputDeviceDx8Pad] - CInputDevice
+CInputDeviceDx8Pad::GetDeviceKind - 00826EE0
+CInputDeviceDx8Pad::GetObjectsCount - 008FD240
+CInputDeviceDx8Pad::GetObjectW - 008FD270
+CInputDeviceDx8Pad::FindObject - 008FD3F0
+CInputDeviceDx8Pad::ReadHardwareCurState - 008FD600
+CInputDeviceDx8Pad::GetObjectState - 008FD680
+CInputDeviceDx8Pad::ReacquireInput - 008FDE20
+CInputDeviceDx8Pad::UnacquireInput - 008FDE40
+CInputDeviceDx8Pad::Tick - 008FDE60
+
+[CInputPort] - CMwNod
+CInputPort::KillFocus - 0042B500
+CInputPort::EndNewActionMap - 0042B500
+CInputPort::SetPollingIsEnabled - 008F81D0
+CInputPort::ClearActionMap - 008F85B0
+CInputPort::ClearAllMaps - 008F8600
+CInputPort::UpdateAsync - 008F9190
+CInputPort::RegisterAction - 008F9390
+CInputPort::StartNewActionMap - 008FA5F0
+CInputPort::UseActionMap - 008FA6E0
+CInputPort::SetAnalogSensitivity - 00961D70
+CInputPort::ApplySystemConfig - 00961DD0
+
+[CInputPortNull] - CInputPort
+CInputPortNull::GatherLatestInputs - 0042B500
+
+[CInputPortDx8] - CInputPort
+CInputPortDx8::GatherLatestInputs - 008FBCC0
+
+[CPlugModelShell] - CMwNod
+CPlugModelShell::ApplyShellModifs - 00961DD0
+
+[CPlugMaterialFx] - CPlug
+CPlugMaterialFx::AddMobil_GetMatFx - 0078F270
+CPlugMaterialFx::ModifyCrystal - 00961DD0
+CPlugMaterialFx::ModifyTreeAfterOptim - 00961DD0
+CPlugMaterialFx::ModifyTreeBeforeOptim - 00961DD0
+
+[CPlugMaterialFxFur] - CPlugMaterialFx
+CPlugMaterialFxFur::GetModifyMask - 008C7700
+
+[CPlugMaterialFxFlags] - CPlugMaterialFx
+CPlugMaterialFxFlags::GetModifyMask - 008C74D0
+
+[CPlugMaterialFxDynaBump] - CPlugMaterialFx
+CPlugMaterialFxDynaBump::GetModifyMask - 00595300
+
+[CPlugMaterialFxDynaMobil] - CPlugMaterialFx
+CPlugMaterialFxDynaMobil::GetModifyMask - 00595300
+
+[CPlugMaterialFxGenUvProj] - CPlugMaterialFx
+CPlugMaterialFxGenUvProj::GetModifyMask - 00925BE0
+
+[CPlugMaterialFxGenCV] - CPlugMaterialFx
+CPlugMaterialFxGenCV::GetModifyMask - 006FD4B0
+
+[CPlugMaterialFxs] - CPlugMaterialFx
+CPlugMaterialFxs::GetModifyMask - 008BDDA0
+
+[CPlugTreeGenerator] - CPlug
+CPlugTreeGenerator::CopyGeneratedTree - 008BDB80
+
+[CPlugCrystal] - CPlugTreeGenerator
+CPlugCrystal::CleanTree - 008D8C00
+CPlugCrystal::GetOptimizedGroups - 008D9820
+CPlugCrystal::GenerateTree - 008DAF30
+
+[CPlugTreeGenSolid] - CPlugTreeGenerator
+CPlugTreeGenSolid::GetOptimizedGroups - 005B06B0
+CPlugTreeGenSolid::IsSaveGenerated - 0078F270
+CPlugTreeGenSolid::CleanTree - 008C4CD0
+CPlugTreeGenSolid::GenerateTree - 008C5940
+CPlugTreeGenSolid::IsKeepInSaveAsRelease - 00925BE0
+
+[CPlugModel] - CPlugTreeGenerator
+CPlugModel::GetOptimizedGroups - 005B06B0
+CPlugModel::GenerateTree - 008A6CC0
+CPlugModel::CleanTree - 008C4CD0
+
+[CPlugTreeGenText] - CPlugTreeGenerator
+CPlugTreeGenText::GetOptimizedGroups - 005B06B0
+CPlugTreeGenText::CleanTree - 008562A0
+CPlugTreeGenText::GenerateTree - 008576F0
+CPlugTreeGenText::IsKeepInSaveAsRelease - 00925BE0
+
+[CPlugBitmapRender] - CPlug
+CPlugBitmapRender::CleanRenderCache - 0042B500
+CPlugBitmapRender::DepObjectRemoveAll - 0087C270
+CPlugBitmapRender::DepObjectOnReplacedByLast - 00961D70
+CPlugBitmapRender::DepObjectOnAdded - 00961DD0
+
+[CPlugBitmapRenderHemisphere] - CPlugBitmapRender
+CPlugBitmapRenderHemisphere::GetRenderMode - 008C4E50
+CPlugBitmapRenderHemisphere::IsContextCameraRequired - 00925BE0
+
+[CPlugBitmapRenderPlaneR] - CPlugBitmapRender
+CPlugBitmapRenderPlaneR::GetRenderMode - 00595300
+CPlugBitmapRenderPlaneR::IsContextCameraRequired - 00925BE0
+
+[CPlugBitmapRenderPortal] - CPlugBitmapRender
+CPlugBitmapRenderPortal::GetRenderMode - 00730D00
+CPlugBitmapRenderPortal::IsContextCameraRequired - 00925BE0
+
+[CPlugBitmapRenderVDepPlaneY] - CPlugBitmapRender
+CPlugBitmapRenderVDepPlaneY::GetRenderMode - 006EB8E0
+CPlugBitmapRenderVDepPlaneY::IsContextCameraRequired - 00925BE0
+
+[CPlugBitmapRenderSub] - CPlugBitmapRender
+CPlugBitmapRenderSub::GetRenderMode - 0056AA30
+CPlugBitmapRenderSub::IsContextCameraRequired - 0078F270
+
+[CPlugBitmapRenderOverlay] - CPlugBitmapRender
+CPlugBitmapRenderOverlay::GetRenderMode - 00550ED0
+CPlugBitmapRenderOverlay::IsContextCameraRequired - 0078F270
+
+[CPlugBitmapRenderCubeMap] - CPlugBitmapRender
+CPlugBitmapRenderCubeMap::GetRenderMode - 00925BE0
+CPlugBitmapRenderCubeMap::IsContextCameraRequired - 00925BE0
+
+[CPlugBitmapRenderWater] - CPlugBitmapRender
+CPlugBitmapRenderWater::GetRenderMode - 00826EE0
+CPlugBitmapRenderWater::IsContextCameraRequired - 00925BE0
+
+[CPlugBitmapRenderLightOcc] - CPlugBitmapRender
+CPlugBitmapRenderLightOcc::GetRenderMode - 0080A4A0
+CPlugBitmapRenderLightOcc::IsContextCameraRequired - 00925BE0
+
+[CPlugBitmapRenderLightFromMap] - CPlugBitmapRender
+CPlugBitmapRenderLightFromMap::IsContextCameraRequired - 0078F270
+CPlugBitmapRenderLightFromMap::GetRenderMode - 009393A0
+
+[CPlugBitmapRenderShadow] - CPlugBitmapRender
+CPlugBitmapRenderShadow::GetRenderMode - 0074F670
+CPlugBitmapRenderShadow::IsContextCameraRequired - 0078F270
+
+[CPlugBitmapRenderSolid] - CPlugBitmapRender
+CPlugBitmapRenderSolid::GetRenderMode - 006FD4B0
+CPlugBitmapRenderSolid::IsContextCameraRequired - 0078F270
+
+[CPlugBitmapRenderCamera] - CPlugBitmapRender
+CPlugBitmapRenderCamera::GetRenderMode - 0078F270
+CPlugBitmapRenderCamera::IsContextCameraRequired - 00826870
+
+[CPlugShader] - CPlug
+CPlugShader::CanAddLayer - 0078F270
+CPlugShader::ComputeRequireAlphaBlending - 0086BD20
+CPlugShader::VGetAlphaBlending - 0086BD70
+CPlugShader::GetLayerName - 0086D970
+CPlugShader::CheckGeometryRequirement - 0086DD80
+CPlugShader::CheckPixelShader - 008C7FE0
+CPlugShader::CheckVertexShader - 008C7FE0
+
+[CPlugShaderGeneric] - CPlugShader
+CPlugShaderGeneric::SetTranslucent - 00858900
+
+[CPlugShaderApply] - CPlugShaderGeneric
+CPlugShaderApply::GetLayer - 00868A00
+CPlugShaderApply::GetLayerCount - 00868A30
+CPlugShaderApply::GetLayerCountUsed - 00868A30
+CPlugShaderApply::GetBitmapAdrToRenderCount - 00868A30
+CPlugShaderApply::GetBitmapAdrToRender - 00868A40
+CPlugShaderApply::GetBitmapAdrToRenderFromId - 00868A40
+CPlugShaderApply::GetBitmapAdrToRenderId - 00868A60
+CPlugShaderApply::SetLayer - 008694D0
+CPlugShaderApply::RemoveLayers - 00869560
+
+[CPlugVisual] - CPlug
+CPlugVisual::ComputeNormals - 0042B500
+CPlugVisual::ReleasePtrVertexs - 0042B500
+CPlugVisual::GetVertexIndexation - 007022D0
+CPlugVisual::ComputeFaceCull - 0078F270
+CPlugVisual::GetVertexIndexCount - 0078F270
+CPlugVisual::GetWireLineIndexsCount - 0078F270
+CPlugVisual::GetVisualKind - 0080A4A0
+CPlugVisual::GetBytePerIndex - 00826EE0
+CPlugVisual::ResetToEmptyVisual - 0085D360
+CPlugVisual::GetBytePerVertex - 0085D700
+CPlugVisual::GenerateDefaultTexCoord - 0085D7E0
+CPlugVisual::Optimize - 0085DBB0
+CPlugVisual::VStreamOrClassic_GetPlugVDcls - 0085E920
+CPlugVisual::RemapGeometryAndIndexation - 0085ECC0
+CPlugVisual::GetStridedVertexElem - 0085FD40
+CPlugVisual::GetStridedVertexElem - 0085FD60
+CPlugVisual::GetStridedVertexElem - 0085FD80
+CPlugVisual::GetStridedVertexElem - 0085FDA0
+CPlugVisual::GetStridedVertexElem - 0085FDC0
+CPlugVisual::GetVertexsAll - 0085FDE0
+CPlugVisual::IsValidForRender - 0085FDF0
+CPlugVisual::GetStridedVertexElem - 0085FF00
+CPlugVisual::SetVertexCount - 00860910
+CPlugVisual::Duplicate_ShareGeometryAndIndexation - 00860DC0
+CPlugVisual::CopyGeometry - 00860EB0
+CPlugVisual::SelfWeld - 00882DD0
+CPlugVisual::IsTexelCoveredByTriangle - 00886890
+CPlugVisual::GetVertexFromTexel - 00886890
+CPlugVisual::IsTexelCoveredByTriangle - 00886890
+CPlugVisual::ComputeBoundingBox - 00961D70
+CPlugVisual::GetWireLineIndexs - 00961DD0
+CPlugVisual::TransformByNOMat - 00961DD0
+CPlugVisual::SetDefaultShaderProperties - 00961DD0
+
+[CPlugVisual2D] - CPlugVisual
+CPlugVisual2D::Inverse - 0042B500
+CPlugVisual2D::GetVertexsStart - 00452F30
+CPlugVisual2D::GetVertexs2DStart - 0078F270
+CPlugVisual2D::GetVertexsNext - 007BCCE0
+CPlugVisual2D::GetTotalVertexCount - 008629B0
+CPlugVisual2D::GetTexCoordSize - 008629B0
+CPlugVisual2D::GetVertexs2DNext - 008BE9E0
+CPlugVisual2D::GetTotalVertexs - 008BEA10
+CPlugVisual2D::TransformByGmIso3 - 008BEAD0
+CPlugVisual2D::DoesRayIntersect - 008BECB0
+CPlugVisual2D::TransformByGmIso4 - 00961DD0
+
+[CPlugVisualIndexedTriangles2D] - CPlugVisual2D
+CPlugVisualIndexedTriangles2D::Duplicate - 0078F270
+CPlugVisualIndexedTriangles2D::GetTriangleIndexsCount - 008D7EA0
+CPlugVisualIndexedTriangles2D::GetTriangleIndexs - 008D7EC0
+
+[CPlugVisualLines2D] - CPlugVisual2D
+CPlugVisualLines2D::GetTriangleIndexsCount - 004B0750
+CPlugVisualLines2D::Duplicate - 0078F270
+CPlugVisualLines2D::GetTriangleIndexs - 00961DD0
+
+[CPlugVisualQuads2D] - CPlugVisual2D
+CPlugVisualQuads2D::Duplicate - 0078F270
+CPlugVisualQuads2D::GetTriangleIndexs - 008629C0
+CPlugVisualQuads2D::GetTriangleIndexsCount - 00886E90
+
+[CPlugVisual3D] - CPlugVisual
+CPlugVisual3D::GetVertexs2DStart - 00452F30
+CPlugVisual3D::CanMerge - 0078F270
+CPlugVisual3D::GetVertexsStart - 0078F270
+CPlugVisual3D::GetVertexs2DNext - 007BCCE0
+CPlugVisual3D::GetTotalVertexs - 0088B2C0
+CPlugVisual3D::TransformByGmIso4 - 0088B7E0
+CPlugVisual3D::SetVertices - 0088B960
+CPlugVisual3D::SubMerge - 0088BDD0
+CPlugVisual3D::GetTexCoordSize - 0088C600
+CPlugVisual3D::GetTotalVertexCount - 0088C600
+CPlugVisual3D::DoesRayIntersect - 0088D150
+CPlugVisual3D::AddMerge - 0088DB70
+CPlugVisual3D::InsMerge - 0088EA70
+CPlugVisual3D::ComputeTangents - 00891520
+CPlugVisual3D::SetMerge - 00891830
+CPlugVisual3D::GetVertexsNext - 008BE9E0
+CPlugVisual3D::GetNeighbouringVertexs - 00961D70
+
+[CPlugVisualVertexs] - CPlugVisual3D
+CPlugVisualVertexs::GetTriangleIndexsCount - 004B0750
+CPlugVisualVertexs::Duplicate - 008D76D0
+CPlugVisualVertexs::Inverse - 008D7740
+CPlugVisualVertexs::GetTriangleIndexs - 00961DD0
+
+[CPlugVisualStrip] - CPlugVisual3D
+CPlugVisualStrip::Inverse - 0042B500
+CPlugVisualStrip::Duplicate - 0078F270
+CPlugVisualStrip::GetTriangleIndexsCount - 008D7100
+CPlugVisualStrip::GetTriangleIndexs - 008D7120
+
+[CPlugVisualIndexedStrip] - CPlugVisualIndexed
+CPlugVisualIndexedStrip::Duplicate - 008BE3E0
+CPlugVisualIndexedStrip::GetTriangleIndexsCount - 008BE580
+CPlugVisualIndexedStrip::GetTriangleIndexs - 008BE630
+CPlugVisualIndexedStrip::Inverse - 008BE710
+
+[CPlugVisualIndexedLines] - CPlugVisualIndexed
+CPlugVisualIndexedLines::Inverse - 0042B500
+CPlugVisualIndexedLines::GetTriangleIndexsCount - 004B0750
+CPlugVisualIndexedLines::Duplicate - 0078F270
+CPlugVisualIndexedLines::GetTriangleIndexs - 00961DD0
+
+[CPlugVisualIndexedTriangles] - CPlugVisualIndexed
+CPlugVisualIndexedTriangles::Duplicate - 00881300
+CPlugVisualIndexedTriangles::GetTriangleIndexsCount - 008816D0
+CPlugVisualIndexedTriangles::GetTriangleIndexs - 008816F0
+CPlugVisualIndexedTriangles::Inverse - 00881F00
+
+[CPlugVisualGrid] - CPlugVisual3D
+CPlugVisualGrid::GetTriangleIndexsCount - 008A5FC0
+CPlugVisualGrid::GetTriangleIndexs - 008A5FF0
+CPlugVisualGrid::Duplicate - 008A6460
+CPlugVisualGrid::CreateGrid - 008A66A0
+CPlugVisualGrid::Inverse - 008A68E0
+
+[CPlugVisualTriangles] - CPlugVisual3D
+CPlugVisualTriangles::Duplicate - 0089E960
+CPlugVisualTriangles::GetTriangleIndexsCount - 0089EA40
+CPlugVisualTriangles::GetTriangleIndexs - 0089EA60
+CPlugVisualTriangles::Inverse - 0089EA80
+
+[CPlugVisualLines] - CPlugVisual3D
+CPlugVisualLines::Inverse - 0042B500
+CPlugVisualLines::GetTriangleIndexsCount - 004B0750
+CPlugVisualLines::Duplicate - 0078F270
+CPlugVisualLines::GetTriangleIndexs - 00961DD0
+
+[CPlugVisualQuads] - CPlugVisual3D
+CPlugVisualQuads::GetTriangleIndexs - 008629C0
+CPlugVisualQuads::Duplicate - 00886A60
+CPlugVisualQuads::GetTriangleIndexsCount - 00886E90
+CPlugVisualQuads::Inverse - 00886EC0
+
+[CPlugVisualSprite] - CPlugVisual3D
+CPlugVisualSprite::Inverse - 0042B500
+CPlugVisualSprite::GetTriangleIndexsCount - 004B0750
+CPlugVisualSprite::AddTexCoordSet - 00882DD0
+CPlugVisualSprite::Duplicate - 008839B0
+CPlugVisualSprite::GetTriangleIndexs - 00961DD0
+CPlugVisualSprite::UpdateTexCoordSetFromShader - 00961DD0
+
+[CPlugBitmapSampler] - CPlug
+CPlugBitmapSampler::SetDefaultProperties - 0085C3A0
+CPlugBitmapSampler::OnBitmapDirty - 0085CE30
+
+[CPlugBitmapAddress] - CPlugBitmapSampler
+CPlugBitmapAddress::NeedTexCoord - 00896FB0
+
+[CPlugFont] - CPlug
+CPlugFont::GetAscent - 008517A0
+
+[CPlugFontBitmap] - CPlugFont
+CPlugFontBitmap::CreateVisual - 008CF140
+
+[CPlugTree] - CPlug
+CPlugTree::RenderBefore - 00741AC0
+CPlugTree::GetChildCount - 0075D060
+CPlugTree::GetChildToRenderMip - 0078F270
+CPlugTree::DeleteAllChilds - 008484F0
+CPlugTree::DeleteChildPtr - 00848520
+CPlugTree::GetChild - 00848790
+CPlugTree::SetChild - 00848830
+CPlugTree::DetachChildPtr - 00848890
+CPlugTree::DetachChild - 008488C0
+CPlugTree::GetPlugFromId - 00848960
+CPlugTree::GetPlugFromModelId - 008489D0
+CPlugTree::TransformByNOMat - 00848FC0
+CPlugTree::GetLastChild - 00849430
+CPlugTree::AddChild - 008494E0
+CPlugTree::GetChildIndex - 00849520
+CPlugTree::DeleteAllVolatileChilds - 00849570
+CPlugTree::InternalRecursiveCreate - 008498A0
+CPlugTree::UpdateBoundingBox - 00849940
+CPlugTree::GetDecorationBoundingBox - 00849D80
+CPlugTree::GetRecursiveVertexCount - 0084A490
+CPlugTree::Generate - 0084B450
+CPlugTree::GetOptimizedGroups - 0084C1D0
+CPlugTree::CopyFromModel - 0084D6F0
+CPlugTree::DisconnectThisFromModel - 0084DA40
+CPlugTree::GenerateOptimizedTree - 0084DB80
+CPlugTree::DeleteChild - 0086A9A0
+
+[CPlugFile] - CPlug
+CPlugFile::ExportToBuffer - 004B0750
+CPlugFile::ImportFromBuffer - 004B0750
+CPlugFile::CreateDummyWhenImportFailed - 0078F270
+CPlugFile::CreateDefaultWhenImportFailed - 0078F270
+CPlugFile::ReGenerate - 00839680
+CPlugFile::Export - 008397A0
+CPlugFile::Import - 00839CA0
+CPlugFile::GbxContainerAutoCreate - 00961DD0
+
+[CPlugFileModel] - CPlugFile
+CPlugFileModel::ImportModel - 0078F270
+CPlugFileModel::ImportModel - 00961DD0
+
+[CPlugFileGpuFxD3d] - CPlugFileGpuFx
+CPlugFileGpuFxD3d::ComputeMaterial - 008C5F00
+
+[CPlugFileGPU] - CPlugFileText
+CPlugFileGPU::CanFidParameterize - 004B0750
+CPlugFileGPU::GetEntryPoint - 0087DA70
+CPlugFileGPU::DefineIdIsKnown - 00892AD0
+CPlugFileGPU::TweakReset - 00894520
+CPlugFileGPU::TweakAddId_rPosAfter - 00894980
+CPlugFileGPU::TweakIdGetDefines - 00961DD0
+
+[CPlugFileGPUP] - CPlugFileGPU
+CPlugFileGPUP::GetPipeline - 00925BE0
+
+[CPlugFilePso] - CPlugFileGPUP
+CPlugFilePso::Compile - 008C48E0
+
+[CPlugFilePHlsl] - CPlugFileGPUP
+CPlugFilePHlsl::Compile - 0087DBC0
+
+[CPlugFilePsh] - CPlugFileGPUP
+CPlugFilePsh::GetFileFullExt - 0089B0B0
+CPlugFilePsh::Compile - 0089BE30
+
+[CPlugFileGPUV] - CPlugFileGPU
+CPlugFileGPUV::GetPipeline - 0078F270
+
+[CPlugFileVsh] - CPlugFileGPUV
+CPlugFileVsh::GetFileFullExt - 008D0AB0
+CPlugFileVsh::Compile - 008D0CE0
+
+[CPlugFileVso] - CPlugFileGPUV
+CPlugFileVso::Compile - 008C5DB0
+
+[CPlugFileVHlsl] - CPlugFileGPUV
+CPlugFileVHlsl::Compile - 0087DBC0
+
+[CPlugFileSnd] - CPlugFile
+CPlugFileSnd::GetPreBufferingRecommendedSize - 0078F270
+
+[CPlugFileOggVorbis] - CPlugFileSnd
+CPlugFileOggVorbis::ReadData - 008CBA60
+CPlugFileOggVorbis::EndReading - 008CBC40
+CPlugFileOggVorbis::StartReading - 008CBCB0
+
+[CPlugFileWav] - CPlugFileSnd
+CPlugFileWav::EndReading - 008A0800
+CPlugFileWav::ReadData - 008A0980
+CPlugFileWav::StartReading - 008A0B50
+
+[CPlugFileSndGen] - CPlugFileSnd
+CPlugFileSndGen::StartReading - 0089F8A0
+CPlugFileSndGen::ReadData - 0089F8B0
+CPlugFileSndGen::EndReading - 0089F930
+
+[CPlugFileFidContainer] - CPlugFile
+CPlugFileFidContainer::AssociateFidWithThis - 00865310
+CPlugFileFidContainer::DissociateFidFromThis - 00865350
+CPlugFileFidContainer::UninstallFids - 00865DD0
+CPlugFileFidContainer::InstallFids - 00866180
+
+[CPlugFileVideo] - CPlugFileImg
+CPlugFileVideo::GetPcmData - 005B06B0
+CPlugFileVideo::UpdateVideoTexture - 005D72F0
+CPlugFileVideo::IsFinished - 0078F270
+CPlugFileVideo::HasSound - 0078F270
+CPlugFileVideo::GetDuration - 0078F270
+CPlugFileVideo::Stop - 0089EFE0
+CPlugFileVideo::Rewind - 0089F050
+CPlugFileVideo::Play - 0089F2A0
+
+[CPlugFileAvi] - CPlugFileVideo
+CPlugFileAvi::GetDesc - 008D6300
+
+[CPlugFileBink] - CPlugFileVideo
+CPlugFileBink::GetDesc - 0083A830
+
+[CPlugFileJpg] - CPlugFileImg
+CPlugFileJpg::ImportFromBufferNoMirrorY - 00898210
+
+[GxLight] - CMwNod
+GxLight::GetKind - 0078F270
+GxLight::GenerateTestData - 00835330
+
+[CSceneToySeaHoule] - CMwNod
+CSceneToySeaHoule::SetSamplingTimeEnd - 00829990
+CSceneToySeaHoule::SetSamplingTimeBegin - 00829EC0
+CSceneToySeaHoule::GetPointElevation - 0082A070
+CSceneToySeaHoule::GetPointElevationAndFoam - 0082A240
+
+[CSceneFx] - CMwNod
+CSceneFx::PreLoad - 0042B500
+CSceneFx::NeedPreLoad - 004FE3D0
+CSceneFx::IsAlwaysActive - 0078F270
+CSceneFx::CanActive - 007EE5C0
+CSceneFx::SetFxIntensity - 007EE600
+CSceneFx::CanHaveInputFx - 00925BE0
+CSceneFx::OnNewTechnique - 00961D70
+
+[CSceneFxCompo] - CSceneFx
+CSceneFxCompo::ViewportResized - 0042B500
+CSceneFxCompo::FxRender - 00827DC0
+
+[CSceneFxFlares] - CSceneFxCompo
+CSceneFxFlares::CreateBitmaps - 00824290
+CSceneFxFlares::CreateShaders - 008245D0
+
+[CSceneFxBloom] - CSceneFxCompo
+CSceneFxBloom::CreateBitmaps - 00821D50
+CSceneFxBloom::CreateShaders - 00822590
+
+[CSceneFxToneMapping] - CSceneFxCompo
+CSceneFxToneMapping::CreateBitmaps - 00821090
+CSceneFxToneMapping::CreateShaders - 00821140
+
+[CSceneFxHeadTrack] - CSceneFxCompo
+CSceneFxHeadTrack::CreateBitmaps - 0042B500
+CSceneFxHeadTrack::CreateShaders - 008203C0
+
+[CSceneFxDepthOfField] - CSceneFxCompo
+CSceneFxDepthOfField::CreateBitmaps - 0080C4C0
+CSceneFxDepthOfField::CreateShaders - 0080DB00
+
+[CSceneFxMotionBlur] - CSceneFxCompo
+CSceneFxMotionBlur::CreateBitmaps - 0080AA20
+CSceneFxMotionBlur::CreateShaders - 0080B350
+
+[CSceneFxGrayAccum] - CSceneFxCompo
+CSceneFxGrayAccum::CreateBitmaps - 00809D20
+CSceneFxGrayAccum::CreateShaders - 00809E70
+
+[CSceneFxCameraBlend] - CSceneFxCompo
+CSceneFxCameraBlend::CreateBitmaps - 00809860
+CSceneFxCameraBlend::CreateShaders - 008098C0
+
+[CSceneFxOccZCmp] - CSceneFxCompo
+CSceneFxOccZCmp::CreateShaders - 00808280
+CSceneFxOccZCmp::CreateBitmaps - 00808880
+
+[CSceneFxSuperSample] - CSceneFxCompo
+CSceneFxSuperSample::CreateBitmaps - 007EC640
+CSceneFxSuperSample::CreateShaders - 007ECD70
+
+[CSceneFxColors] - CSceneFxCompo
+CSceneFxColors::CreateBitmaps - 007EA880
+CSceneFxColors::CreateShaders - 007EB710
+
+[CSceneFxStereoscopy] - CSceneFxCompo
+CSceneFxStereoscopy::CreateBitmaps - 007DBD40
+CSceneFxStereoscopy::CreateShaders - 007DBFA0
+
+[CSceneFxDistor2d] - CSceneFxCompo
+CSceneFxDistor2d::CreateShaders - 007D1990
+CSceneFxDistor2d::CreateBitmaps - 007D2110
+
+[CSceneFxVisionK] - CSceneFx
+CSceneFxVisionK::Clean - 0080E0F0
+CSceneFxVisionK::FxRender - 0080F380
+
+[CSceneFxOverlay] - CSceneFx
+CSceneFxOverlay::FxRender - 0080BC50
+
+[CSceneController] - CMwNod
+CSceneController::OnInputEvent - 004B0750
+CSceneController::Update - 00961DD0
+CSceneController::GetCamVal - 00961DD0
+
+[CGameControlCamera] - CSceneController
+CGameControlCamera::ResetKeysState - 0042B500
+CGameControlCamera::ResetButtonsState - 0042B500
+CGameControlCamera::GetSpeed - 00458DB0
+CGameControlCamera::HaveEffects - 00458DE0
+CGameControlCamera::SetIsActive - 005D9810
+CGameControlCamera::Reset - 005D9910
+CGameControlCamera::AddEffect - 005D9920
+CGameControlCamera::RemoveEffect - 005D9930
+CGameControlCamera::RemoveEffect - 005D9940
+CGameControlCamera::IsActive - 006F61E0
+
+[CGameControlCameraTarget] - CGameControlCamera
+CGameControlCameraTarget::GetPosition - 00458CA0
+CGameControlCameraTarget::IsUpLinked - 00458CD0
+CGameControlCameraTarget::SetInterpolate - 00458CE0
+CGameControlCameraTarget::IsInterpolate - 00458CF0
+CGameControlCameraTarget::CanUseRelativeTargetLocation - 00458D00
+CGameControlCameraTarget::SetCanUseRelativeTargetLocation - 00458D10
+CGameControlCameraTarget::SetPosition - 00458E60
+CGameControlCameraTarget::ResetRelativeLocation - 005D8700
+CGameControlCameraTarget::SetTargetGameMobilId - 005D8710
+CGameControlCameraTarget::SetRelativeTargetLocation - 005D8A10
+CGameControlCameraTarget::ComputeTargetLocation - 005D8A30
+CGameControlCameraTarget::LookAtBox - 005D91D0
+CGameControlCameraTarget::SetUpLinked - 00783790
+
+[CScene] - CMwNod
+CScene::LogSceneStats - 0042B500
+CScene::GetObjectBufferFromObjectClassId - 007BA880
+CScene::ObjectRemove - 007BB360
+CScene::ObjectAdd - 007BBC90
+
+[CScene3d] - CScene
+CScene3d::GetDefaultSector - 007B70A0
+
+[CScene2d] - CScene
+CScene2d::GetDefaultSector - 007B1D60
+CScene2d::GetSector - 007B1D60
+
+[CSceneObjectLink] - CMwNod
+CSceneObjectLink::GetCamVal - 007B6520
+CSceneObjectLink::DoLink - 007B6AD0
+
+[CSceneObject] - CMwNod
+CSceneObject::GetLocation - 004B0750
+CSceneObject::GetSector - 0078F270
+CSceneObject::SetLocation - 007B5710
+CSceneObject::GetInterpolatedLocation - 007B5970
+CSceneObject::OnEnterScene - 007B5AE0
+CSceneObject::OnLeaveScene - 007B5B00
+CSceneObject::SetMotion - 007B5B60
+CSceneObject::GetSpeed - 00814330
+CSceneObject::OnEnterSector - 00961D70
+CSceneObject::SetLocation - 00961D70
+CSceneObject::SetSpeed - 00961DD0
+CSceneObject::OnLeaveSector - 00961DD0
+CSceneObject::GetEdBoundingBox - 00961DD0
+
+[CScenePoc] - CSceneObject
+CScenePoc::UpdatePoc - 0042B500
+CScenePoc::ResetPoc - 0042B500
+CScenePoc::SwitchOn - 007DD2D0
+CScenePoc::SwitchOff - 007DD2E0
+
+[CSceneCamera] - CScenePoc
+CSceneCamera::CreateCamera - 0042B500
+
+[CSceneMobil] - CSceneObject
+CSceneMobil::OnZombieChange - 0042B500
+CSceneMobil::VehicleHorn - 0042B500
+CSceneMobil::VehicleReset - 0042B500
+CSceneMobil::ArchiveOwnData_GetCurVersion - 004B0750
+CSceneMobil::VehicleFrontSpeedGet - 004EA330
+CSceneMobil::VehicleInputSteerGet - 004EA330
+CSceneMobil::RestoreStaticState - 005D72F0
+CSceneMobil::DisconnectFromModel - 007636A0
+CSceneMobil::VehicleHelperNameGet - 0078F270
+CSceneMobil::DoesMotionChangeLocations - 007B2A30
+CSceneMobil::OnStillFocus - 007B2F20
+CSceneMobil::Show - 007B2F50
+CSceneMobil::Hide - 007B2F60
+CSceneMobil::GetIsVisible - 007B2F70
+CSceneMobil::AbsorbContact - 007B3060
+CSceneMobil::OnVisibleGained - 007B30F0
+CSceneMobil::OnVisibleLost - 007B3120
+CSceneMobil::OnRenderBefore - 007B3170
+CSceneMobil::CreateModelInstance - 007B36B0
+CSceneMobil::GetNodsNotToDuplicate - 007B3800
+CSceneMobil::OnStillDrag - 007B3C30
+CSceneMobil::ArchiveOwnDataOld - 007B4A40
+CSceneMobil::SetSolid - 007B55A0
+CSceneMobil::ArchiveOwnData - 007BCCE0
+CSceneMobil::AddStateForPrediction - 007BCCE0
+CSceneMobil::SaveState - 007BCCE0
+CSceneMobil::UpdateFromDynamicState - 007BCCE0
+CSceneMobil::VehicleAsyncWorldSpeedGet - 00814330
+CSceneMobil::GetTimeBase - 00925BE0
+CSceneMobil::HasSavedStateChanged - 00925BE0
+CSceneMobil::SoundEnableSet - 00961D70
+CSceneMobil::VehicleCurrentEnvironmentSet - 00961D70
+CSceneMobil::VehicleInputSteerSet - 00961DD0
+CSceneMobil::OnBeginSelect - 00961DD0
+CSceneMobil::OnBeginDrag - 00961DD0
+CSceneMobil::OnEndSelect - 00961DD0
+CSceneMobil::VehicleIsNetworkedSet - 00961DD0
+CSceneMobil::VehicleInputGasSet - 00961DD0
+CSceneMobil::VehicleInputBrakeSet - 00961DD0
+CSceneMobil::OnStillSelect - 00961DD0
+CSceneMobil::VehicleBlockSpeedSet - 00961DD0
+CSceneMobil::OnEndDrag - 00961DD0
+CSceneMobil::OnEndFocus - 00961DD0
+CSceneMobil::PreloadResources - 00961DD0
+CSceneMobil::SetQuality - 00961DD0
+CSceneMobil::VehicleFreeWheelingSet - 00961DD0
+CSceneMobil::VehicleIsLightTrailsSet - 00961DD0
+CSceneMobil::OnBeginFocus - 00961DD0
+CSceneMobil::VehicleHelperNameSet - 00961DD0
+CSceneMobil::VehicleBlockSpeed2Set - 00961DD0
+
+[CSceneToyCharacter] - CSceneToy
+CSceneToyCharacter::GetTuning - 007FEFD0
+CSceneToyCharacter::UpdateParamsFromTuning - 007FF030
+CSceneToyCharacter::AfterContacts - 007FF370
+
+[CControlBase] - CSceneToy
+CControlBase::UpdateNod - 0042B500
+CControlBase::NotifyThisLocationChanged - 0042B500
+CControlBase::AskForSpecificSleepingEffect - 00730D00
+CControlBase::ArchiveTerminalInstanceData - 00761840
+CControlBase::SetFocusedTree - 00761880
+CControlBase::IsFocusCaptured - 007619B0
+CControlBase::UpdateFocus - 00761B00
+CControlBase::OnInputEvent - 00761B30
+CControlBase::InternalGetControlRootTree - 00761CE0
+CControlBase::GetStyleSheet - 00761D90
+CControlBase::BindEvent - 00761E20
+CControlBase::UnbindEvent - 00761F60
+CControlBase::UnbindEvent - 00761F90
+CControlBase::UnbindAll - 00761FD0
+CControlBase::OnAction - 007620A0
+CControlBase::CreateStack_MwStack - 007626E0
+CControlBase::UpdateEffect - 00762910
+CControlBase::SetControlSize - 00762BE0
+CControlBase::InternalUpdateVisibility - 00764090
+CControlBase::FocusGained - 00764570
+CControlBase::FocusLost - 00764620
+CControlBase::GetControlBBox - 00764770
+CControlBase::Draw - 00765530
+CControlBase::Clean - 00765890
+CControlBase::VerifyStack - 0078F270
+
+[CControlCurve] - CControlBase
+CControlCurve::SetXRange - 00794020
+CControlCurve::SetYRange - 00794040
+CControlCurve::SetControlPointsVisible - 00794060
+CControlCurve::SelectControlPoint - 00794070
+CControlCurve::IsControlPointSelected - 00794080
+CControlCurve::DeselectControlPoint - 007940A0
+CControlCurve::HasSelection - 007940B0
+CControlCurve::StartDragging - 007940C0
+CControlCurve::StopDragging - 007940F0
+CControlCurve::StartPanning - 00794120
+CControlCurve::StartZooming - 00794180
+CControlCurve::SetCurve - 00794570
+CControlCurve::GetSelectedControlPointPos - 00794610
+CControlCurve::ArchiveState - 00794670
+CControlCurve::UpdateLayersCount - 007947F0
+CControlCurve::UpdateDragging - 00794830
+CControlCurve::GetVisibleCurvePart - 00794980
+CControlCurve::InsertPointAtPickedPos - 00794A50
+CControlCurve::RemovePoint - 00794AD0
+CControlCurve::GetCurveFromNod - 00794B50
+CControlCurve::UpdateCurveFromNod - 00794BB0
+CControlCurve::UpdatePanning - 00794BF0
+CControlCurve::UpdateZooming - 00794CE0
+CControlCurve::GetXRange - 00794E60
+CControlCurve::GetYRange - 00794E80
+CControlCurve::GetCurveDrawMode - 00794EA0
+CControlCurve::SetCurveDrawMode - 00794EB0
+CControlCurve::AreControlPointsVisible - 00794EC0
+CControlCurve::SetCurvePrecision - 00794ED0
+CControlCurve::IsDragging - 00794EE0
+CControlCurve::StopPanning - 00794EF0
+CControlCurve::IsPanning - 00794F00
+CControlCurve::StopZooming - 00794F10
+CControlCurve::IsZooming - 00794F20
+CControlCurve::SetGrid - 007957B0
+CControlCurve::Screen2Control - 00795830
+CControlCurve::SnapPos - 00795910
+CControlCurve::GetControlPointFromPickedTree - 007959C0
+CControlCurve::UpdateCurve - 00795A10
+CControlCurve::UpdateControlPointsCount - 00795FE0
+CControlCurve::RemoveControlPointsTrees - 00796170
+
+[CControlRadar] - CControlBase
+CControlRadar::CreateResourceInstance - 00792D90
+CControlRadar::Follow - 007932C0
+CControlRadar::AddMobil - 00793BB0
+
+[CControlText] - CControlBase
+CControlText::GetDisplayedString - 00961DD0
+
+[CControlContainer] - CControlBase
+CControlContainer::RequestUnfocus - 00765D90
+CControlContainer::CreateButton - 00765E20
+CControlContainer::CreateLabel - 00765E90
+CControlContainer::CreateEntry - 00765F00
+CControlContainer::CreateEnum - 00765F70
+CControlContainer::CreateSlider - 00765FE0
+CControlContainer::CreateUiRange - 00766050
+CControlContainer::ArchiveChild - 00766460
+CControlContainer::AddChildToScene - 007664F0
+CControlContainer::GetNextFocusableChild - 00766620
+CControlContainer::RequestFocus - 007667C0
+CControlContainer::InternalRemoveChild - 00766990
+CControlContainer::InternalAnimateLocation - 007671F0
+CControlContainer::ChangeChildIndex - 00767340
+CControlContainer::AddChild - 00767AE0
+CControlContainer::SetChildsLocations - 007687F0
+CControlContainer::NotifyChildLocationChanged - 00961DD0
+
+[CControlForm] - CControlContainer
+CControlForm::InternalGetRelativeLocation - 0079B850
+
+[CControlGrid] - CControlContainer
+CControlGrid::InternalGetRelativeLocation - 0076C200
+
+[CGameControlGrid] - CControlGrid
+CGameControlGrid::GetCurrentPage - 005BE7C0
+CGameControlGrid::GetPageCount - 005BE7D0
+CGameControlGrid::GetDataCountPerPage - 005BE7E0
+CGameControlGrid::GetDataCountAtCurrentPage - 005BE7F0
+CGameControlGrid::Remote_SetRequestedCount - 005BE810
+CGameControlGrid::Remote_GetRequestedCount - 005BE820
+CGameControlGrid::GetDataCountAtPage - 0064C5B0
+CGameControlGrid::OnNextPage - 0064C630
+CGameControlGrid::OnPreviousPage - 0064C650
+CGameControlGrid::OnFastNextPage - 0064C670
+CGameControlGrid::OnFastPreviousPage - 0064C690
+CGameControlGrid::OnFirstPage - 0064C6D0
+CGameControlGrid::OnLastPage - 0064C6F0
+CGameControlGrid::OnCurrentPageChanged - 0064C730
+CGameControlGrid::Remote_OnPageRequestedFailure - 0064C7F0
+CGameControlGrid::Remote_OnDatasReceived - 0064D570
+CGameControlGrid::GetDatasCount - 0064D860
+CGameControlGrid::ResetPage - 0064D880
+CGameControlGrid::SetCurrentPage - 0064D8C0
+CGameControlGrid::Remote_OnPageRequestedSuccess - 0064DAA0
+CGameControlGrid::Init - 0064E290
+CGameControlGrid::Remote_OnPagesWillChange - 007BCCE0
+CGameControlGrid::Remote_OnPagesChanged - 00961D70
+CGameControlGrid::Remote_OnPageRequested - 00961DD0
+
+[CGameControlGridCard] - CGameControlGrid
+CGameControlGridCard::UpdateFromDatas - 005BD9B0
+CGameControlGridCard::SetSelectionAction - 005BDA10
+CGameControlGridCard::SetSelectionEnabled - 005BDBD0
+CGameControlGridCard::GetSelectedCard - 005BDC20
+CGameControlGridCard::PushLocalNod - 005BDC60
+CGameControlGridCard::PopNods - 005BDCB0
+CGameControlGridCard::PopLocalNod - 005BDD10
+CGameControlGridCard::GetNod - 005BDDB0
+CGameControlGridCard::CleanCards - 005BDDE0
+CGameControlGridCard::InitCards - 005BE190
+CGameControlGridCard::PushNod - 005BE240
+CGameControlGridCard::PushNods - 005BE270
+CGameControlGridCard::PushNods - 005BE270
+CGameControlGridCard::PushNodsRange - 005BE2E0
+CGameControlGridCard::CleanCaches - 005BE3D0
+CGameControlGridCard::GetNods - 005BE850
+CGameControlGridCard::GetNods - 005BE850
+CGameControlGridCard::UpdateOnlyCards - 005BEEE0
+CGameControlGridCard::OnNewCard - 005BF940
+
+[CTrackManiaMatchSettingsControlGrid] - CControlGrid
+CTrackManiaMatchSettingsControlGrid::GetCurrentSize - 00451BA0
+CTrackManiaMatchSettingsControlGrid::GetCurrentRange - 00451C40
+CTrackManiaMatchSettingsControlGrid::OnNextPage - 00452120
+CTrackManiaMatchSettingsControlGrid::OnPreviousPage - 00452160
+
+[CControlFrame] - CControlContainer
+CControlFrame::InternalGetRelativeLocation - 00769D00
+
+[CControlListMap2] - CControlFrame
+CControlListMap2::UpdateAllChildEffects - 00798300
+
+[CControlList] - CControlFrame
+CControlList::AdditionalDrawChild - 005B06B0
+CControlList::OnLineSelected - 00779170
+CControlList::GetNbLines - 00779200
+CControlList::PrevPageFast - 00779230
+CControlList::ComputeChildLocation - 00779500
+CControlList::SetCurLine - 007797F0
+CControlList::NextPage - 00779960
+CControlList::PrevPage - 007799A0
+CControlList::NextPageFast - 007799C0
+CControlList::GetLineControlStyle - 00779D70
+
+[CGameMenuFrame] - CControlFrame
+CGameMenuFrame::OnBeforeShow - 0072F4C0
+CGameMenuFrame::OnShow - 0072F4E0
+CGameMenuFrame::OnHide - 0072F540
+
+[CGameControlCard] - CControlFrame
+CGameControlCard::CheckChanges - 0042B500
+CGameControlCard::GetNod - 00444C30
+CGameControlCard::SetUseDelays - 00444C40
+CGameControlCard::UseDelays - 00444C50
+CGameControlCard::PrepareChilds - 00444C60
+CGameControlCard::ConfigChilds - 00444C80
+CGameControlCard::SetNod - 0059F850
+CGameControlCard::ForceReconfig - 0059F8B0
+CGameControlCard::SetSelectionEnabled - 0059F920
+CGameControlCard::SetSelectionAction - 0059F9A0
+CGameControlCard::DisconnectChilds - 0059FA70
+CGameControlCard::IsDelayStarted - 0059FB40
+CGameControlCard::StopDelayValue - 0059FB60
+CGameControlCard::InternalOnSelect - 0059FB70
+CGameControlCard::SetSelectionAction - 005A0010
+CGameControlCard::ConnectChilds - 005A00A0
+CGameControlCard::PrepareChilds - 005A0300
+CGameControlCard::ConfigChilds - 005A0500
+CGameControlCard::StartDelayValue - 005A0510
+CGameControlCard::IsDelayReached - 005A0540
+CGameControlCard::InternalOnFocusGained - 005A0570
+CGameControlCard::InternalOnFocusLost - 005A06F0
+CGameControlCard::PrepareUseOwnDataMode - 00961DD0
+
+[CGameControlCardLadderRanking] - CGameControlCard
+CGameControlCardLadderRanking::SetOnShowPlayersRankingsCallBack - 0072BC20
+CGameControlCardLadderRanking::SetRankingInfo - 0073F830
+CGameControlCardLadderRanking::GetRankingInfo - 0073F840
+CGameControlCardLadderRanking::OnShowPlayersRankings - 0074DED0
+
+[CGameControlCardCalendarEvent] - CGameControlCard
+CGameControlCardCalendarEvent::SetCalendarEvent - 0073F830
+CGameControlCardCalendarEvent::GetCalendarEvent - 0073F840
+CGameControlCardCalendarEvent::GetDataCard - 00794F20
+
+[CGameControlCardCalendar] - CGameControlCard
+CGameControlCardCalendar::SetCalendar - 0073F830
+CGameControlCardCalendar::GetCalendar - 0073F840
+
+[CGameControlCardCtnReplayRecordInfo] - CGameControlCard
+CGameControlCardCtnReplayRecordInfo::SetReplayRecordInfo - 0073F830
+CGameControlCardCtnReplayRecordInfo::GetReplayRecordInfo - 0073F840
+
+[CGameControlCardCtnArticle] - CGameControlCard
+CGameControlCardCtnArticle::SetChapter - 0073F830
+CGameControlCardCtnArticle::GetArticle - 0073F840
+
+[CGameControlCardCtnCampaign] - CGameControlCard
+CGameControlCardCtnCampaign::SetCampaign - 0073F830
+CGameControlCardCtnCampaign::GetCampaign - 0073F840
+
+[CGameControlCardCtnGhost] - CGameControlCard
+CGameControlCardCtnGhost::SetGhost - 0073F830
+CGameControlCardCtnGhost::GetGhost - 0073F840
+
+[CGameControlCardCtnChapter] - CGameControlCard
+CGameControlCardCtnChapter::SetChapter - 0073F830
+CGameControlCardCtnChapter::GetChapter - 0073F840
+
+[CGameControlCardChampionship] - CGameControlCard
+CGameControlCardChampionship::SetChampionship - 0073F830
+CGameControlCardChampionship::GetChampionship - 0073F840
+
+[CGameControlCardCtnGhostInfo] - CGameControlCard
+CGameControlCardCtnGhostInfo::SetGhostInfo - 0073F830
+CGameControlCardCtnGhostInfo::GetGhostInfo - 0073F840
+
+[CGameControlCardCtnVehicle] - CGameControlCard
+CGameControlCardCtnVehicle::SetVehicle - 0073F830
+CGameControlCardCtnVehicle::GetVehicle - 0073F840
+
+[CGameControlCardNetTeamInfo] - CGameControlCard
+CGameControlCardNetTeamInfo::SetTeamInfo - 0073F830
+CGameControlCardNetTeamInfo::GetTeamInfo - 0073F840
+
+[CGameControlCardNetOnlineEvent] - CGameControlCard
+CGameControlCardNetOnlineEvent::SetOnlineEvent - 0073F830
+CGameControlCardNetOnlineEvent::GetOnlineEvent - 0073F840
+CGameControlCardNetOnlineEvent::OnUseManiaCode - 00746D30
+
+[CGameControlCardMessage] - CGameControlCard
+CGameControlCardMessage::SetEditable - 0073E9A0
+CGameControlCardMessage::SetCheckLoginAction - 0073E9C0
+CGameControlCardMessage::SetMessage - 0073F830
+CGameControlCardMessage::GetMessage - 0073F840
+
+[CGameControlCardLeague] - CGameControlCard
+CGameControlCardLeague::SetLeague - 0073F830
+CGameControlCardLeague::GetLeague - 0073F840
+
+[CGameControlCardNetOnlineNews] - CGameControlCard
+CGameControlCardNetOnlineNews::OnEditReply - 0072BF00
+CGameControlCardNetOnlineNews::OnUseManiaCode - 0072BF30
+CGameControlCardNetOnlineNews::SetOnlineNews - 0073F830
+CGameControlCardNetOnlineNews::GetOnlineNews - 0073F840
+CGameControlCardNetOnlineNews::OnViewReplies - 00746D30
+
+[CGameControlCardProfile] - CGameControlCard
+CGameControlCardProfile::SetProfile - 0073F830
+CGameControlCardProfile::GetProfile - 0073F840
+
+[CGameControlCardGeneric] - CGameControlCard
+CGameControlCardGeneric::SetGenericType - 00647070
+CGameControlCardGeneric::GetGenericType - 00647080
+CGameControlCardGeneric::SetItemNod - 0073F830
+CGameControlCardGeneric::GetItemNod - 0073F840
+
+[CGameControlCardCtnNetServerInfo] - CGameControlCard
+CGameControlCardCtnNetServerInfo::SetChangeFavouriteStateCallBack - 0072BC20
+CGameControlCardCtnNetServerInfo::SetChangeBuddyStateCallBack - 0072E4B0
+CGameControlCardCtnNetServerInfo::SetServerInfo - 0073F830
+CGameControlCardCtnNetServerInfo::GetServerInfo - 0073F840
+
+[CGameControlCardCtnChallengeInfo] - CGameControlCard
+CGameControlCardCtnChallengeInfo::SetChallengeInfo - 0073F830
+CGameControlCardCtnChallengeInfo::GetChallengeInfo - 0073F840
+
+[CTrackManiaControlCard] - CGameControlCard
+CTrackManiaControlCard::SetRace - 00452610
+
+[CTrackManiaControlPlayerInfoCard] - CTrackManiaControlCard
+CTrackManiaControlPlayerInfoCard::SetPlayerInfo - 0073F830
+CTrackManiaControlPlayerInfoCard::GetPlayerInfo - 0073F840
+
+[CControlTrackManiaTeamCard] - CTrackManiaControlCard
+CControlTrackManiaTeamCard::SetTeamNumber - 00452820
+CControlTrackManiaTeamCard::GetTeamNumber - 00452D20
+
+[CTrackManiaControlRaceScoreCard] - CTrackManiaControlCard
+CTrackManiaControlRaceScoreCard::SetScore - 0073F830
+CTrackManiaControlRaceScoreCard::GetScore - 0073F840
+
+[CTrackManiaControlMatchSettingsCard] - CTrackManiaControlCard
+CTrackManiaControlMatchSettingsCard::SetMatchSettings - 0073F830
+CTrackManiaControlMatchSettingsCard::GetMatchSettings - 0073F840
+
+[CSceneVehicle] - CSceneMobil
+CSceneVehicle::UpdateParamsFromTuning - 0042B500
+CSceneVehicle::WheelIsSliding - 004B0750
+CSceneVehicle::WheelGetCount - 0078F270
+CSceneVehicle::GetVehicleTuning - 007BFEC0
+CSceneVehicle::WheelGetContactMaterial - 007C8B00
+CSceneVehicle::WheelGetAsyncGroundContactPos - 007C8B10
+CSceneVehicle::VehicleUpdateAsync - 007C9B80
+CSceneVehicle::ReloadSoundsToApplyFidParams - 007CA090
+CSceneVehicle::AdjustSounds - 007CB080
+CSceneVehicle::VehicleInitFromSolid - 007CD240
+
+[CSceneVehicleBall] - CSceneVehicle
+CSceneVehicleBall::VehicleStateAsyncGet - 0081A480
+CSceneVehicleBall::VehicleStatePrevAsyncGet - 0081A490
+
+[CSceneVehicleSpeedBoat] - CSceneVehicle
+CSceneVehicleSpeedBoat::VehicleStateAsyncGet - 00814290
+CSceneVehicleSpeedBoat::VehicleStatePrevAsyncGet - 008142A0
+
+[CSceneVehicleGlider] - CSceneVehicle
+CSceneVehicleGlider::VehicleStateAsyncGet - 00807BB0
+CSceneVehicleGlider::VehicleStatePrevAsyncGet - 00807BC0
+
+[CSceneVehicleCar] - CSceneVehicle
+CSceneVehicleCar::OtherUpdateAsync - 0042B500
+CSceneVehicleCar::OtherVehicleForces - 0042B500
+CSceneVehicleCar::OtherVehiclePhysics - 0042B500
+CSceneVehicleCar::IsRubberBall - 007BC940
+CSceneVehicleCar::VehicleStateAsyncGet - 007BFDD0
+CSceneVehicleCar::VehicleStatePrevAsyncGet - 007BFDE0
+
+[COalAudioBufferKeeper] - CAudioBufferKeeper
+COalAudioBufferKeeper::InternalUploadData - 007ACBD0
+
+[CAudioPort] - CMwNod
+CAudioPort::RefreshAllSounds - 0042B500
+CAudioPort::CaptureUpdate - 0042B500
+CAudioPort::GetIsEnabled - 004FE3D0
+CAudioPort::GetNbMaxSounds - 0056F2F0
+CAudioPort::ApplySystemConfig - 0079D450
+CAudioPort::SetIsCapturing - 0079E280
+CAudioPort::SetIsEnabled - 0079E700
+CAudioPort::Update - 0079EB10
+CAudioPort::ApplyListenerAudioEnvironment - 00961DD0
+CAudioPort::Init - 00961DD0
+
+[CAudioPortNull] - CAudioPort
+CAudioPortNull::CreateImplementation - 004B0750
+CAudioPortNull::CreateNewBufferKeeper - 0078F270
+
+[COalAudioPort] - CAudioPort
+COalAudioPort::CreateNewBufferKeeper - 007A1580
+COalAudioPort::CreateImplementation - 007A1880
+
+[CControlEffect] - CMwNod
+CControlEffect::AnimateLocation - 005B06B0
+CControlEffect::ApplyEffectToVertexs - 00741AC0
+CControlEffect::ReturnInverse - 0078F270
+CControlEffect::GetDelayBeforeStart - 0078F2C0
+CControlEffect::Uninstall - 0078F300
+CControlEffect::ApplyEffectToLetter - 00925CA0
+CControlEffect::ApplyEffect - 00961D70
+CControlEffect::OnControlDrawn - 00961D70
+CControlEffect::CleanUp - 00961D70
+CControlEffect::Init - 00961D70
+
+[CControlEffectSwitchStyle] - CControlEffect
+CControlEffectSwitchStyle::Install - 004B0750
+CControlEffectSwitchStyle::UpdateParam - 00759800
+CControlEffectSwitchStyle::CanBeAppliedOnControl - 0079BFB0
+CControlEffectSwitchStyle::Start - 0079C9C0
+CControlEffectSwitchStyle::Stop - 0079C9C0
+CControlEffectSwitchStyle::Run - 00961DD0
+
+[CControlEffectMotion] - CControlEffect
+CControlEffectMotion::CanBeAppliedOnControl - 0079BFB0
+CControlEffectMotion::Install - 0079C590
+CControlEffectMotion::UpdateParam - 0079C650
+
+[CControlEffectCombined] - CControlEffect
+CControlEffectCombined::CanBeAppliedOnControl - 0079A3A0
+CControlEffectCombined::UpdateParam - 0079A730
+CControlEffectCombined::Install - 0079A930
+
+[CControlEffectMoveFrame] - CControlEffect
+CControlEffectMoveFrame::CanBeAppliedOnControl - 00799A50
+CControlEffectMoveFrame::UpdateParam - 00799B50
+CControlEffectMoveFrame::Install - 0079A210
+
+[CControlEffectSimi] - CControlEffect
+CControlEffectSimi::CanBeAppliedOnControl - 0078C440
+CControlEffectSimi::Install - 0078D000
+CControlEffectSimi::UpdateParam - 0078D820
+
+[CGameMenuColorEffect] - CControlEffect
+CGameMenuColorEffect::CanBeAppliedOnControl - 0075A250
+CGameMenuColorEffect::UpdateParam - 0075A950
+CGameMenuColorEffect::Install - 0075B0D0
+
+[CGameMenuScaleEffect] - CControlEffect
+CGameMenuScaleEffect::Install - 004B0750
+CGameMenuScaleEffect::UpdateParam - 00759800
+CGameMenuScaleEffect::CanBeAppliedOnControl - 00759960
+CGameMenuScaleEffect::UpdateParam - 0079BFB0
+CGameMenuScaleEffect::ReInit - 00961D70
+CGameMenuScaleEffect::Stop - 00961DD0
+CGameMenuScaleEffect::Start - 00961DD0
+CGameMenuScaleEffect::ForceEndParam - 00961DD0
+CGameMenuScaleEffect::Run - 00961DD0
+
+[CGameCtnEdControlCam] - CMwNod
+CGameCtnEdControlCam::SetIsActive - 0075CC30
+CGameCtnEdControlCam::IsActive - 0075CC40
+CGameCtnEdControlCam::SetClampPitch - 0075CC50
+
+[CGameCtnEdControlCamCustom] - CGameCtnEdControlCam
+CGameCtnEdControlCamCustom::OnInputEvent - 0073DA40
+CGameCtnEdControlCamCustom::MoveFaster - 0073DB90
+CGameCtnEdControlCamCustom::MoveSlower - 0073DBA0
+CGameCtnEdControlCamCustom::ResetRoll - 0073DBB0
+CGameCtnEdControlCamCustom::ResetDir - 0073DCA0
+CGameCtnEdControlCamCustom::Update - 0073DDF0
+CGameCtnEdControlCamCustom::CamTargetPrev - 0073E410
+CGameCtnEdControlCamCustom::CamTargetNext - 0073E460
+CGameCtnEdControlCamCustom::CamAnchorPrev - 0073E4B0
+CGameCtnEdControlCamCustom::CamAnchorNext - 0073E4E0
+
+[CGameCtnEdControlCamPath] - CGameCtnEdControlCam
+CGameCtnEdControlCamPath::OnInputEvent - 0073CEB0
+CGameCtnEdControlCamPath::MoveFaster - 0073D000
+CGameCtnEdControlCamPath::MoveSlower - 0073D010
+CGameCtnEdControlCamPath::ResetRoll - 0073D020
+CGameCtnEdControlCamPath::ResetDir - 0073D140
+CGameCtnEdControlCamPath::Update - 0073D290
+CGameCtnEdControlCamPath::CamTargetPrev - 0073D8E0
+CGameCtnEdControlCamPath::CamTargetNext - 0073D930
+CGameCtnEdControlCamPath::CamAnchorPrev - 0073D980
+CGameCtnEdControlCamPath::CamAnchorNext - 0073D9B0
+
+[CGameControlCameraEffect] - CMwNod
+CGameControlCameraEffect::Reset - 0042B500
+CGameControlCameraEffect::Install - 005D7030
+CGameControlCameraEffect::IsInstalled - 00863030
+CGameControlCameraEffect::Uninstall - 00909220
+CGameControlCameraEffect::Update - 00961DD0
+CGameControlCameraEffect::ApplyEffect - 00961DD0
+
+[CGameControlCameraEffectGroup] - CGameControlCameraEffect
+CGameControlCameraEffectGroup::AddEffect - 0071CBE0
+CGameControlCameraEffectGroup::RemoveEffect - 0071CCC0
+CGameControlCameraEffectGroup::RemoveEffect - 0071CD20
+
+[CGameCtnMediaBlockEditorTriangles] - CGameCtnMediaBlockEditor
+CGameCtnMediaBlockEditorTriangles::GetToolTip - 00752150
+CGameCtnMediaBlockEditorTriangles::SetFrame - 007525C0
+CGameCtnMediaBlockEditorTriangles::Update - 00753230
+CGameCtnMediaBlockEditorTriangles::SetKey - 00754D90
+CGameCtnMediaBlockEditorTriangles::OnInputEvent - 00755D80
+CGameCtnMediaBlockEditorTriangles::SetBlock - 00756780
+
+[CGameCtnZone] - CMwNod
+CGameCtnZone::GetZoneInfo - 0078F270
+
+[CGameCtnZoneTest] - CGameCtnZone
+CGameCtnZoneTest::GetBlockInfoFromId - 0074FE20
+
+[CGameTournament] - CMwNod
+CGameTournament::SetContestantsCounts - 00724680
+CGameTournament::IsValid - 007246B0
+
+[CGameLadderRanking] - CMwNod
+CGameLadderRanking::FillFromXML - 00722FC0
+CGameLadderRanking::CreateRankingOfSameType - 007235B0
+
+[CGameControlDataType] - CMwNod
+CGameControlDataType::CanBeUseWith - 0071C480
+
+[CGameNetOnlineEvent] - CMwNod
+CGameNetOnlineEvent::SetStartDateFromString_YYYYMMDDHHMMSS - 00718C50
+CGameNetOnlineEvent::SetEndDateFromString_YYYYMMDDHHMMSS - 00718C60
+
+[CGameRemoteBufferPool] - CMwNod
+CGameRemoteBufferPool::CreateRemoteBuffer - 007182D0
+
+[CGameRemoteBufferDataInfo] - CMwNod
+CGameRemoteBufferDataInfo::CleanCallbacks - 00718030
+CGameRemoteBufferDataInfo::GetCacheDuration - 00718090
+CGameRemoteBufferDataInfo::GetPerPageCount - 007180A0
+CGameRemoteBufferDataInfo::NeedUseRefs - 007180B0
+CGameRemoteBufferDataInfo::GetCallbackGetRemote - 007180C0
+CGameRemoteBufferDataInfo::GetCallbackSetRemote - 007180D0
+CGameRemoteBufferDataInfo::GetCallbackHashParams - 007180E0
+
+[CGameCtnCollector] - CMwNod
+CGameCtnCollector::HackCompatibility_AfterLoadIdentifer - 0042B500
+
+[CGameCtnBlockInfo] - CGameCtnCollector
+CGameCtnBlockInfo::GetPillarMobilIndex - 00661250
+
+[CGameEnvironmentManager] - CMwNod
+CGameEnvironmentManager::Clean - 0042B500
+CGameEnvironmentManager::Update - 0042B500
+
+[CGamePlayground] - CGameNod
+CGamePlayground::UpdateAsync - 0042B500
+CGamePlayground::OnLocalPlayerSpectatorChange - 0042B500
+CGamePlayground::ApplyProfileInputSettings - 0042B500
+CGamePlayground::Pause - 005E3720
+CGamePlayground::Resume - 005E3750
+CGamePlayground::SetInDialogs - 005E3780
+CGamePlayground::UpdateFromSettingsParam - 005E37B0
+CGamePlayground::Init - 005E3A40
+CGamePlayground::Clean - 005E3AC0
+CGamePlayground::GetSettings - 005E3CF0
+
+[CGameRace] - CGamePlayground
+CGameRace::MediaClipCheckInGameTriggers - 0042B500
+CGameRace::GetRandomPlayerInfo - 004B0750
+CGameRace::NetPlayerIsPlaying - 005DD920
+CGameRace::SpectatorSetCameraTarget - 005DD950
+CGameRace::SwitchFromRace - 005DDA10
+CGameRace::LoadPreset - 005DDD50
+CGameRace::SavePreset - 005DDDA0
+CGameRace::SwitchToRace - 005DE050
+CGameRace::SpectatorSetCameraType - 005DE4C0
+CGameRace::UpdateTargetFromRaceInfos - 0078F270
+CGameRace::MediaClipCreateDefaultStart - 0078F270
+CGameRace::MediaClipCreateDefaultIntro - 0078F270
+CGameRace::MediaClipCreateDefaultFinish - 0078F270
+
+[CTrackManiaRace] - CGameRace
+CTrackManiaRace::SetOfficial - 0042B500
+CTrackManiaRace::SetScoresDirty - 0042B500
+CTrackManiaRace::SelectOpponents - 0042B500
+CTrackManiaRace::SetDirectOpponentGhosts - 0042B500
+CTrackManiaRace::SetGhosts - 0042B500
+CTrackManiaRace::GetChallenge - 00460980
+CTrackManiaRace::GetCountdownDuration - 0047AD00
+CTrackManiaRace::ComputeNextRaceStartTime - 0047AD10
+CTrackManiaRace::OnPlayFieldModified - 0047AD60
+CTrackManiaRace::OnInDialogsInputEvent - 0047AD70
+CTrackManiaRace::GetBestTimeOrScore - 0047B190
+CTrackManiaRace::GetStrDelayFromBestRaceTimeOrScore - 0047B1D0
+CTrackManiaRace::GetStrLadderScore - 0047B230
+CTrackManiaRace::GetStrTotalRoundScore - 0047B260
+CTrackManiaRace::GetStrLastRaceRoundScore - 0047B260
+CTrackManiaRace::IsStuntsMode - 0047B390
+CTrackManiaRace::IsRoundsMode - 0047B3B0
+CTrackManiaRace::GetRaceInterface - 0047B450
+CTrackManiaRace::UpdateRaceSettingsInCurrentProfile - 0047B8E0
+CTrackManiaRace::SaveRaceSettingsToCurrentProfile - 0047B960
+CTrackManiaRace::RestoreRaceSettingsFromCurrentProfile - 0047B9B0
+CTrackManiaRace::BuildRaceInputMaps - 0047BA30
+CTrackManiaRace::Reset - 0047BDD0
+CTrackManiaRace::OnStartLine - 0047C280
+CTrackManiaRace::OnCheckpoint - 0047C330
+CTrackManiaRace::OnOutOfTheRing - 0047C560
+CTrackManiaRace::GetInterface - 0047C8B0
+CTrackManiaRace::InputRace - 0047CF80
+CTrackManiaRace::OnInputEvent - 0047DCD0
+CTrackManiaRace::InternalOnCheckpoint - 0047E400
+CTrackManiaRace::OnPlayerRemoved - 0047E610
+CTrackManiaRace::GetCurrentTime - 0047E680
+CTrackManiaRace::OnFinishLine - 00480820
+CTrackManiaRace::OnPlayerAdded - 00481800
+CTrackManiaRace::ResetPlayer - 004831F0
+CTrackManiaRace::DelayedFinishLine - 00483440
+CTrackManiaRace::DisplayStuntMessages - 004B31B0
+CTrackManiaRace::ComputeStunt - 004B3910
+CTrackManiaRace::UpdatePlayerInfoFromNewScoreAndTimeAtCheckpoint - 005B06B0
+CTrackManiaRace::DisplayDialogEnd - 005B0A10
+CTrackManiaRace::IsEswcCupMode - 0078F270
+CTrackManiaRace::IsTeamMode - 0078F270
+CTrackManiaRace::GetNbCurrentCompetitors - 00925BE0
+CTrackManiaRace::OnPlayerChanged - 00961DD0
+CTrackManiaRace::SmallRespawn - 00961DD0
+
+[CTrackManiaRaceNet] - CTrackManiaRace
+CTrackManiaRaceNet::GetTeamName - 004B4280
+CTrackManiaRaceNet::GetTeamNameForDisplay - 004B4320
+CTrackManiaRaceNet::StartDelayValueCustom - 004B44F0
+CTrackManiaRaceNet::StartDelayValue - 004B4520
+CTrackManiaRaceNet::IsDelayStarted - 004B4540
+CTrackManiaRaceNet::IsDelayReached - 004B4550
+CTrackManiaRaceNet::SetIsDisplayEndMatchResults - 004B5990
+CTrackManiaRaceNet::DisplayPlayerStuntsScore - 004B5BB0
+CTrackManiaRaceNet::IsDrawMatch - 004B5C30
+CTrackManiaRaceNet::OnInsertTime - 004B6540
+CTrackManiaRaceNet::OnInsertStuntsScore - 004B6730
+CTrackManiaRaceNet::ResetScores - 004B7110
+CTrackManiaRaceNet::GetTeamScore - 004B7210
+CTrackManiaRaceNet::ArchivePlayerScores - 004B7280
+CTrackManiaRaceNet::GetEndRaceResultMessage - 004B77C0
+CTrackManiaRaceNet::NewCheckpointTimeReceived - 004B8550
+CTrackManiaRaceNet::TargetScoresUpdate_GetValidatedCheckpoints - 004B8C10
+CTrackManiaRaceNet::TargetScoresUpdate_HaveInvalidPlayersState - 004B8C30
+CTrackManiaRaceNet::GetTargetPlayerUid - 004B8C40
+CTrackManiaRaceNet::UpdateTargetsScore_FirstTurn - 004B91D0
+CTrackManiaRaceNet::UpdateTargetsScore_KillPlayersWithBadState - 004B9230
+CTrackManiaRaceNet::TargetScoresUpdate_PlayersAverageRank - 004B92A0
+CTrackManiaRaceNet::TargetScoresUpdate_IsFirstTurn - 004B92F0
+CTrackManiaRaceNet::TargetScoresUpdate_OnCheckpoints - 004B94B0
+CTrackManiaRaceNet::TargetScoresUpdate_OnCheckpoint - 004B9630
+CTrackManiaRaceNet::TargetScoresUpdate_OnRaceTime - 004B97F0
+CTrackManiaRaceNet::TargetScoresUpdate_OnRaceScore - 004B9840
+CTrackManiaRaceNet::TargetScoresUpdate_OnPlayerRemoved - 004B9880
+CTrackManiaRaceNet::TargetScoresUpdate_Reset - 004B98D0
+CTrackManiaRaceNet::TargetScoresUpdate_OnRespawn - 004B99A0
+CTrackManiaRaceNet::TargetScoresUpdate_OnHistory - 004B9A20
+CTrackManiaRaceNet::VerifyTargetValidity - 004B9AE0
+CTrackManiaRaceNet::UpdateTargetsScore_CheckpointsTime - 004BA320
+CTrackManiaRaceNet::UpdateTargetsScore_CheckpointsScore - 004BA510
+CTrackManiaRaceNet::UpdateTargetsScore_RaceTime - 004BA6E0
+CTrackManiaRaceNet::UpdateTargetsScore_RaceScore - 004BA7F0
+CTrackManiaRaceNet::UpdateTargetsScore_SpeedMin - 004BA900
+CTrackManiaRaceNet::UpdateTargetsScore_SpeedMax - 004BAA10
+CTrackManiaRaceNet::UpdateTargetsScore_RemainingLaps - 004BAAD0
+CTrackManiaRaceNet::UpdateTargetsScore_RemainingCheckpoints - 004BAB80
+CTrackManiaRaceNet::UpdateTargetsScore_RemainingScore - 004BAC30
+CTrackManiaRaceNet::UpdateTargetsScore_DelayedTime - 004BADB0
+CTrackManiaRaceNet::UpdateTargetsScore_Team - 004BAF80
+CTrackManiaRaceNet::UpdateTargetsScore_MustBeAfter - 004BB020
+CTrackManiaRaceNet::UpdateTargetsScore_AverageRank - 004BB0A0
+CTrackManiaRaceNet::UpdateTargetsScore_Respawners - 004BB100
+CTrackManiaRaceNet::UpdateTargetsScore_RaceFinishedOrSpectator - 004BB1F0
+CTrackManiaRaceNet::TargetScoresUpdate_GetNextPlayerPlayingUid - 004BB240
+CTrackManiaRaceNet::TargetScoresUpdate_ResetHasFinishedRace - 004BB2B0
+CTrackManiaRaceNet::TargetScoresUpdate_OnPlayerAdded - 004BB310
+CTrackManiaRaceNet::StopDelayValue - 0059FB60
+CTrackManiaRaceNet::UpdateTargetsScore_RemainingTime - 005B06B0
+CTrackManiaRaceNet::IsMatchOver - 0078F270
+CTrackManiaRaceNet::ShouldReset - 0078F270
+CTrackManiaRaceNet::UpdateTargetsScore_Fame - 007BCCE0
+CTrackManiaRaceNet::UpdateTargetsScore_InWater - 007BCCE0
+
+[CTrackManiaRaceNetRounds] - CTrackManiaRaceNet
+CTrackManiaRaceNetRounds::GetFinishTimeout - 0046A1F0
+
+[CTrackManiaRaceNetTimeAttack] - CTrackManiaRaceNet
+CTrackManiaRaceNetTimeAttack::GetFinishTimeout - 004641B0
+
+[CTrackManiaRaceNetLaps] - CTrackManiaRaceNet
+CTrackManiaRaceNetLaps::GetFinishTimeout - 00460DB0
+
+[CTrackManiaRace1P] - CTrackManiaRace
+CTrackManiaRace1P::SetOpponent - 00474280
+
+[CGamePlayer] - CGameNod
+CGamePlayer::SetName - 004FEB30
+CGamePlayer::SetControlPlayer - 005E2F60
+CGamePlayer::UpdatePlayer - 005E2FA0
+CGamePlayer::UpdatePlayerAsync - 005E2FC0
+CGamePlayer::InteractWithTriggers - 00925BE0
+
+[CGameAnalyzer] - CMwNod
+CGameAnalyzer::Cleanup - 0070EB30
+CGameAnalyzer::RefreshUi - 0070EC00
+CGameAnalyzer::SwitchMode - 0070ED10
+CGameAnalyzer::Init - 0070EE80
+CGameAnalyzer::BeforeViewportUpdate - 00710D80
+CGameAnalyzer::GetModeCount - 00826EE0
+
+[CGameFid] - CMwNod
+CGameFid::InitFolderDummy - 00707170
+
+[CGameCtnChallengeInfo] - CGameFid
+CGameCtnChallengeInfo::SetFid - 005CE640
+
+[CGameNetPlayerInfo] - CMwNod
+CGameNetPlayerInfo::IsPlayingType - 00700FF0
+CGameNetPlayerInfo::ArchivePlayerInfo - 00701610
+CGameNetPlayerInfo::GetReplacementAvatar - 0078F270
+CGameNetPlayerInfo::IsConnectedToMasterServer - 0078F270
+CGameNetPlayerInfo::GetLadderStats - 0078F270
+
+[CGamePlayerInfo] - CGameNetPlayerInfo
+CGamePlayerInfo::GetReplacementSkinPackDesc - 004B0750
+
+[CGameLoadProgress] - CMwNod
+CGameLoadProgress::StopSafe - 0042B500
+
+[CGameCtnMediaTrack] - CMwNod
+CGameCtnMediaTrack::CanAppendKeyOn - 00696C50
+
+[CGameControlCameraMaster] - CMwNod
+CGameControlCameraMaster::Switch - 00692EF0
+
+[CGameGhost] - CMwNod
+CGameGhost::OnEndReplay - 0042B500
+CGameGhost::WhileOutOfReplay - 0042B500
+CGameGhost::WhileInReplay - 0042B500
+CGameGhost::CanReplay - 006761E0
+CGameGhost::StoreState - 006766B0
+
+[CGameMenu] - CMwNod
+CGameMenu::AddFrame - 006557E0
+CGameMenu::NotifyInputEvent - 00655E00
+CGameMenu::RemoveFrame - 00655E30
+CGameMenu::GameHide - 006567D0
+CGameMenu::GameShow - 00657AC0
+CGameMenu::ShowFrameInternal - 00657BE0
+CGameMenu::HideFrameInternal - 00658510
+CGameMenu::InternalAddFrame - 00658570
+
+[CGameManialinkBrowser] - CMwNod
+CGameManialinkBrowser::OnInputEvent - 00648BE0
+
+[CGameSystemOverlay] - CMwNod
+CGameSystemOverlay::OnInputEvent - 0063F290
+
+[CGameCtnMenus] - CMwNod
+CGameCtnMenus::MenuInternetLeague_OnZonesLadderPageChanged - 0042B500
+CGameCtnMenus::MenuEditors - 0042B500
+CGameCtnMenus::MenuChooseChallenge_OnSaveSettings - 0042B500
+CGameCtnMenus::OnGeneralScoresUpdated - 0042B500
+CGameCtnMenus::MenuMain_UpdateBuddies - 0042B500
+CGameCtnMenus::UpdateAsync - 0042B500
+CGameCtnMenus::OnCampaignsRecordsUpdated - 0042B500
+CGameCtnMenus::DialogInGameMenu_OnHelp - 0042B500
+CGameCtnMenus::MenuChooseChallenge_UpdateLeague - 0042B500
+CGameCtnMenus::MenuCredits - 0042B500
+CGameCtnMenus::MenuInternetLeague_UpdatePlayerScores - 0042B500
+CGameCtnMenus::OnLadderScoresUpdated - 0042B500
+CGameCtnMenus::OnCampaignsScoresUpdated - 0061F6F0
+CGameCtnMenus::MenuMultiPlayerNetworkLan_OnRefresh - 0061F730
+CGameCtnMenus::MenuMultiPlayerNetworkLan_OnCreate - 0061F760
+CGameCtnMenus::MenuMultiPlayerNetworkLan_OnBack - 0061F780
+CGameCtnMenus::MenuMultiPlayerNetworkLan_GetServerDataTypeInfos - 0061F7A0
+CGameCtnMenus::MenuMultiPlayerNetworkLan_GetPlayerDataTypeInfos - 0061F800
+CGameCtnMenus::MenuConfigureInputs_Setup - 0061F860
+CGameCtnMenus::MenuConfigureInputs_OnBack - 0061F8D0
+CGameCtnMenus::MenuMain_Init - 0061FC90
+CGameCtnMenus::Start - 006200D0
+CGameCtnMenus::MenuMain - 00620370
+CGameCtnMenus::MenuMain_ViewManialink - 006204E0
+CGameCtnMenus::MenuMain_Clean - 00620520
+CGameCtnMenus::MenuMultiPlayerNetworkLan - 00620600
+CGameCtnMenus::MenuMultiPlayerNetworkLan_Init - 00620940
+CGameCtnMenus::MenuMultiPlayerNetworkLan_Clean - 00620B40
+CGameCtnMenus::MenuMultiPlayerNetworkLan_RefreshList - 00620CF0
+CGameCtnMenus::MenuMultiPlayerNetworkLan_OnSel - 00620F00
+CGameCtnMenus::MenuProfileAdvanced - 00621C40
+CGameCtnMenus::MenuMain_FinalClean - 00622D10
+CGameCtnMenus::MenuConfigureInputs - 00625AF0
+CGameCtnMenus::DialogInGameMenu_OnAdvanced - 006290C0
+CGameCtnMenus::DialogInGameMenu_OnCancel - 006290D0
+CGameCtnMenus::DialogManageGroup_DoCreateAGroup - 006298F0
+CGameCtnMenus::DialogManageGroup_DoSubscribeToGroup - 006298F0
+CGameCtnMenus::ShowMenus - 00629CB0
+CGameCtnMenus::DialogJoin - 0062B6A0
+CGameCtnMenus::DialogJoin_Clean - 0062BAE0
+CGameCtnMenus::DialogInGameMenu_OnResume - 0062FAC0
+CGameCtnMenus::DialogInGameMenu_Restart - 0062FAD0
+CGameCtnMenus::DialogInGameMenu_Next - 0062FB20
+CGameCtnMenus::DialogInGameMenu_Spectator - 0062FB70
+CGameCtnMenus::DialogInGameMenu_OfficialMode - 0062FB80
+CGameCtnMenus::DialogInGameMenu_Buddy - 0062FB90
+CGameCtnMenus::DialogInGameMenu_Abuse - 0062FBA0
+CGameCtnMenus::DialogInGameMenu_Kick - 0062FBB0
+CGameCtnMenus::DialogInGameMenu_Ban - 0062FBC0
+CGameCtnMenus::DialogInGameMenu_OnBecomeReferee - 0062FBD0
+CGameCtnMenus::DialogInGameMenu_OnSaveReplay - 0062FBE0
+CGameCtnMenus::DialogInGameMenu_OnSavePrevReplay - 0062FBF0
+CGameCtnMenus::DialogInGameMenu_OnSaveChallenge - 0062FC00
+CGameCtnMenus::DialogInGameMenu_OnQuit - 0062FC10
+CGameCtnMenus::DialogInGameMenu_OnPlayerProfile - 0062FC20
+CGameCtnMenus::DialogInGameMenu_OnLadderRankings - 0062FC30
+CGameCtnMenus::DialogInGameMenu_OnVote - 0062FC40
+CGameCtnMenus::DialogManageGroup_DoUnsubscribeFromGroup - 00633690
+CGameCtnMenus::MenuInternetLeague_OnCreate - 00636E70
+CGameCtnMenus::MenuInternetLeague_OnBack - 00636E90
+CGameCtnMenus::MenuInternetLeague_ResetPage - 00636EE0
+CGameCtnMenus::MenuInternetLeague_OnCardSelected - 00636F30
+CGameCtnMenus::MenuInternetLeague_GetDataTypeInfosFromNod - 00637030
+CGameCtnMenus::MenuInternetLeague_GetLadderDataTypeInfosFromNod - 006371F0
+CGameCtnMenus::MenuInternetLeague_OnRefreshSimple - 00637350
+CGameCtnMenus::MenuInternetLeague_Clean - 00637840
+CGameCtnMenus::MenuInternetLeague_SetUpCard - 00637860
+CGameCtnMenus::MenuInternetLeague_OnRefresh - 006388F0
+CGameCtnMenus::MenuInternetLeague_OnSimpleServerSelected - 00638CC0
+CGameCtnMenus::MenuInternetLeague_OnServerSelected - 00638D10
+CGameCtnMenus::MenuInternetLeague_OnPlayerSelected - 00638D60
+CGameCtnMenus::MenuInternetLeague_OnLeagueRankingSelected - 00638DB0
+CGameCtnMenus::MenuInternetLeague_OnHierarchyUp - 0063A2F0
+CGameCtnMenus::MenuInternetLeague_OnLadderHierarchyUp - 0063A440
+CGameCtnMenus::MenuInternetLeague_OnChangeOnlyPaying - 0063A620
+CGameCtnMenus::MenuInternetLeague_OnHierarchyItemSelected - 0063B050
+CGameCtnMenus::MenuInternetLeague - 0063B170
+CGameCtnMenus::MenuChooseChallenge_OnChallengeInfoUpdated - 0063FAA0
+CGameCtnMenus::MenuChooseChallenge_Clean - 0063FF10
+CGameCtnMenus::MenuChooseChallenge_GameFidFilter - 006403E0
+CGameCtnMenus::MenuChooseChallenge_OnPlay - 006406A0
+CGameCtnMenus::MenuChooseChallenge_OnOk - 00640B40
+CGameCtnMenus::MenuChooseChallenge_OnRefresh - 00640ED0
+CGameCtnMenus::MenuChooseChallenge_OnBack - 006410C0
+CGameCtnMenus::ChooseChallenge - 00641110
+CGameCtnMenus::MenuChooseChallenge - 00641310
+CGameCtnMenus::DialogChooseChallenge - 006413E0
+CGameCtnMenus::MenuChooseChallenge_Init - 006416C0
+CGameCtnMenus::MenuVehicleProfile - 006445F0
+CGameCtnMenus::MenuMultiLocal_OnBack - 0064BAC0
+CGameCtnMenus::MenuMultiLocal_OnOk - 0064BAE0
+CGameCtnMenus::MenuMultiLocal_OnConfigureInputs - 0064BAF0
+CGameCtnMenus::MenuMultiLocal_GeneratePlayerProfiles - 0064C1D0
+CGameCtnMenus::MenuMultiLocal - 0064C2B0
+CGameCtnMenus::DialogMessenger_DoSend - 007BCCE0
+CGameCtnMenus::BackToMainMenu - 00925BE0
+CGameCtnMenus::MenuChooseChallenge_OnFocus - 00961DD0
+CGameCtnMenus::DialogChooseGameModeFilter_OnGameModeChoosen - 00961DD0
+CGameCtnMenus::DialogChooseGameModeFilter_Init - 00961DD0
+CGameCtnMenus::DialogMessenger_DoSendAll - 00961DD0
+CGameCtnMenus::RedrawCollectorIcons - 00961DD0
+
+[CGamePlayerCameraSet] - CMwNod
+CGamePlayerCameraSet::OverrideCamVal - 00961DD0
+
+[CGamePlaygroundInterface] - CMwNod
+CGamePlaygroundInterface::InterfaceVisibleSet_MediaClip - 005E1A30
+CGamePlaygroundInterface::InterfaceVisibleInternalUpdate - 005E1A50
+CGamePlaygroundInterface::InterfaceVisibleInternalSet - 005E1D00
+CGamePlaygroundInterface::Clean - 005E1EF0
+CGamePlaygroundInterface::SwitchTo - 005E1F90
+CGamePlaygroundInterface::Init - 005E24B0
+CGamePlaygroundInterface::SwitchFrom - 005E2950
+CGamePlaygroundInterface::UpdateAsync - 005E2EC0
+CGamePlaygroundInterface::GetNetwork - 0078F270
+CGamePlaygroundInterface::BindControls - 00961DD0
+
+[CTrackManiaRaceInterface] - CGameRaceInterface
+CTrackManiaRaceInterface::GetPlayground - 004BFDE0
+CTrackManiaRaceInterface::SwitchFromRace - 004BFDF0
+CTrackManiaRaceInterface::SwitchToRace - 004C5FB0
+
+[CGameCtnReplayRecord] - CMwNod
+CGameCtnReplayRecord::PrepareSave - 0042B500
+CGameCtnReplayRecord::GetBestGhostRace - 005DB030
+CGameCtnReplayRecord::StopRecord - 005DB590
+CGameCtnReplayRecord::GhostRemove - 005DBBA0
+CGameCtnReplayRecord::StartRecord - 005DD4E0
+
+[CGameCtnMediaBlock] - CMwNod
+CGameCtnMediaBlock::OnKeyModif - 0042B500
+CGameCtnMediaBlock::PreloadDatas - 0042B500
+CGameCtnMediaBlock::GetTimeLineColor - 00453120
+CGameCtnMediaBlock::Install - 005D7030
+CGameCtnMediaBlock::SwitchOff - 005D7040
+CGameCtnMediaBlock::SwitchOn - 005D7050
+CGameCtnMediaBlock::StartGet - 005D7060
+CGameCtnMediaBlock::StartSet - 005D7080
+CGameCtnMediaBlock::ShiftStartSet - 005D70C0
+CGameCtnMediaBlock::EndGet - 005D7120
+CGameCtnMediaBlock::EndSet - 005D7140
+CGameCtnMediaBlock::KeyGetCount - 005D7190
+CGameCtnMediaBlock::KeyCopy - 005D71B0
+CGameCtnMediaBlock::KeyGetX - 005D71F0
+CGameCtnMediaBlock::KeySetX - 005D7240
+CGameCtnMediaBlock::KeyRemove - 005D72C0
+CGameCtnMediaBlock::TransformByTransRot - 005D72F0
+CGameCtnMediaBlock::Cut - 005D7300
+CGameCtnMediaBlock::Shift - 005D73A0
+CGameCtnMediaBlock::AppendTo - 005D7460
+CGameCtnMediaBlock::PreCleanDatas - 005D74F0
+CGameCtnMediaBlock::GetFastBufferKey - 0078F270
+CGameCtnMediaBlock::IsOnlyStartEndKeys - 0078F270
+CGameCtnMediaBlock::GetFastBufferKey - 0078F270
+CGameCtnMediaBlock::KeyInsert - 00905050
+CGameCtnMediaBlock::Uninstall - 00909220
+CGameCtnMediaBlock::Update - 00961D70
+CGameCtnMediaBlock::TransformByIso4 - 00961DD0
+CGameCtnMediaBlock::GetPackDescList - 00961DD0
+
+[CGameCtnMediaBlockCameraEffectShake] - CGameCtnMediaBlockCameraEffect
+CGameCtnMediaBlockCameraEffectShake::SetValue - 0073A630
+CGameCtnMediaBlockCameraEffectShake::GetValue - 0073A790
+
+[CGameCtnMediaBlockCameraPath] - CGameCtnMediaBlockCamera
+CGameCtnMediaBlockCameraPath::ResetKey - 00732D20
+CGameCtnMediaBlockCameraPath::RecomputePath - 007335F0
+
+[CGameCtnMediaBlockCameraCustom] - CGameCtnMediaBlockCamera
+CGameCtnMediaBlockCameraCustom::ResetKey - 00731030
+CGameCtnMediaBlockCameraCustom::RecomputeTangents - 00732280
+
+[CGameCtnMediaBlockText] - CGameCtnMediaBlock
+CGameCtnMediaBlockText::SetStyleColor - 00735780
+
+[CGameCtnMediaBlockUi] - CGameCtnMediaBlock
+CGameCtnMediaBlockUi::NeedEvents - 00452F90
+CGameCtnMediaBlockUi::GetUserInterface - 00500EE0
+CGameCtnMediaBlockUi::SetUserInterface - 005D7930
+CGameCtnMediaBlockUi::InternalPreloadDatas - 005D7980
+CGameCtnMediaBlockUi::InternalCleanDatas - 005D79E0
+
+[CGamePlayerProfile] - CMwNod
+CGamePlayerProfile::FillMultiLocalProfileHeaderFromProfile - 005C0E70
+CGamePlayerProfile::FillProfileFromMultiLocalProfileHeader - 005C0F30
+CGamePlayerProfile::Init - 005C1B10
+CGamePlayerProfile::CreateMultiLocalProfileHeader - 005C2A60
+
+[CGameControlCardManager] - CMwNod
+CGameControlCardManager::CreateCardFor - 005BFAB0
+CGameControlCardManager::CreateCardFromDataType - 005BFAE0
+CGameControlCardManager::GetDataType - 005BFB10
+CGameControlCardManager::CreateCardFor - 005BFC70
+CGameControlCardManager::GetDataTypeFor - 005BFD50
+CGameControlCardManager::GetDataTypeFor - 005BFE80
+
+[CGameNetwork] - CMwNod
+CGameNetwork::ResetNetworkInfos - 0042B500
+CGameNetwork::OnVoteRefresh - 0042B500
+CGameNetwork::OnCallVoteCanceled - 0042B500
+CGameNetwork::OnVoteSuccess - 0042B500
+CGameNetwork::PrepareSendAlive - 0042B500
+CGameNetwork::OnVoteFailed - 0042B500
+CGameNetwork::CanReceiveGameSync - 004B0750
+CGameNetwork::MustSaveBandwidthForPlayer - 004B0750
+CGameNetwork::HaveReferees - 004E33D0
+CGameNetwork::CreateOnlineEvent - 005B0340
+CGameNetwork::CreateOnlineNews - 005B03B0
+CGameNetwork::ReceiveInGameSync - 005B06B0
+CGameNetwork::MainLoop_Menus - 005B06B0
+CGameNetwork::CreatePlayerInfo - 005B0710
+CGameNetwork::Sv_CreateServerInfo - 005B0790
+CGameNetwork::OnNetFormReceived - 005B0910
+CGameNetwork::MainLoop_RoundPrepare - 005B0A10
+CGameNetwork::MainLoop_RoundPlay - 005B0A10
+CGameNetwork::MainLoop_SetUp - 005B0A10
+CGameNetwork::MainLoop_RoundExit - 005B0A80
+CGameNetwork::SwitchToReferee - 005B0AF0
+CGameNetwork::ClearNetworkInfos - 005B0B80
+CGameNetwork::ApplyNetworkParams - 005B1070
+CGameNetwork::OnPlayerAdded - 005B1A70
+CGameNetwork::OnPlayerRemoved - 005B1B90
+CGameNetwork::MustDropPlayer - 005B2350
+CGameNetwork::MakeReferee - 005B25A0
+CGameNetwork::UpdateReferee - 005B2600
+CGameNetwork::OnRefereeBecomePlayer - 005B2660
+CGameNetwork::ComputeNetworkInfos - 005B2880
+CGameNetwork::ApplySystemConfig - 005B3400
+CGameNetwork::UpdateInfos - 005B3F60
+CGameNetwork::OnPlayerChanged - 005B4800
+CGameNetwork::Sv_AcceptConnection - 005B4BE0
+CGameNetwork::Cl_ClientConnectionFailed - 005B5F00
+CGameNetwork::Cl_Disconnected - 005B60F0
+CGameNetwork::OnPlayerBecomeReferee - 005B6920
+CGameNetwork::Destroy - 005BD140
+CGameNetwork::OnPlayerAdded_Dedicated - 00611140
+CGameNetwork::OnNewCallVoteAsk - 00616630
+CGameNetwork::Tunnel_OnDataReceived - 00619780
+CGameNetwork::OnDisplayDisplayManialinkPage - 0061A680
+CGameNetwork::Sv_CanNetFormBeRelayed - 0079BFB0
+CGameNetwork::OnNoticeReceived - 007BCCE0
+CGameNetwork::GetOrderedPlayerInfosToSendForPlayer - 007BCCE0
+CGameNetwork::SendInGameSync - 00886890
+CGameNetwork::RestorePlayerNetState - 00961D70
+CGameNetwork::Cl_OnServerInfoUpdated - 00961D70
+CGameNetwork::ComputeServerSendingInfos - 00961D70
+CGameNetwork::OnPlayerKicked - 00961DD0
+CGameNetwork::UpdateCoppersLeft - 00961DD0
+CGameNetwork::OnPlayerBanned - 00961DD0
+CGameNetwork::OnDownloadTerminated - 00961DD0
+CGameNetwork::Sv_SendInitInfosToPlayer - 00961DD0
+CGameNetwork::Cl_OnConnectedToServer - 00961DD0
+CGameNetwork::OnMSPlayerInfosReceived - 00961DD0
+CGameNetwork::OnPackListReceived - 00961DD0
+CGameNetwork::GeneratePlayerData - 00961DE0
+
+[CGameCtnNetwork] - CGameNetwork
+CGameCtnNetwork::RefreshCallVoteMessage - 0042B500
+CGameCtnNetwork::PurgeRefereeLastScoresValidated - 0042B500
+CGameCtnNetwork::MainLoop_RoundPrepareDoChallengeParams - 005B0A10
+CGameCtnNetwork::BuildValidationReplay - 0064F610
+CGameCtnNetwork::SendRefereeFinishValidation - 006773F0
+CGameCtnNetwork::SendWaitRefereesEnd - 006774B0
+CGameCtnNetwork::SetGetReplaysMode - 00677580
+CGameCtnNetwork::ResetNetworkParams - 00677990
+CGameCtnNetwork::RemoveWaitedRefereePlayer - 00677CB0
+CGameCtnNetwork::IncRefereeReplayCounter - 00677CE0
+CGameCtnNetwork::DecRefereeReplayCounter - 00677D10
+CGameCtnNetwork::ReceivePlayerInGameSync - 00678050
+CGameCtnNetwork::SetForceSpectator - 00678150
+CGameCtnNetwork::SetWishSpectator - 006781B0
+CGameCtnNetwork::OnSpectatorChanged - 00678210
+CGameCtnNetwork::InitWaitedReferees - 00679550
+CGameCtnNetwork::GetOrderedPlayerInfosToSendForFreeSpectator - 00679CB0
+CGameCtnNetwork::SetGameChallenge - 0067AAD0
+CGameCtnNetwork::InitGame - 0067AE00
+CGameCtnNetwork::SetOfficialMode - 0067B660
+CGameCtnNetwork::SetOfficialModeForNextMatch - 0067B780
+CGameCtnNetwork::MustWaitReferees - 0078F270
+CGameCtnNetwork::BuildBestRaceReplay - 0078F270
+CGameCtnNetwork::CheckPlaylistForCurrentServerParams - 0079BFB0
+CGameCtnNetwork::CheckChallengeForCurrentServerParams - 0079BFB0
+CGameCtnNetwork::DisconnectFromInternet - 00961DD0
+
+[CTrackManiaNetwork] - CGameCtnNetwork
+CTrackManiaNetwork::GetGameChallenge - 004DCB80
+CTrackManiaNetwork::RoundPrepare - 004DD6D0
+CTrackManiaNetwork::RoundExit - 004DD9F0
+CTrackManiaNetwork::CanRefereeUseThisPlayerScore - 00503C00
+CTrackManiaNetwork::GetRefereeUsableScoresCount - 00503EA0
+
+[CGameCtnChallenge] - CMwNod
+CGameCtnChallenge::IsInProgress - 004B0750
+CGameCtnChallenge::Destroy - 005A2EF0
+CGameCtnChallenge::DetermineChallengeKind - 005A3280
+CGameCtnChallenge::InitChallengeData - 005AA2C0
+
+[CGameCtnEditor] - CMwNod
+CGameCtnEditor::Clean - 0042B500
+CGameCtnEditor::BuildEditorInputMaps - 0042B500
+CGameCtnEditor::PlayfieldModified - 0042B500
+CGameCtnEditor::OnInputEvent - 004B0750
+CGameCtnEditor::ShouldUseMenuMap - 005A1710
+CGameCtnEditor::GetGridLocation - 005A1750
+CGameCtnEditor::SwitchFromEditor - 005A17F0
+CGameCtnEditor::SetGame - 005A1A60
+CGameCtnEditor::RunEditor - 005A1CF0
+CGameCtnEditor::UpdateGrid - 005A1D90
+CGameCtnEditor::AddMobilsToScene - 005A1E40
+CGameCtnEditor::Pause - 005A1EB0
+CGameCtnEditor::Resume - 005A1EF0
+CGameCtnEditor::SwitchToEditor - 005A1F50
+CGameCtnEditor::InputEditor - 005A2050
+CGameCtnEditor::AllowPacksUpdate - 00925BE0
+CGameCtnEditor::TreatInput - 00961DD0
+CGameCtnEditor::FastLoadChallenge - 00961DD0
+
+[CTrackManiaEditor] - CGameCtnEditor
+CTrackManiaEditor::UpdateCurrentBlockInfo - 0049F250
+CTrackManiaEditor::Scroll - 0049F570
+CTrackManiaEditor::Pan - 0049F8B0
+CTrackManiaEditor::CreateDefaultParams - 004A0080
+CTrackManiaEditor::Start - 004A0180
+CTrackManiaEditor::InitInterface - 004A04A0
+CTrackManiaEditor::UpdateCursorMobil - 004A0BD0
+CTrackManiaEditor::UpdateCursor - 004A1CD0
+CTrackManiaEditor::CanPlaceRectBlocks - 004AA510
+CTrackManiaEditor::Sweep - 004AA5E0
+CTrackManiaEditor::CanPlaceBlock - 004AA680
+CTrackManiaEditor::CanPlacePillars - 004AA780
+CTrackManiaEditor::CanPlaceRoadBlocks - 004AA8B0
+CTrackManiaEditor::PlaceBlockSimple - 004AAA70
+CTrackManiaEditor::PlaceRectBlocks - 004AAAE0
+CTrackManiaEditor::FastRemoveBlock - 004AAD60
+CTrackManiaEditor::CreatePillars - 004AB3A0
+CTrackManiaEditor::CreatePillar - 004AB4B0
+CTrackManiaEditor::RemovePillars - 004AB6A0
+CTrackManiaEditor::UpdateBlockJunctions - 004AB940
+CTrackManiaEditor::UpdateNeighbourBlock - 004AB9E0
+CTrackManiaEditor::Bulldoze - 004ABB60
+CTrackManiaEditor::CanPlacePillar - 004ABE10
+CTrackManiaEditor::PlaceBlockSlide - 004AC1C0
+CTrackManiaEditor::PlaceRoadBlocks - 004AC570
+CTrackManiaEditor::RemoveBlock - 004ACB80
+CTrackManiaEditor::RemoveRectBlock - 004AD040
+CTrackManiaEditor::UpdateBlockJunction - 004AD100
+CTrackManiaEditor::UpdateSlopes - 004AD330
+CTrackManiaEditor::AutoLinkRoads - 004AD640
+CTrackManiaEditor::AutoUnLinkRoads - 004AD9C0
+CTrackManiaEditor::PlaceBlock - 004AE110
+CTrackManiaEditor::FastPlaceBlock - 004AE4B0
+CTrackManiaEditor::UpdateInterface - 00961DD0
+
+[CFuncKeys] - CFunc
+CFuncKeys::IsLength - 004B0750
+CFuncKeys::GetLength - 00591340
+CFuncKeys::RemoveKey - 00591740
+CFuncKeys::Reset - 00591850
+CFuncKeys::AddKey - 00591860
+CFuncKeys::SetLength - 00961D70
+CFuncKeys::GetName - 00961DE0
+
+[CFuncKeysPath] - CFuncKeysTransQuat
+CFuncKeysPath::InsertKeyPath - 0058C4A0
+
+[CFuncShader] - CFuncPlug
+CFuncShader::ResetShader - 0059AD10
+CFuncShader::CreateNewCache - 0059AD30
+CFuncShader::ComputeFromTime - 0059AEA0
+
+[CFuncShaders] - CFuncShader
+CFuncShaders::ComputeInternal - 00599C20
+
+[CFuncShaderFxFactor] - CFuncShader
+CFuncShaderFxFactor::ComputeInternal - 007BCCE0
+
+[CFuncShaderLayerUV] - CFuncShader
+CFuncShaderLayerUV::ComputeInternal - 00598F40
+
+[CFuncShaderTweakKeysTranss] - CFuncShader
+CFuncShaderTweakKeysTranss::ComputeInternal - 00594230
+
+[CFuncLightIntensity] - CFuncLight
+CFuncLightIntensity::Compute - 0059AB30
+
+[CFuncLightColor] - CFuncLight
+CFuncLightColor::Compute - 00596E30
+
+[CFuncVisualShiver] - CFuncVisual
+CFuncVisualShiver::Compute - 00596850
+
+[CFuncVisualBlendShapeSequence] - CFuncVisual
+CFuncVisualBlendShapeSequence::Compute - 005954D0
+
+[CFuncTree] - CFuncPlug
+CFuncTree::IsChangeTreeLocation - 00925BE0
+
+[CFuncTreeTranslate] - CFuncTree
+CFuncTreeTranslate::Compute - 0059A780
+
+[CFuncTreeRotate] - CFuncTree
+CFuncTreeRotate::Compute - 00596160
+
+[CFuncTreeBend] - CFuncTree
+CFuncTreeBend::Compute - 00595E30
+
+[CFuncTreeElevator] - CFuncTree
+CFuncTreeElevator::Compute - 00594770
+
+[CFuncTreeSubVisualSequence] - CFuncTree
+CFuncTreeSubVisualSequence::Compute - 0058E320
+
+[CMotion] - CMwNod
+CMotion::Pause - 0042B500
+CMotion::Play - 0042B500
+CMotion::Stop - 0042B500
+CMotion::SetInPlayState - 0042B500
+CMotion::GetMotion - 0056E340
+CMotion::IsStopped - 0078F270
+CMotion::IsPlaying - 0078F270
+CMotion::WantRenderBefore - 0078F270
+CMotion::WantAbsorbContact - 0078F270
+CMotion::GetOwner - 0078F270
+CMotion::IsPaused - 0078F270
+CMotion::AreTreeLocationChanged - 00925BE0
+CMotion::IsToSave - 00925BE0
+CMotion::OnRenderBefore - 00961D70
+CMotion::GetNodsNotToDuplicate - 00961DD0
+CMotion::OnSolidChange - 00961DD0
+CMotion::OnEnterScene - 00961DD0
+CMotion::OnAbsorbContact - 00961DD0
+CMotion::OnLeaveScene - 00961DD0
+
+[CMotions] - CMotion
+CMotions::SetOwner - 00582C60
+
+[CMotionManagerCharacter] - CMotion
+CMotionManagerCharacter::OnCharacterEnterScene - 0042B500
+CMotionManagerCharacter::SetOwner - 0057D250
+CMotionManagerCharacter::SetFuncManager - 0057D680
+
+[CMotionGroupPlayers] - CMotion
+CMotionGroupPlayers::SetOwner - 0057AE50
+
+[CMotionPlayer] - CMotion
+CMotionPlayer::SetOwner - 0056EFD0
+
+[CMotionManaged] - CMotion
+CMotionManaged::SetOwner - 0056E3B0
+CMotionManaged::GetManagerModel - 0078F270
+CMotionManaged::GetManagerClassId - 0078F270
+
+[CMotionManager] - CMwNod
+CMotionManager::Reset - 0042B500
+CMotionManager::GetSector - 0078F270
+CMotionManager::GetMotionCount - 0078F270
+CMotionManager::PreloadResources - 00961DD0
+CMotionManager::RemoveMotion - 00961DD0
+CMotionManager::AddMotion - 00961DD0
+CMotionManager::SetSector - 00961DD0
+
+[CHmsZoneElem] - CMwNod
+CHmsZoneElem::GetLocation - 0085C9E0
+
+[CHmsPoc] - CHmsZoneElem
+CHmsPoc::SetLocation - 0054AC00
+CHmsPoc::SetZone - 0054AC20
+CHmsPoc::SwitchOn - 005543F0
+CHmsPoc::SwitchOff - 00554400
+
+[CHmsForceField] - CHmsPoc
+CHmsForceField::TestBoxOverlap - 0079BFB0
+CHmsForceField::GetValue - 00961DE0
+
+[CHmsZone] - CMwNod
+CHmsZone::TransformViewportToZone - 004B0750
+CHmsZone::CreateZoneCorpus - 0054CBF0
+CHmsZone::AddItem - 0054CC60
+CHmsZone::RemoveCorpus - 0054EE60
+CHmsZone::AddCorpus - 0054EEE0
+CHmsZone::UpdateCorpusFromDynamicState - 005B06B0
+CHmsZone::GetCollisionZone - 0078F270
+CHmsZone::BeforeIsZombieChange - 00961DD0
+CHmsZone::AddCollidableCorpus - 00961DD0
+CHmsZone::AfterCollisionGroupChange - 00961DD0
+CHmsZone::RemoveCollidableCorpus - 00961DD0
+CHmsZone::CorpusVisibleChange - 00961DD0
+CHmsZone::AddDynamicCorpus - 00961DD0
+CHmsZone::AfterIsZombieChange - 00961DD0
+CHmsZone::RemoveDynamicCorpus - 00961DD0
+CHmsZone::BeforeCollisionGroupChange - 00961DD0
+
+[CHmsViewport] - CMwNod
+CHmsViewport::LogViewportInfos - 0042B500
+CHmsViewport::TextureRemoveAllOverlayContext - 0042B500
+CHmsViewport::RemoveTemporaryResources - 0042B500
+CHmsViewport::OnSystemWindowChange - 0042B500
+CHmsViewport::RunWhenAppIsMinimized - 0042B500
+CHmsViewport::RenderFrameEnd - 0042B500
+CHmsViewport::GetDirectXDevice - 004B0750
+CHmsViewport::SetDialogBoxMode - 0052BE20
+CHmsViewport::Alpha01_BlendEdges - 0052C070
+CHmsViewport::Projector_DeferedEnable - 0052C090
+CHmsViewport::HighQualityEnable - 0052C0D0
+CHmsViewport::InRenderWrapShaderInternal - 0052CDC0
+CHmsViewport::SetSystemWindow - 0052D0C0
+CHmsViewport::RenderFrameBegin - 0052D600
+CHmsViewport::ApplySystemConfig - 0052DDC0
+CHmsViewport::UpdateVisibleZones - 0052FC10
+CHmsViewport::RenderShadowsSet - 00530E60
+CHmsViewport::FullScreenRetrieveModes - 00532C40
+CHmsViewport::ForceDeviceSynchro - 00925BE0
+CHmsViewport::OverlayDetach - 00961D70
+CHmsViewport::CameraDetach - 00961D70
+CHmsViewport::LoadResourceShadows - 00961DD0
+CHmsViewport::OverlayAttach - 00961DD0
+CHmsViewport::ScissorSetRect - 00961DD0
+CHmsViewport::CameraAttach - 00961DD0
+CHmsViewport::ShaderTweakAlphaTestRef - 00961DE0
+
+[CVisionViewport] - CHmsViewport
+CVisionViewport::Release - 0042B500
+CVisionViewport::LoadResourceEnd - 0042B500
+CVisionViewport::TextureGetUsedVideoBytes - 004B0750
+CVisionViewport::Create - 0079BFB0
+CVisionViewport::LoadResourceTree - 007BCCE0
+CVisionViewport::PixelShaderCompileAndCheck - 00926120
+CVisionViewport::VertexShaderCompileAndCheck - 00926120
+CVisionViewport::ShaderGetBuffer - 00955AF0
+CVisionViewport::TextureGetBuffer - 00955B00
+CVisionViewport::ShaderRemove - 00955B80
+CVisionViewport::TextureRemove - 00955BA0
+CVisionViewport::ShaderRemove - 00955E90
+CVisionViewport::TextureAddOrUndirtySafe - 00955EF0
+CVisionViewport::TextureRemove - 00955F50
+CVisionViewport::VisualRemove - 00955FA0
+CVisionViewport::VertexStreamRemove - 00955FF0
+CVisionViewport::IndexBufferRemove - 00956040
+CVisionViewport::VertexShaderRemove - 00956090
+CVisionViewport::PixelShaderRemove - 009560B0
+CVisionViewport::CleanAllDelayedRenders - 009560D0
+CVisionViewport::LensFlareOccFree - 00956160
+CVisionViewport::TextureAdd - 009569C0
+CVisionViewport::TextureUndirty - 00956B00
+CVisionViewport::VisualAdd - 00956B60
+CVisionViewport::VertexStreamAdd - 00956C20
+CVisionViewport::IndexBufferAdd - 00956CB0
+CVisionViewport::VertexShaderAdd - 00956D10
+CVisionViewport::PixelShaderAdd - 00956D30
+CVisionViewport::LensFlareOccIsVisible - 00957380
+CVisionViewport::ShaderFillOnDestroy - 00957490
+CVisionViewport::ShaderAdd - 009575F0
+CVisionViewport::TextureRemoveAll - 00957620
+CVisionViewport::UndirtyAllResources - 00957AD0
+CVisionViewport::RenderCameraBegin - 00957B20
+CVisionViewport::RemoveAllResourceAndReset - 009580B0
+
+[CVisionViewportDx9] - CVisionViewport
+CVisionViewportDx9::SetFullScreenGammaRamp - 0095A790
+CVisionViewportDx9::ComputeDriverWorldMatrix - 0095AB10
+CVisionViewportDx9::ComputeDriverViewMatrix - 0095AB40
+CVisionViewportDx9::ComputeRenderRectFromDriver - 0095AB70
+CVisionViewportDx9::ComputeDriverRenderRect - 0095B860
+CVisionViewportDx9::ComputeDriverProjection - 0095D530
+CVisionViewportDx9::RestoreDevice - 0095DAF0
+CVisionViewportDx9::ResetDriver - 0095DDA0
+CVisionViewportDx9::PerformanceCompute - 0095F7B0
+CVisionViewportDx9::StartFullscreen - 00960880
+CVisionViewportDx9::ResumeFullscreen - 00960A40
+CVisionViewportDx9::ResetSwapChains - 00960C80
+CVisionViewportDx9::CreateShaderKeeper - 00984F90
+CVisionViewportDx9::EvictDriverResources - 00985260
+CVisionViewportDx9::TextureRenderPixelUpdate - 00985870
+CVisionViewportDx9::TextureRenderClear - 00985960
+CVisionViewportDx9::TextureUpdatePlugFromVision - 00985A20
+CVisionViewportDx9::TextureSaveVisionToImage - 00985AC0
+CVisionViewportDx9::TextureSwapVisionDatas - 00985D20
+CVisionViewportDx9::TextureCopyRenderToSystem - 00985D70
+CVisionViewportDx9::VisualUndirty - 00986290
+CVisionViewportDx9::VertexStreamUndirty - 00986420
+CVisionViewportDx9::IndexBufferUndirty - 00986490
+CVisionViewportDx9::TextureOnCameraDestroy - 00986870
+CVisionViewportDx9::ResetPlugTreeCaches - 009868C0
+CVisionViewportDx9::TextureDetach - 00986BB0
+CVisionViewportDx9::TextureForcePixelUpdate - 00986C50
+CVisionViewportDx9::TextureForcePixelUpdate - 00986CE0
+CVisionViewportDx9::TextureBlitBackBuffer - 00986D90
+CVisionViewportDx9::TextureConvertStaticToRender - 00986ED0
+CVisionViewportDx9::TextureConvertRenderToStatic - 00988E30
+CVisionViewportDx9::TextureSaveVisionToFile - 00989100
+CVisionViewportDx9::TextureLogMemoryUsage - 00989EB0
+CVisionViewportDx9::SyncGpuInit - 0098BAB0
+CVisionViewportDx9::CameraFxCreate - 0098DD40
+CVisionViewportDx9::RenderCameraDepTextures - 0099D150
+CVisionViewportDx9::RenderZoneEnd - 0099D1D0
+CVisionViewportDx9::RenderZoneBegin - 0099DB80
+CVisionViewportDx9::RenderPortalBegin - 0099F6C0
+CVisionViewportDx9::RenderPortalEnd - 0099FB10
+CVisionViewportDx9::RenderCameraEnd - 0099FE80
+CVisionViewportDx9::RenderOverlayZones - 009A2390
+CVisionViewportDx9::RenderZoneElems - 009A2D30
+CVisionViewportDx9::RenderVisual - 009A4870
+CVisionViewportDx9::SetLighting - 009A9290
+CVisionViewportDx9::Projector_DeferedIsSupported - 009B2AF0
+
+[CNetServer] - CMwNod
+CNetServer::BuildNewUserData - 004B0750
+CNetServer::UpdateSendingInfo - 005253B0
+CNetServer::UpdateSendingNodInfo - 00525400
+CNetServer::UpdateReceivingInfo - 00525430
+CNetServer::UpdateReceivingNodInfo - 00525480
+CNetServer::OnDisconnect - 00526880
+CNetServer::OnConnect - 00526910
+CNetServer::ProcessIncomming - 00527240
+CNetServer::ProcessIncommingPriorityNod - 00527A40
+CNetServer::OnConnectionRequest - 00527AA0
+CNetServer::OnPreJoin - 00759800
+CNetServer::CheckDisconnection - 0079BFB0
+CNetServer::OnConnectResponse - 007BCCE0
+CNetServer::OnVerifyConnection - 008C7FE0
+CNetServer::DeleteUserData - 00961DD0
+
+[CNetClient] - CMwNod
+CNetClient::OnConnectionEstablished - 00521CB0
+CNetClient::OnConnectionGranted - 00521D70
+CNetClient::OnUDPSucceed - 00521DB0
+CNetClient::UpdateSendingInfo - 00521E80
+CNetClient::UpdateSendingNodInfo - 00521EC0
+CNetClient::UpdateReceivingInfo - 00521EF0
+CNetClient::UpdateReceivingNodInfo - 00521F30
+CNetClient::FindConnectionFromServerAddress - 005221F0
+CNetClient::ProcessIncommingConnectionLessNod - 00522250
+CNetClient::PrivateOnDisconnect - 00522A60
+CNetClient::ProcessIncomming - 00522E70
+CNetClient::Send - 005231B0
+CNetClient::OnConnectionRefused - 005236F0
+CNetClient::OnUDPFailed - 005237B0
+CNetClient::OnConnect - 00523AA0
+CNetClient::OnServerInfoReceived - 00961D70
+CNetClient::OnDisconnect - 00961D70
+CNetClient::OnConnectChallenge - 00961D70
+CNetClient::OnConnectFailed - 00961D70
+
+[CNetFileTransfer] - CMwNod
+CNetFileTransfer::IsGameConnection - 004B0750
+CNetFileTransfer::CheckUploadAllowed - 00925BE0
+CNetFileTransfer::CheckDownloadAllowed - 00925BE0
+CNetFileTransfer::CheckLocatorAllowed - 00925BE0
+CNetFileTransfer::OnDownloadTerminated - 00961DD0
+
+[CNetMasterHost] - CMwNod
+CNetMasterHost::GetCurrentVersion - 00511050
+CNetMasterHost::IsValid - 00511060
+CNetMasterHost::SetDirty - 00511070
+CNetMasterHost::ArchiveQuickInfo - 00511120
+CNetMasterHost::GetServerHostName - 0078F270
+CNetMasterHost::IsServer - 0078F270
+CNetMasterHost::IsPrivate - 0078F270
+CNetMasterHost::IsFull - 0078F270
+CNetMasterHost::IsOnline - 00925BE0
+CNetMasterHost::IsIdle - 00925BE0
+CNetMasterHost::SetSendAliveParams - 00961D70
+
+[CGameNetServerInfo] - CNetMasterHost
+CGameNetServerInfo::ArchiveFull - 00702140
+CGameNetServerInfo::GetMaxPlayersCount - 007022D0
+CGameNetServerInfo::CommitNextChanges - 007024F0
+CGameNetServerInfo::IsPrivateForSpectator - 00702860
+CGameNetServerInfo::FillFromXML - 00702BC0
+CGameNetServerInfo::GetRaceType - 0078F270
+CGameNetServerInfo::GetPlayerDataSize - 0078F270
+CGameNetServerInfo::AcceptReferees - 007B1D60
+CGameNetServerInfo::SetRaceType - 00961DD0
+
+[CGameCtnNetServerInfo] - CGameNetServerInfo
+CGameCtnNetServerInfo::IsFullSpectator - 007038E0
+CGameCtnNetServerInfo::GetSaveStateVersion - 0078F270
+
+[CTrackManiaNetworkServerInfo] - CGameCtnNetServerInfo
+CTrackManiaNetworkServerInfo::ArchiveQuickGameModeOptions - 004AFE60
+
+[CNetMasterServer] - CMwNod
+CNetMasterServer::NewHost - 00509FB0
+CNetMasterServer::NewMasterServerRequest - 0050A020
+CNetMasterServer::Destroy - 0050A230
+CNetMasterServer::MasterServerRequestErrorHandler - 0050C9E0
+CNetMasterServer::ReadRequestError - 0050CAF0
+CNetMasterServer::GetErrorMessage - 0050D070
+CNetMasterServer::ApplySystemConfig - 0050F0F0
+CNetMasterServer::MasterServerRequestContentHandler - 00926120
+CNetMasterServer::SpecificMasterServerRequestCallback - 00926120
+CNetMasterServer::TerminateMasterServerRequest - 00961DD0
+
+[CGameMasterServer] - CNetMasterServer
+CGameMasterServer::OnNewMessagesReceived - 0042B500
+CGameMasterServer::OnMessagesSent - 0042B500
+CGameMasterServer::ApplyNetworkParams - 005ADD40
+CGameMasterServer::NewOnlineEvent - 005ADD70
+CGameMasterServer::NewOnlineNews - 005ADD80
+CGameMasterServer::OnConnectAnswer - 005ADD90
+CGameMasterServer::PrepareSendAlive - 005ADDE0
+CGameMasterServer::CreateRemoteDataInfo - 005ADE30
+CGameMasterServer::CreatePools - 005AEDB0
+CGameMasterServer::CreateRemoteDataInfos - 005AEEA0
+CGameMasterServer::ReadUpdateOnlineProfileParams - 006B55E0
+CGameMasterServer::ReadTimeouts - 006B7170
+CGameMasterServer::ReadCachesDurationParams - 006B7ED0
+CGameMasterServer::ReadProfileParams - 006BC110
+CGameMasterServer::ReadMessageParams - 006C5640
+CGameMasterServer::ReadOnlineProfileParams - 006C7EF0
+CGameMasterServer::ReadSendAliveUpdateParams - 006D2810
+CGameMasterServer::OnNewServerInfoRead - 00961DD0
+
+[CNetNod] - CMwNod
+CNetNod::RecycleNod - 00508F70
+CNetNod::GetBaseLength - 00595300
+CNetNod::CompressPacket - 0078F270
+CNetNod::GetNodsFree - 0078F270
+CNetNod::GetNodsUsed - 0078F270
+CNetNod::GetPriority - 0078F270
+CNetNod::IsPriorityNod - 0078F270
+
+[CGameNetFormGameSync] - CNetNod
+CGameNetFormGameSync::UseSafeChannel - 0078F270
+
+[CGameNetFormAdmin] - CNetNod
+CGameNetFormAdmin::UseSafeChannel - 00925BE0
+
+[CGameNetFormBuddy] - CNetNod
+CGameNetFormBuddy::UseSafeChannel - 00925BE0
+
+[CGameNetForm] - CNetNod
+CGameNetForm::UseSafeChannel - 00925BE0
+
+[CNetClientInfo] - CNetNod
+CNetClientInfo::OldArchive - 0051E680
+CNetClientInfo::UseSafeChannel - 0078F270
+
+[CNetServerInfo] - CNetNod
+CNetServerInfo::UseSafeChannel - 0078F270
+
+[CGameNetFormTimeSync] - CNetFormTimed
+CGameNetFormTimeSync::UseSafeChannel - 0078F270
+
+[CNetFormPing] - CNetFormTimed
+CNetFormPing::UseSafeChannel - 0072AD90
+
+[CNetFormQuerrySessions] - CNetNod
+CNetFormQuerrySessions::UseSafeChannel - 0078F270
+
+[CNetFormEnumSessions] - CNetNod
+CNetFormEnumSessions::UseSafeChannel - 0078F270
+
+[CNetFormConnectionAdmin] - CNetNod
+CNetFormConnectionAdmin::UseSafeChannel - 00514B80
+
+[CNetFileTransferForm] - CNetNod
+CNetFileTransferForm::UseSafeChannel - 00925BE0
+
+[CNetFormRpcCall] - CNetNod
+CNetFormRpcCall::UseSafeChannel - 00925BE0
+
+[CSystemKeyboard] - CNodSystem
+CSystemKeyboard::SynchUpdate - 0043B450
+
+[CSystemMouse] - CNodSystem
+CSystemMouse::SynchUpdate - 0043A2A0
+
+[CSystemWindow] - CNodSystem
+CSystemWindow::SynchUpdate - 00439ED0
+
+[CSystemNodWrapper] - CMwNod
+CSystemNodWrapper::UpdateWrappedNod - 004B0750
+CSystemNodWrapper::CreateWrappedNod - 0078F270
+
+[CSystemFids] - CMwNod
+CSystemFids::TruncLocal - 0042F260
+CSystemFids::CreateSub - 0042F270
+CSystemFids::UpdateNameDown - 0042F300
+CSystemFids::UpdateTree - 0042F320
+CSystemFids::GetRoot - 0042F370
+CSystemFids::ArchiveFids - 0042F7C0
+CSystemFids::NewFidAdded - 0042FDA0
+CSystemFids::UpdateFidProps - 0042FF30
+CSystemFids::Browse - 00431850
+CSystemFids::GetFidsType - 0078F270
+CSystemFids::IsEqualFids - 0079BFB0
+CSystemFids::GetFullNameUpTo - 008C7FE0
+CSystemFids::GetFullName - 00961D70
+CSystemFids::NewFidsAdded - 00961DD0
+CSystemFids::CopyFromFids - 00961DD0
+
+[CSystemFidsFolder] - CSystemFids
+CSystemFidsFolder::GetIcon - 0042A680
+CSystemFidsFolder::CreateSameType - 0042AE40
+CSystemFidsFolder::UpdatedDirName - 0042AEB0
+
+[CSystemFid] - CMwNod
+CSystemFid::IsEqualFid - 00425EE0
+CSystemFid::UpdateNameDown - 00425F30
+CSystemFid::CopyFromFid - 004275A0
+CSystemFid::RequestWrite - 0078F270
+CSystemFid::ArchiveFid - 00961DD0
+
+[CSystemFidFile] - CSystemFid
+CSystemFidFile::UpdateFidPropsFromFile - 0042B270
+CSystemFidFile::CheckAll - 0042B500
+CSystemFidFile::UpdatedFileName - 0042B8D0
+

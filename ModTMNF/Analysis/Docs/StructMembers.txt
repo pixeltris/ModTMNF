@@ -1,0 +1,13 @@
+﻿# This file is used to manually define members for structs / classes.
+# Doing so allows this information to be used by either code generators, generators.
+
+DeclareType(int, _DWORD)
+
+BeginStruct(CHmsZoneDynamic)
+HelloWorld | int | 10 | 4
+
+BeginVTable
+
+BeginFuncs
+
+BeginStruct(CMwNod)

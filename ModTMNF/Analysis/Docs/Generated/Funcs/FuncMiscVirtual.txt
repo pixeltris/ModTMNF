@@ -1,0 +1,335 @@
+List all virtual functions excluding CMwNod types
+
+Duplicates: 1299
+
+public: virtual float __thiscall CAudioSoundBink::GetPlayCursor(void) - 007AD7D0
+public: virtual float __thiscall CAudioSoundBink::GetPlayLength(void) - 007AD820
+public: virtual int __thiscall CAudioSoundBink::IsPlaying(void) - 007AD640
+public: virtual void __thiscall CAudioSoundBink::ManagedStop(void) - 007AD490
+public: virtual void __thiscall CAudioSoundBink::Play(void) - 007AD5B0
+public: virtual void __thiscall CAudioSoundBink::RefreshStaticProperties(void) - 0042B500
+public: virtual void __thiscall CAudioSoundBink::SetPlayCursor(float) - 007AD750
+public: virtual void __thiscall CAudioSoundBink::Stop(void) - 007AD620
+public: virtual void __thiscall CAudioSoundBink::Update(void) - 007AD950
+public: virtual void __thiscall CAudioSoundEngine_Mixer_Implem<int,2>::AddMixElem(float,float,struct CAudioSoundEngine::SComp *,int) - 007A6900
+public: virtual void __thiscall CAudioSoundEngine_Mixer_Implem<int,6>::ComputeMix(unsigned char *,unsigned long) - 007A6C10
+public: virtual void __thiscall CCallbackMeasureImpression::RenderBeforeTree(class CHmsItem *,class CPlugTree *,class GmIso4 const &,class CHmsCamera *,struct SPlugTreeInRenderFlags) - 006F7920
+public: virtual unsigned long & __thiscall CCallbackSceneToyBoatSortCustom::GetItemData(class CHmsItem *) - 007DDCA0
+public: virtual int __thiscall CCallbackSceneToyBoatSortCustom::SortCustomFarToNear(class CHmsItem *,class CHmsCamera *,class CConstArray<struct SHmsItem_CallbackSortCustom_Elem> &) - 007E3590
+public: virtual void __thiscall CCallbackSceneVehicleCarAfterContacts::AfterContacts(class CHmsItem *) - 007C3040
+public: virtual void __thiscall CCallbackSceneVehicleCarComputeForces::ComputeForces(class CHmsItem *,float) - 007C7D40
+public: virtual class CFastStringInt const * __thiscall CClassicBuffer::GetFileName(void) - 0078F270
+public: virtual int __thiscall CClassicBuffer::IsSeekable(void)const  - 0078F270
+public: virtual void __thiscall CClassicBufferMemory::AdvanceOffset(unsigned long) - 009090B0
+public: virtual unsigned long __thiscall CClassicBufferMemory::GetActualSize(void)const  - 00416EB0
+public: virtual unsigned long __thiscall CClassicBufferMemory::GetAllocatedSize(void)const  - 0075CC40
+public: virtual void __thiscall CClassicDependant::DependantRelease(void) - 00A739F0
+public: virtual void __thiscall CCrystal::CreateDefaultData(void) - 00A60200
+public: virtual void __thiscall CCrystalFace::ArchiveFace(class CClassicArchive &,unsigned long) - 00A61CA0
+public: virtual void __thiscall CCrystalFace::ArchiveFixedNormals(class CClassicArchive &) - 00961DD0
+public: virtual int __thiscall CCrystalFace::AreVertexsDirect(class CCrystalVertex *,class CCrystalVertex *) - 00961DE0
+public: virtual void __thiscall CCrystalFace::ComputeDrawVertexs(void) - 0042B500
+public: virtual void __thiscall CCrystalFace::ComputeFaceNormals(void) - 0042B500
+public: virtual void __thiscall CCrystalFace::ComputeVertexsColors(void) - 0042B500
+public: virtual void __thiscall CCrystalFace::ComputeVertexsNormals(void) - 0042B500
+public: virtual unsigned long __thiscall CCrystalFace::CreateTexCoords(void) - 00452F30
+public: virtual int __thiscall CCrystalFace::EdgeIsConnected(class CCrystalEdge *) - 00A61F30
+public: virtual class GxVertex * __thiscall CCrystalFace::FindDrawVertex(class CCrystalVertex *) - 00A61C70
+public: virtual class GxVertex * __thiscall CCrystalFace::FindDrawVertexFromIndex(unsigned long) - 004B0750
+public: virtual unsigned long __thiscall CCrystalFace::FindVertexIndex(class CCrystalVertex *) - 004B0750
+public: virtual unsigned short * __thiscall CCrystalFace::GetDrawTriangles(void) - 0078F270
+public: virtual class GxVertex * __thiscall CCrystalFace::GetDrawVertexs(void) - 0078F270
+public: virtual unsigned long __thiscall CCrystalFace::GetNbDrawTriangle(void) - 0078F270
+public: virtual unsigned long __thiscall CCrystalFace::GetNpe(unsigned long) - 004B0750
+public: virtual void __thiscall CCrystalFace::GetTravelEdge(class CCrystalTravelEdge *,unsigned long,unsigned long,int) - 005B06B0
+public: virtual void __thiscall CCrystalFace::GetVertex(class CCrystalVertex * &,unsigned long) - 00961D70
+public: virtual int __thiscall CCrystalFace::IsValid(void) - 00A61D50
+public: virtual void __thiscall CCrystalFace::ResetEdgeCrystallize2(void) - 0042B500
+public: virtual void __thiscall CCrystalFace::SetFixedNormals(unsigned long,class GmVec3) - 005B06B0
+public: virtual void __thiscall CCrystalFace::SetRigidEdges(void) - 0042B500
+public: virtual void __thiscall CCrystalFace::SetVertex(class CCrystalVertex *,unsigned long) - 00A61C90
+public: virtual void __thiscall CCrystalFace::SetVertexWithoutVertexAddFace(class CCrystalVertex *,unsigned long) - 00961D70
+public: virtual void __thiscall CCrystalFace::UpdateTextureDrawCoords(void) - 0042B500
+public: virtual int __thiscall CCrystalQuadEqui::IsRigid(void) - 0078F270
+public: virtual unsigned long __thiscall CCrystalTriangle::GetNbVertex(void) - 006EB8E0
+public: virtual unsigned long __thiscall CCrystalTriangleEqui::GetFaceType(void) - 006EB8E0
+public: virtual unsigned long __thiscall CCrystalTriangleRaw::GetNbDrawVertex(void) - 006EB8E0
+public: virtual unsigned long __thiscall CCrystalVertex::GetClassicKind(void) - 006EB8E0
+public: virtual unsigned long __thiscall CEditionDataBitmap::GetCharacterIndexFromPicker(class CPlugTree *,unsigned long,class GmVec3 const &) - 008CE1C0
+public: virtual void __thiscall CEditionDataBitmap::GetCharTransformedBBox(unsigned long,class GmBoxAligned &) - 008CDF60
+public: virtual int __thiscall CFastBufferKey<struct CCtnMediaBlockEventTrackMania::SEvent>::AppendTo(float) - 0045F980
+public: virtual int __thiscall CFastBufferKey<struct CCtnMediaBlockEventTrackMania::SEvent>::ComputeBlendCoef(float,unsigned long &,unsigned long &,float &,int)const  - 0045F490
+public: virtual void __thiscall CFastBufferKey<struct CControlEffectSimi::SKeyVal>::GetBoundingIndices(float,unsigned long &,unsigned long &,int)const  - 005935D0
+public: virtual unsigned long const __thiscall CFastBufferKey<struct CGameCtnMediaBlockCameraPath::SKeyVal>::GetCount(void)const  - 0073AC50
+public: virtual float __thiscall CFastBufferKey<struct CGameCtnMediaBlockCameraSimple::SKeyVal>::GetFirstX(void)const  - 00697CB0
+public: virtual float __thiscall CFastBufferKey<struct CGameCtnMediaBlockCameraSimple::SKeyVal>::GetLastX(void)const  - 00697CC0
+public: virtual void __thiscall CFastBufferKey<class CMwNodRef<class CFuncKeysReal> >::GetPreviousIndex(float,unsigned long &,int)const  - 0045F130
+public: virtual float __thiscall CFastBufferKey<struct SDummy>::GetX(unsigned long)const  - 005DB2A0
+public: virtual void __thiscall CFastBufferKey<struct CGameCtnMediaBlockCameraSimple::SKeyVal>::KeyCopy(unsigned long,unsigned long) - 00697A40
+public: virtual void __thiscall CFastBufferKey<struct SDummy>::Remove(unsigned long) - 005DB2C0
+public: virtual void __thiscall CFastBufferKey<struct CCtnMediaBlockEventTrackMania::SEvent>::Reset(void) - 00739470
+public: virtual void __thiscall CFastBufferKey<class CMwNodRef<class GxFog> >::SetX(unsigned long,float) - 005937C0
+public: virtual void __thiscall CFastBufferKey<class CMwNodRef<class CFuncCurvesReal> >::ShiftMove(unsigned long,float) - 00592390
+public: virtual void __thiscall CFastBufferKey<struct CCtnMediaBlockEventTrackMania::SEvent>::SortAscending(void) - 0045FCF0
+public: virtual void __thiscall CFastCallbackInstance<class CTrackManiaMenus>::Callback(void) - 004EA4F0
+public: virtual void __thiscall CGameAdvertisingNadeo::Flush(void) - 00741DD0
+public: virtual void __thiscall CGameAdvertisingNadeo::InternalUpdate(int,class CFastBuffer<class CGameAdvertisingElement *> const &) - 00742200
+public: virtual void __thiscall CGameAdvertisingNadeo::ReportFrameFinished(class CGameAdvertisingElement *) - 00742710
+public: virtual void __thiscall CGameAdvertisingNadeo::ReportImpression(int,float,float,unsigned long,unsigned long,class CGameAdvertisingElement *) - 00741AC0
+public: virtual void __thiscall CGameAdvertisingNadeo::SetZone(class CFastString const &,class CFastString const &,class CFastString const &,class CFastString const &,enum CGameAdvertising::EAdvertisingMode) - 00741AF0
+public: virtual void __thiscall CGameAdvertisingRadial::NotifyInstance(class CGameAdvertisingElement *,unsigned long,int) - 00743030
+public: virtual void __thiscall CGameApp_MenuContext::HideMenu(class CGameMenu *) - 0059E100
+public: virtual void __thiscall CGameApp_MenuContext::ShowMenu(class CGameMenu *) - 0059E0F0
+public: virtual void __thiscall CGameCtnLoadProgress::StopSafe(void) - 0072A5B0
+public: virtual void __thiscall CGameCtnMediaTracker::STimeLineIo::BlockGetColor(unsigned long,unsigned long,class GmVec3 &) - 00664360
+public: virtual unsigned long const __thiscall CGameCtnMediaTracker::STimeLineIo::BlockGetCount(unsigned long) - 00664220
+public: virtual float const __thiscall CGameCtnMediaTracker::STimeLineIo::BlockGetEnd(unsigned long,unsigned long) - 00664290
+public: virtual float const __thiscall CGameCtnMediaTracker::STimeLineIo::BlockGetStart(unsigned long,unsigned long) - 00664250
+public: virtual void __thiscall CGameCtnMediaTracker::STimeLineIo::BlockShiftSetStart(unsigned long,unsigned long,float) - 00665CF0
+public: virtual void __thiscall CGameCtnMediaTracker::STimeLineIo::ItemCopy(unsigned long,unsigned long,unsigned long) - 006643A0
+public: virtual void __thiscall CGameCtnMediaTracker::STimeLineIo::ItemPaste(unsigned long,unsigned long,unsigned long) - 006681F0
+public: virtual void __thiscall CGameCtnMediaTracker::STimeLineIo::ItemSelect(unsigned long,unsigned long,unsigned long) - 0066D870
+public: virtual void __thiscall CGameCtnMediaTracker::STimeLineIo::ItemSelectValue(unsigned long,unsigned long,unsigned long) - 00665D20
+public: virtual unsigned long const __thiscall CGameCtnMediaTracker::STimeLineIo::KeyGetCount(unsigned long,unsigned long) - 006642D0
+public: virtual float const __thiscall CGameCtnMediaTracker::STimeLineIo::KeyGetX(unsigned long,unsigned long,unsigned long) - 00664310
+public: virtual void __thiscall CGameCtnMediaTracker::STimeLineIo::KeySetTime(unsigned long,unsigned long,unsigned long,float) - 006715A0
+public: virtual void __thiscall CGameCtnMediaTracker::STimeLineIo::TimeSet(float) - 00670150
+public: virtual unsigned long const __thiscall CGameCtnMediaTracker::STimeLineIo::TrackGetCount(void) - 006641E0
+public: virtual unsigned long const __thiscall CGameCtnMediaTracker::STimeLineIo::TrackIsReadOnly(unsigned long) - 006641F0
+public: virtual void __thiscall CGameMasterServerRequest::OnFailure(void) - 0064ACD0
+public: virtual void __thiscall CGameMasterServerRequest::OnFinished(void) - 0064AC90
+public: virtual void __thiscall CGameMasterServerRequest::OnSuccess(void) - 0064ACB0
+public: virtual void __thiscall CGameMultiLocalProfileHeader::ArchiveMultiLocalProfileHeader(class CClassicArchive &,unsigned long) - 005C1F30
+protected: virtual class CNetConnection * __thiscall CGameNetClient::FindConnectionFromServerAddress(struct CNetIPAddress &) - 00719A00
+protected: virtual void __thiscall CGameNetClient::OnConnectChallenge(class CNetConnection *,class CNetConnectChallengeData const *) - 00719B20
+protected: virtual void __thiscall CGameNetClient::OnConnectFailed(class CNetConnection *,class CFastString const &) - 00719AD0
+protected: virtual void __thiscall CGameNetClient::OnConnectionEstablished(class CNetConnection *) - 00719AA0
+protected: virtual void __thiscall CGameNetClient::OnConnectionGranted(class CNetConnection *,class CNetAnswerData const *) - 00719AE0
+protected: virtual void __thiscall CGameNetClient::OnServerInfoReceived(class CNetServerInfo const *,unsigned long) - 00719CC0
+protected: virtual void __thiscall CGameNetClient::PrivateOnDisconnect(class CNetConnection *,int,class CFastString const *,int) - 00719E10
+protected: virtual void __thiscall CGameNetClient::ProcessIncommingConnectionLessNod(class CNetNod *,struct CNetIPAddress const &) - 00719F20
+public: virtual int __thiscall CGameNetClient::Send(class CNetNod *,class CNetConnection *) - 00719A40
+public: virtual class CMwId const * __thiscall CGameNetManialinkPage::MwGetId(void)const  - 0085C9E0
+public: virtual int __thiscall CGameNetSearchRequest_Servers::FillRequestParams(class CGameMasterServerRequestParams *) - 0072DCB0
+protected: virtual void * __thiscall CGameNetServer::BuildNewUserData(class CNetConnection const *) - 0070E710
+public: virtual int __thiscall CGameNetServer::CheckDisconnection(struct CNetConnectedClient &) - 0070DB80
+protected: virtual void __thiscall CGameNetServer::DeleteUserData(void *) - 0070E760
+protected: virtual void __thiscall CGameNetServer::OnConnect(struct CNetConnectedClient &) - 0070E5D0
+protected: virtual void __thiscall CGameNetServer::OnConnectionRequest(class CNetRequestData const &,struct CNetConnectedClient &) - 0070E330
+protected: virtual void __thiscall CGameNetServer::OnConnectResponse(class CNetRequestData const &,class CNetConnectResponseData const &,struct CNetConnectedClient &) - 0070E4F0
+protected: virtual void __thiscall CGameNetServer::OnDisconnect(struct CNetConnectedClient &,class CFastString const *) - 0070E0B0
+protected: virtual int __thiscall CGameNetServer::OnGetQuickInfo(class CClassicArchive &) - 0070DA60
+protected: virtual int __thiscall CGameNetServer::OnPreJoin(class CNetConnection *,class CNetRequestData const &,class CFastString &) - 0070DD40
+protected: virtual void __thiscall CGameNetServer::OnQuerryQuickInfoReceive(class CNetFormConnectionAdmin &,struct CNetConnectedClient &) - 0070E150
+protected: virtual int __thiscall CGameNetServer::OnVerifyConnection(class CNetConnection *,class CFastString &) - 0070DE30
+protected: virtual void __thiscall CGameNetServer::ProcessIncomming(class CNetNod *,struct CNetConnectedClient &) - 0070DAC0
+protected: virtual void __thiscall CGameNetServer::ProcessIncommingPriorityNod(class CNetNod *,struct CNetConnectedClient &) - 0070DA90
+protected: virtual void __thiscall CGameNetServer::UpdateReceivingNodInfo(class CNetNod const *,unsigned long,enum CNetTransferInfoQueue::EProtocol) - 0070DB50
+public: virtual void __thiscall CGbxApp::EngineInitEnd(void) - 0052A5C0
+public: virtual void __thiscall CGbxApp::OnViewportCreation(class CHmsViewport *,int &) - 0052A640
+public: virtual void __thiscall CGbxGame::ApplyCommandLineArgs(void) - 00401B80
+public: virtual void __thiscall CGbxGame::ExitGame(void) - 00401310
+public: virtual int __thiscall CGbxGame::Init(void) - 004021B0
+public: virtual int __thiscall CGbxGame::IsForceWindowed(void) - 00401610
+public: virtual void __thiscall CGbxGame::RenderWaitingFrame(void) - 00402730
+public: virtual int __thiscall CGbxGame::SetCmdLineFile(class CFastStringInt const &) - 004014F0
+public: virtual int __thiscall CGbxGame::SetCmdLineUrl(class CFastString const &) - 004012F0
+public: virtual void __thiscall CGbxGame::StartApp(void) - 004023E0
+public: virtual void __thiscall CGbxGame::StopApp(void) - 00401540
+public: virtual class GmCollision & __thiscall CHmsCollisionBuffer::AddCollision(void) - 005380F0
+public: virtual class GmCollision & __thiscall CHmsCollisionBuffer::GetCollision(unsigned long) - 00537350
+public: virtual unsigned long __thiscall CHmsCollisionBuffer::GetCurrentCount(void) - 0073AC50
+public: virtual void __thiscall CHmsItem::CCallback::Destroy(void) - 0042B500
+public: virtual enum CHmsItem::ECallback __thiscall CHmsItem::CCallbackSortCustom::GetType(void) - 0056AA30
+public: virtual void __thiscall CHmsZone::CVisionData::ReleaseShadowDatas(void) - 0042B500
+public: virtual struct SInputActionDesc const * __thiscall CInputPort::SActionMapDescription::Map(unsigned long,unsigned long)const  - 008F8950
+public: virtual unsigned long __thiscall CMotionEngine::GetNumberOfGroups(void) - 006EB8E0
+public: virtual void __thiscall CMwClassInfoCGameCtnMediaBlock::GetInterfaceName(class CFastStringInt &)const  - 004530C0
+public: virtual int __thiscall CMwClassInfoCGameCtnMediaBlock::IsInternal(void)const  - 0078F270
+public: virtual unsigned long __thiscall CMwClassInfoCGameCtnMediaBlock::IsOneTrackMaxClassId(void)const  - 00452F30
+public: virtual unsigned long __thiscall CMwClassInfoCSceneMobil::GetSaveStateSize(enum EMobilStateQuality)const  - 004B0750
+public: virtual unsigned long __thiscall CMwClassInfoCSceneMobil::GetSaveStateVersion(enum EMobilStateQuality)const  - 004B0750
+public: virtual int __thiscall CMwClassInfoCSceneVehicleCar::ArchiveStateBuffer_FixedTimeStep(class CClassicArchive &,class CClassicBufferMemory &,unsigned long,unsigned long)const  - 007F2AB0
+public: virtual unsigned char __thiscall CMwClassInfoCSceneVehicleCar::GetHmsSaveStateVersionFromSceneSaveStateVersion(unsigned long,int &)const  - 007CDFB0
+public: virtual unsigned long __thiscall CMwClassInfoCSystemNodWrapper::GetWrappedClassId(void)const  - 00452F30
+public: virtual unsigned long __thiscall CMwParamFastArray<class CMwParamIso3>::IndexedGetCount(class CMwValueStd &)const  - 00928B30
+public: virtual int __thiscall CMwParamFastArray<class CMwParamString>::IsArray(void)const  - 00925BE0
+public: virtual void __thiscall CMwParamFastArray<class CMwParamBool>::ParseSubParams(class CMwNod *,class CMwStack *,class CMwStack *,class CMwNod *,int (__thiscall CMwNod::*)(class CMwStack *,void *),void *,unsigned long)const  - 00927CC0
+public: virtual int __thiscall CMwParamFastArray<class CMwParamVec3>::VCanGetValueFromString(void)const  - 0078F270
+public: virtual unsigned long __thiscall CMwParamFastArray<class CMwParamBool>::VGetNextNod(class CMwNod *,class CMwStack *,class CMwNod * &)const  - 0092EA20
+public: virtual unsigned long __thiscall CMwParamFastArray<class CMwParamClass>::VGetValue(void *,class CMwStack *,class CMwValueStd *)const  - 0092FE30
+public: virtual unsigned long __thiscall CMwParamFastArray<class CMwParamBool>::VSubValue(void *,class CMwStack *,void *)const  - 0092FC00
+public: virtual int __thiscall CMwParamFastBuffer<class CMwParamIso3>::IsBuffer(void)const  - 00925BE0
+public: virtual unsigned long __thiscall CMwParamFastBuffer<class CMwParamBool>::VAddValue(void *,class CMwStack *,void *)const  - 0092FC40
+public: virtual void __thiscall CMwParamFastBuffer<class CMwParamStringInt>::VGetStringFromValue(class CFastStringInt &,void const *,struct SMwParamInfo const &)const  - 00928DE0
+public: virtual void __thiscall CMwParamFastBuffer<class CMwParamVec4>::VGetValueFromString(class CMwValueStd *,class CFastStringInt const &,struct SMwParamInfo const &)const  - 00929350
+public: virtual void __thiscall CMwParamFastBufferCat<class CMwParamBool>::GetIcon(enum EMwIconList &,enum EMwIconList &)const  - 00925BC0
+public: virtual int __thiscall CMwParamFastBufferCat<class CMwParamIso4>::IsBufferCat(void)const  - 00925BE0
+public: virtual int __thiscall CMwParamFastBufferCat<class CMwParamString>::VCanGetStringFromValue(void)const  - 0078F270
+public: virtual unsigned long __thiscall CMwParamNodRef::VSetValue(void *,class CMwStack *,void *)const  - 0092CC90
+protected: virtual int __thiscall COalAudioSound::CreateResources(void) - 007AFBE0
+public: virtual unsigned long __thiscall COalAudioSound::GetStreamBufferSize(class CPlugFileSnd *)const  - 007ADBD0
+protected: virtual int __thiscall COalAudioSound::IsInterruptibleSound(unsigned long)const  - 007ADD90
+public: virtual void __thiscall COalAudioSound::ManagedPlay(void) - 0042B500
+protected: virtual void __thiscall COalAudioSound::PreCommitSound(void) - 0042B500
+public: virtual void __thiscall CPlugFileFidContainer::CLoaderFidContainer::OnLoaderOverriden(class CSystemFid const *,class CSystemFid::CLoader *) - 00865D30
+public: virtual long __stdcall CPlugFileGpuInclude::Open(enum _D3DXINCLUDE_TYPE,char const *,void const *,void const * *,unsigned int *) - 008DED20
+public: virtual void __thiscall CSceneMobilOnRenderBeforeItem::RenderBeforeItem(class CHmsItem *,class CHmsCamera *,int &) - 007B3150
+public: virtual void __thiscall CSceneMobilOnVisibleWake::OnVisibleWake(class CHmsItem *) - 007B30D0
+private: virtual void __thiscall CScenePickedItem::MwIsKilled(class CMwNod *) - 007DB550
+public: virtual void __thiscall CSceneToyFxDynaBump::OnEnterScene(void) - 007EF330
+public: virtual int __thiscall CStreamBuf::overflow(int) - 00905B80
+public: virtual int __thiscall CStreamBuf::underflow(void) - 00905920
+public: virtual void __thiscall CSystemArchiveNod::DoFid(class CSystemFidFile * &) - 00418070
+public: virtual void __thiscall CSystemArchiveNod::DoFolder(class CSystemFidsFolder * &,int,class CSystemFidsFolder *) - 00418250
+public: virtual void __thiscall CSystemArchiveNod::DoNodPtr(class CMwNod * &) - 00417E80
+public: virtual int __thiscall CSystemArchiveNod::GetArchivingFileName(class CFastStringInt &)const  - 00417120
+public: virtual class CFastString & __thiscall CSystemCrashDump::CatNewLine(class CFastString &) - 004279B0
+public: virtual class CFastString const & __thiscall CSystemCrashDump::GetNewLinePrefix(void) - 00427820
+public: virtual void __thiscall CSystemCrashDump::LinePrefixPop(void) - 00427930
+public: virtual void __thiscall CSystemCrashDump::LinePrefixPush(void) - 00427B80
+public: virtual void __thiscall CSystemCrashDump::OnCrashCallback(void) - 004273B0
+public: virtual int __thiscall CSystemCrashDump::OnCrashDump(class CMwNod *,class CFastString &) - 004275F0
+public: virtual void __thiscall CSystemCrashDump::OnCrashDumpFid(class CSystemFid *,class CFastString &) - 00427750
+public: virtual void __thiscall CSystemCrashDump::OnCrashInBinkDll(void) - 0083A910
+public: virtual class CSystemDialogMemory * __thiscall CSystemDialogManagerWin32::CreateDialogMemory(void) - 0078F270
+public: virtual class CSystemDialogProgress * __thiscall CSystemDialogManagerWin32::CreateDialogProgress(void) - 0078F270
+public: virtual unsigned long __thiscall CSystemDialogManagerWin32::DisplayLog(class CFastString *,class CFastString const &,int) - 00926120
+public: virtual void __thiscall CSystemDialogManagerWin32::GetEditOk(class CFastStringInt const &,class CFastStringInt const &,class CFastString const &) - 007BCCE0
+public: virtual int __thiscall CSystemDialogManagerWin32::GetFileNameOpen(class CFastStringInt &,char const *,class CFastStringList &,class CSystemFids *) - 00A57B40
+public: virtual int __thiscall CSystemDialogManagerWin32::GetFileNameSaveAs(class CFastStringInt &,char const *,class CFastStringList &) - 00A57E30
+public: virtual void __thiscall CSystemDialogManagerWin32::GetOk(class CFastStringInt const &,class CFastStringInt const &,enum CSystemDialogManager::EQueryStyle) - 00A57860
+public: virtual enum CSystemDialogManager::EQuery __thiscall CSystemDialogManagerWin32::GetOkAll(class CFastStringInt const &,class CFastStringInt const &,enum CSystemDialogManager::EQueryStyle) - 00A57810
+public: virtual enum CSystemDialogManager::EQuery __thiscall CSystemDialogManagerWin32::GetOkCancel(class CFastStringInt const &,class CFastStringInt const &,enum CSystemDialogManager::EQueryStyle) - 00A57900
+public: virtual enum CSystemDialogManager::EQuery __thiscall CSystemDialogManagerWin32::GetYesNo(class CFastStringInt const &,class CFastStringInt const &,enum CSystemDialogManager::EQueryStyle) - 00A579B0
+public: virtual enum CSystemDialogManager::EQuery __thiscall CSystemDialogManagerWin32::GetYesNoAll(class CFastStringInt const &,class CFastStringInt const &,enum CSystemDialogManager::EQueryStyle,int,class CFastStringInt *) - 00A57820
+public: virtual enum CSystemDialogManager::EQuery __thiscall CSystemDialogManagerWin32::GetYesNoCancel(class CFastStringInt const &,class CFastStringInt const &,enum CSystemDialogManager::EQueryStyle) - 00A57A60
+public: virtual enum CSystemDialogManager::EQuery __thiscall CSystemDialogManagerWin32::GetYesNoCancelAll(class CFastStringInt const &,class CFastStringInt const &,enum CSystemDialogManager::EQueryStyle,int) - 00A57830
+public: virtual void __thiscall CSystemFid::CLoaderParametrized::CloseBuffer(class CSystemFid const *,class CClassicBuffer *)const  - 00426310
+public: virtual class CSystemFid * __thiscall CSystemFid::CLoaderParametrized::GetRealFileOnDisk(class CSystemFid *)const  - 00426340
+public: virtual class CClassicBuffer * __thiscall CSystemFid::CLoaderParametrized::OpenBuffer(class CSystemFid const *,enum CClassicBuffer::EMode,int)const  - 004262E0
+public: virtual void __thiscall CSystemFid::CLoaderParametrized::UpdateFidProps(class CSystemFid *)const  - 00427120
+public: virtual void __thiscall CSystemFidParameters::SParam::CopyFrom(struct CSystemFidParameters::SParam const &) - 00428160
+public: virtual void __thiscall CSystemFidParameters::SParam_Fid::Compare(struct CSystemFidParameters::SParam const &,int &,int &)const  - 00428510
+public: virtual int __thiscall CSystemFidParameters::SParam_Fid_Common::IsDefault(void)const  - 004284D0
+public: virtual struct CSystemFidParameters::SParam * __thiscall CSystemFidParameters::SParam_Id::Duplicate(void)const  - 004282B0
+public: virtual unsigned long __thiscall CSystemFile::GetCurOffset(void)const  - 0043B5B0
+public: virtual int __thiscall CSystemFile::IsStoringSecured(void)const  - 0043B520
+public: virtual void __thiscall CSystemFile::SetCurOffset(unsigned long) - 0043B5D0
+public: virtual unsigned long __thiscall CSystemFile::Write(void const *,unsigned long) - 00432510
+public: virtual int __thiscall CSystemFileMemMapped::Close(void) - 00432700
+public: virtual unsigned long __thiscall CSystemFileMemMapped::Read(void *,unsigned long) - 00433420
+protected: virtual class CSystemFidFile * __thiscall CSystemManagerFile::DoCreateFidFile(void)const  - 00436B80
+protected: virtual class CSystemFidsFolder * __thiscall CSystemManagerFile::DoCreateFidsFolder(void)const  - 00436B10
+private: virtual void __thiscall CTrackManiaBench::GameSpecificSaveResult(class CFastString &) - 004FEB60
+public: virtual void __thiscall CTrackManiaEngine::CreateInstance(unsigned long,void *,int) - 00443C70
+public: virtual void __thiscall CTrackManiaIPCCallbacks::BillUpdated(unsigned long,unsigned long,class CFastString const &,unsigned long) - 00500580
+public: virtual void __thiscall CTrackManiaIPCCallbacks::ChallengeListModified(unsigned long,unsigned long,int) - 005005E0
+public: virtual void __thiscall CTrackManiaIPCCallbacks::Echo(class CFastString const &,class CFastString const &) - 00500200
+public: virtual void __thiscall CTrackManiaIPCCallbacks::PlayerChat(class CGameNetPlayerInfo const *,class CFastStringInt const &,int) - 00500140
+public: virtual void __thiscall CTrackManiaIPCCallbacks::PlayerConnect(class CFastString const &,int) - 005000F0
+public: virtual void __thiscall CTrackManiaIPCCallbacks::PlayerDisconnect(class CGameNetPlayerInfo const *) - 00500120
+public: virtual void __thiscall CTrackManiaIPCCallbacks::PlayerManialinkPageAnswer(class CGameNetPlayerInfo const *,unsigned long) - 00500230
+public: virtual void __thiscall CTrackManiaIPCCallbacks::TunnelDataReceived(unsigned char const *,unsigned long,class CGameNetPlayerInfo const *) - 005005B0
+public: virtual void __thiscall CTrackManiaRaceTriggerAbsorbContact::AbsorbContact(class CHmsItem *,class CHmsPhysicalContact &) - 0047CBA0
+public: virtual class CSystemFid * __thiscall CVisionEngine::GetResourceFid(void)const  - 009559D0
+public: virtual int __thiscall CVisionShaderKeeper::AreEqual(class CVisionShaderKeeper const &) - 004B0750
+public: virtual class CPlugVisual * __thiscall CVisionShaderKeeper::GetVisual(void) - 0078F270
+public: virtual void __thiscall CVisionShaderKeeper::OnBitmapDirty(class CPlugShader *,class CPlugBitmap *) - 00961D70
+public: virtual void __thiscall CVisionShaderKeeper::Undirty(class CPlugShader *) - 00961FE0
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::BlurToTexture(class CPlugBitmap *,class CPlugBitmap *,unsigned long,float,float) - 0098D3D0
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::CameraToMultiRTs(struct CHmsCameraFx::SMultiRT const &) - 0098CDF0
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::CameraToTexture(class CPlugBitmap *,struct CHmsCameraFx::SRenderFlags const &) - 0098D7A0
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::CameraToTexture_ForceShader(class CPlugBitmap *,int,class CPlugShader *,class CPlugShader *,enum CPlugShader::ERenderPath,unsigned long,enum CHmsCameraFx::EClear,union GxBGRAColor,int,unsigned char,unsigned char) - 0098D010
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::CameraToViewport(struct CHmsCameraFx::SRenderFlags const &) - 0098D460
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::ForceShadowVolumeUpdate(void) - 0098CFA0
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::GetCameraProjection(class GmMat4 &) - 0098D5A0
+public: virtual class CPlugBitmap * __thiscall CVisionViewportDx9::CCameraFxDx9::OutputGetSharedRT(enum CHmsCameraFx::EOutputRT)const  - 0098E080
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::ShaderToTexture(class CPlugBitmap *,class CPlugShader *) - 0098D350
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::ShaderToViewport(class CPlugShader *) - 0098DA30
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::StencilEnable(int,unsigned long) - 0098CF00
+public: virtual unsigned long __thiscall CVisionViewportDx9::CCameraFxDx9::StencilGetBitCount(void) - 0098CDE0
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::StencilSetCmp(enum CHmsCameraFx::ECmpFunc,unsigned long,unsigned long) - 0098CF20
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::StencilSetOpFail_ZFail_Pass(enum CHmsCameraFx::EStencilOp,enum CHmsCameraFx::EStencilOp,enum CHmsCameraFx::EStencilOp) - 0098CF60
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::TreesToTexture(class CPlugBitmap *,unsigned long,class CPlugTree * *,struct CHmsCameraFx::SRenderFlags const &) - 0098D200
+public: virtual void __thiscall CVisionViewportDx9::CCameraFxDx9::TreesToViewport(unsigned long,class CPlugTree * *,struct CHmsCameraFx::SRenderFlags const &) - 0098DB90
+protected: virtual class CHmsCameraFx * __thiscall CVisionViewportNull::CameraFxCreate(class CHmsCamera *) - 004B0750
+protected: virtual void __thiscall CVisionViewportNull::ComputeDriverProjection(struct SHmsCameraProjection &,class GmFrustum const &,class CHmsCamera *)const  - 007BCCE0
+protected: virtual void __thiscall CVisionViewportNull::ComputeDriverRenderRect(struct SHmsRenderRect &)const  - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::ComputeDriverViewMatrix(struct SHmsCameraLocation &)const  - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::ComputeDriverWorldMatrix(struct CHmsViewport::SVisualLocation &)const  - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::ComputeRenderRectFromDriver(struct SHmsRenderRect &)const  - 00961DD0
+protected: virtual int __thiscall CVisionViewportNull::Create(void) - 00961D40
+public: virtual class CVisionShaderKeeper * __thiscall CVisionViewportNull::CreateShaderKeeper(void) - 0078F270
+protected: virtual void __thiscall CVisionViewportNull::EvictDriverResources(void) - 0042B500
+protected: virtual void __thiscall CVisionViewportNull::IndexBufferUndirty(class CPlugIndexBuffer *) - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::LoadResourceTree(class CPlugTree *,int,class CHmsCamera *,class CHmsZoneOverlay *) - 005B06B0
+protected: virtual void __thiscall CVisionViewportNull::OnSystemWindowChange(void) - 00892950
+protected: virtual void __thiscall CVisionViewportNull::PerformanceCompute(void) - 0042B500
+protected: virtual int __thiscall CVisionViewportNull::Projector_DeferedIsSupported(void) - 0078F270
+protected: virtual void __thiscall CVisionViewportNull::Release(void) - 00961D60
+protected: virtual void __thiscall CVisionViewportNull::RenderCameraBegin(class CHmsCamera *,struct SHmsClearDesc &) - 00961D70
+protected: virtual int __thiscall CVisionViewportNull::RenderCameraDepTextures(class CHmsCamera *) - 004B0750
+protected: virtual void __thiscall CVisionViewportNull::RenderCameraEnd(class CHmsCamera *) - 00961DD0
+protected: virtual int __thiscall CVisionViewportNull::RenderFrameBegin(void) - 00925BE0
+protected: virtual void __thiscall CVisionViewportNull::RenderFrameEnd(void) - 0042B500
+protected: virtual void __thiscall CVisionViewportNull::RenderOverlayZones(class CFastBuffer<class CHmsZoneOverlay *> &,int) - 00961D70
+protected: virtual int __thiscall CVisionViewportNull::RenderPortalBegin(class CHmsPortal *) - 004B0750
+protected: virtual void __thiscall CVisionViewportNull::RenderPortalEnd(class CHmsPortal *) - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::RenderVisual(class CPlugTree *) - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::RenderVisualBlendVertex(class CPlugTree *) - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::RenderZoneBegin(class CHmsZone *) - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::RenderZoneEnd(class CHmsZone *) - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::ResetDriver(void) - 0042B500
+protected: virtual void __thiscall CVisionViewportNull::ResetPlugTreeCaches(void) - 0042B500
+public: virtual int __thiscall CVisionViewportNull::ResetSwapChains(void) - 00925BE0
+protected: virtual int __thiscall CVisionViewportNull::RestoreDevice(void) - 0078F270
+public: virtual void __thiscall CVisionViewportNull::ResumeFullscreen(void) - 0042B500
+public: virtual void __thiscall CVisionViewportNull::SetFullScreenGammaRamp(float,float,float) - 007BCCE0
+public: virtual void __thiscall CVisionViewportNull::SetLighting(enum CHmsViewport::ELighting) - 00961DD0
+public: virtual void __thiscall CVisionViewportNull::SetSystemWindow(class CSystemWindow *) - 00961D30
+public: virtual int __thiscall CVisionViewportNull::StartFullscreen(void) - 00925BE0
+protected: virtual void __thiscall CVisionViewportNull::SyncGpuInit(unsigned long,int,unsigned long) - 007BCCE0
+protected: virtual int __thiscall CVisionViewportNull::TextureBlitBackBuffer(class CPlugBitmap *) - 004B0750
+protected: virtual int __thiscall CVisionViewportNull::TextureConvertRenderToStatic(class CPlugBitmap *,struct CHmsViewport::STextureConvertRenderToStatic const &) - 00961DE0
+protected: virtual int __thiscall CVisionViewportNull::TextureConvertStaticToRender(class CPlugBitmap *,class CPlugBitmapRenderSolid *) - 00961DE0
+protected: virtual int __thiscall CVisionViewportNull::TextureCopyRenderToSystem(class CPlugBitmap *) - 004B0750
+protected: virtual int __thiscall CVisionViewportNull::TextureDetach(class CPlugBitmap *) - 004B0750
+protected: virtual void __thiscall CVisionViewportNull::TextureForcePixelUpdate(class CPlugShader *,class CHmsCamera *) - 00961D70
+protected: virtual void __thiscall CVisionViewportNull::TextureLogMemoryUsage(enum CHmsViewport::EMemoryUsage) - 00961DD0
+protected: virtual void __thiscall CVisionViewportNull::TextureOnCameraDestroy(class CHmsCamera *) - 00961DD0
+protected: virtual int __thiscall CVisionViewportNull::TextureRenderClear(class CPlugBitmap *,class GxColor const &) - 00961DE0
+protected: virtual int __thiscall CVisionViewportNull::TextureRenderPixelUpdate(class CPlugBitmap *) - 004B0750
+protected: virtual int __thiscall CVisionViewportNull::TextureSaveVisionToFile(class CPlugBitmap *,class CFastStringInt const &,struct CHmsViewport::SSaveTextureParam *) - 00926120
+protected: virtual int __thiscall CVisionViewportNull::TextureSaveVisionToImage(class CPlugBitmap *,class CPlugFileImg *,int) - 00926120
+protected: virtual int __thiscall CVisionViewportNull::TextureSwapVisionDatas(class CPlugBitmap *,class CPlugBitmap *) - 00961DE0
+protected: virtual int __thiscall CVisionViewportNull::TextureUpdatePlugFromVision(class CPlugBitmap *) - 004B0750
+protected: virtual void __thiscall CVisionViewportNull::VertexStreamUndirty(class CPlugVertexStream *) - 00961DD0
+public: virtual unsigned long __thiscall CVisionViewportNull::VirtualParam_Set(class CMwStack *,void *) - 00961DF0
+protected: virtual int __thiscall CVisionViewportNull::VisualAdd(class CPlugVisual *,enum EVIBProcess,int) - 00961D80
+protected: virtual int __thiscall CVisionViewportNull::VisualRemove(class CPlugVisual *,int) - 00961DB0
+protected: virtual void __thiscall CVisionViewportNull::VisualUndirty(class CPlugVisual *) - 00961DD0
+public: virtual void __thiscall CVisionVisualKeeper::SetVisual(class CPlugVisual *) - 009629F0
+public: virtual void __thiscall GmField2::Copy(class GmField2Base *) - 008EF000
+public: virtual void __thiscall GmField2Base::ConstantSet(class GmVec2 const &) - 008EE540
+public: virtual void __thiscall GmField2Base::GridResolutionSet(class GmNat2 const &) - 008EE0F0
+public: virtual int __thiscall GmField2Base::IsCompressed(void)const  - 0078F270
+public: virtual int __thiscall GmField2Base::IsUncompress(void)const  - 0078F270
+public: virtual void __thiscall GmField2Base::RectSet(class GmRectAligned const &) - 008EE120
+public: virtual float __thiscall GmFuncRealFromReal2::ComputeRealFromReal2(float,float,class GmVec3 &) - 00A6DF80
+public: virtual class CHmsVPackerCell * __thiscall GmLooseOctree<struct SHmsVPackerObject,class CHmsVPackerCell,class CHmsVPackerLevel>::AddObject(struct SHmsVPackerObject const &,class GmBoxAligned const *) - 005584A0
+protected: virtual void __thiscall GmLooseOctree<struct SHmsVPackerObject,class CHmsVPackerCell,class CHmsVPackerLevel>::CellUnionWithChildrenBBox(class CHmsVPackerCell *,struct SGmLooseOctree_Object::SUserData) - 00556B50
+public: virtual class CHmsVPackerCell * & __thiscall GmLooseOctree<struct SHmsVPackerObject,class CHmsVPackerCell,class CHmsVPackerLevel>::SubObject(struct SHmsVPackerObject const &,struct SHmsVPackerObject *) - 00558EB0
+public: virtual bool __thiscall TiXmlComment::Accept(class TiXmlVisitor *)const  - 0091B9D0
+public: virtual class TiXmlComment const * __thiscall TiXmlComment::ToComment(void)const  - 0050A100
+public: virtual void __thiscall TiXmlDeclaration::Print(struct _iobuf *,int)const  - 0050A0E0
+public: virtual class TiXmlDeclaration const * __thiscall TiXmlDeclaration::ToDeclaration(void)const  - 0050A100
+protected: virtual class TiXmlNode * __thiscall TiXmlDocument::Clone(void)const  - 0091CB60
+public: virtual class TiXmlDocument const * __thiscall TiXmlDocument::ToDocument(void)const  - 0050A100
+public: virtual class TiXmlElement * __thiscall TiXmlElement::ToElement(void) - 0050A100
+public: virtual class TiXmlText * __thiscall TiXmlText::ToText(void) - 0050A100
+public: virtual char const * __thiscall TiXmlUnknown::Parse(char const *,class TiXmlParsingData *,enum TiXmlEncoding) - 0091E1E0
+public: virtual class TiXmlUnknown * __thiscall TiXmlUnknown::ToUnknown(void) - 0050A100
+public: virtual bool __thiscall TiXmlVisitor::Visit(class TiXmlDeclaration const &) - 00509E00
+public: virtual bool __thiscall TiXmlVisitor::VisitEnter(class TiXmlElement const &,class TiXmlAttribute const *) - 00509DF0
+public: virtual bool __thiscall TiXmlVisitor::VisitExit(class TiXmlDocument const &) - 00509E00

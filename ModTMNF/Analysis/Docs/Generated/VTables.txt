@@ -1,0 +1,1342 @@
+List of classes with vtable addresses
+
+Missing CMwNod vtables (these MUST be fixed to access their virtuals from C#):
+
+CGameCtnMediaBlockEditor
+CGameRaceInterface
+CGameCalendar
+CCurveInterface
+
+Full list:
+
+00B2BCCC CFastCallbackInstance1P (generic)
+00B2BCD4 CFastCallbackInstance1P (generic)
+00B2BCEC CGbxGame
+00B2C168 type_info
+00B2E370 CSystemArchiveNod
+00B2E604 CFastCallbackInstance1P (generic)
+00B2E60C CSystemEngine
+00B2F76C CSystemConfig
+00B2FCCC CSystemFid::CLoaderParametrized
+00B2FCE4 CSystemFid::CLoaderFile
+00B2FCFC CSystemFid
+00B2FEE0 CSystemCrashDump
+00B2FF04 CSystemFidParameters::SParam
+00B2FF1C CSystemFidParameters::SParam_Id
+00B2FF34 CSystemFidParameters::SParam_Fid_Common
+00B2FF4C CSystemFidParameters::SParam_Fid
+00B2FF64 CSystemFidParameters::SParam_Fids
+00B2FF7C CSystemFidParameters::SParam_Set
+00B2FF94 CSystemFidParameters
+00B2FFB4 CSystemFidsFolder
+00B300BC CSystemFidMemory
+00B301BC CSystemFidFile
+00B302E4 TiXmlText
+00B30334 TiXmlDocument
+00B3053C CFastMapTable (generic)
+00B30544 CSystemFids
+00B3067C CSystemFidsDrive
+00B30754 CSystemFile::AsyncIOData
+00B30BC4 CSystemManagerFile
+00B31324 CSystemConfigDisplay
+00B31754 CSystemFidBuffer
+00B317FC CMwClassInfoCSystemNodWrapper
+00B3180C CSystemNodWrapper
+00B318AC CSystemCmdAssert
+00B31964 CSystemCmdExec
+00B31A1C CSystemCmdDuplicateNod
+00B31B1C CSystemCmdLoadNod
+00B31C14 CNodSystem
+00B31CCC CSystemWindow
+00B31DDC CSystemMouse
+00B321B4 CSystemKeyboard
+00B32B88 CSystemFile
+00B32E0C CSystemPackManager
+00B32EE4 CSystemPackDesc
+00B32FA4 CSystemArchiveFile
+00B32FCC CTrackManiaEngine
+00B3308C CMwClassInfoCSceneMobil
+00B33154 CTrackManiaControlMatchSettingsCard
+00B3348C CTrackManiaEditorSimple
+00B33814 CTrackManiaControlScores2
+00B33FFC CTrackManiaControlScores
+00B3451C CTrackManiaRaceScore
+00B346DC CTrackManiaPlayerProfile
+00B349F4 CTrackManiaControlRaceScoreCard
+00B34CEC CTrackManiaMatchSettingsControlGrid
+00B3503C CTrackManiaControlCard
+00B35364 CControlTrackManiaTeamCard
+00B3562C CMwClassInfoCGameCtnMediaBlock
+00B35640 CMwClassInfoCGameCtnMediaBlockUi
+00B35654 CMwClassInfoCGameCtnMediaBlockUiSimpleEvtsDisplay
+00B35668 CMwClassInfoCCtnMediaBlockUiTMSimpleEvtsDisplay
+00B3567C CCtnMediaBlockUiTMSimpleEvtsDisplay
+00B35CAC CTrackManiaControlPlayerInfoCard
+00B361A4 CGameControlCameraTrackManiaRace3
+00B36AF4 CGameControlCameraTrackManiaRace2
+00B3717C CMwClassInfoCGameCtnMediaBlockEvent
+00B37190 CMwClassInfoCCtnMediaBlockEventTrackMania
+00B371CC CFastBufferKey (generic)
+00B3720C CCtnMediaBlockEventTrackMania
+00B3735C CGameControlCameraTrackManiaRace
+00B37544 CTrackManiaReplayRecord
+00B3760C CTrackManiaRaceNetLaps
+00B378EC CTrackManiaControlCheckPointList
+00B37C2C CTrackManiaRace1PGhosts
+00B37E04 CTrackManiaRaceNetTimeAttack
+00B38310 SMwFiberContext
+00B383B4 CTrackManiaRace2PTurnBased
+00B38734 CTrackManiaEditorCatalog
+00B388E4 CNetNodPool
+00B388EC CTrackManiaNetForm
+00B389CC CTrackManiaRaceNetRounds
+00B3A64C CTrackManiaMenus
+00B3C86C CTrackManiaEditorPuzzle
+00B3CA0C CTrackManiaRace1P
+00B3CBF4 CTrackManiaEditorTerrain
+00B3CD94 CTrackManiaEditorFree
+00B3CF2C CTrackManiaSwitcher
+00B3D08C CHmsItem::CCallback
+00B3D0B0 CTrackManiaRaceTriggerAbsorbContact
+00B3D0D4 CTrackManiaRace
+00B3DDB4 CTrackManiaBench
+00B3E074 CTrackMania
+00B4114C CTrackManiaEditor
+00B41FC4 CTrackManiaPlayerInfo
+00B4231C CTrackManiaNetworkServerInfo
+00B42DC4 CTrackManiaMatchSettings
+00B4345C CTrackManiaRaceNet
+00B4586C CTrackManiaRaceInterface
+00B47EF4 CTrackManiaEditorInterface
+00B48A44 CGameApp::CIPCCallbacks
+00B48A6C CNetFormTimed
+00B48B08 CNetArchive
+00B48B24 CNetFormPing
+00B48C84 CTrackManiaIPCCallbacks
+00B4935C CTrackManiaNetwork
+00B49CA4 CFastCallbackInstance (generic)
+00B4A824 CGameNetwork::SCallVoteContext
+00B4FC0C CGameAnalyzerContext
+00B50004 CTrackManiaRaceAnalyzerContext
+00B50084 CTrackManiaRaceAnalyzer
+00B50154 CTrackManiaControlPlayerInput
+00B5021C CTrackManiaPlayer
+00B503AC CGameControlCameraFollowAboveWater
+00B504C4 CTrackManiaPlayerCameraSet
+00B5081C CTrackManiaIntro
+00B5095C CTrackManiaEnvironmentManager
+00B50AF4 CTrackManiaEditorIconPage
+00B50E94 CTrackManiaEditorIcon
+00B5152C CNetNod
+00B516FC CNetHttpResult
+00B517F4 CNetMasterServerRequest
+00B518A0 TiXmlVisitor
+00B518CC TiXmlDeclaration
+00B51918 CFastCallbackInstance3P (generic)
+00B51920 TiXmlPrinter
+00B51C6C CNetMasterServer
+00B5220C CNetMasterHost
+00B522B4 CNetServerInfo
+00B5244C CNetFileTransferDownload
+00B5268C CNetFormRpcCall
+00B5273C CNetFileTransferForm
+00B527F8 CNetConnectChallengeData
+00B52800 CNetConnectResponseData
+00B52808 CNetRequestData
+00B52810 CNetAnswerData
+00B5281C CNetFormConnectionAdmin
+00B528EC CNetFormEnumSessions
+00B529A4 CNetFormQuerrySessions
+00B52A9C CNetHttpClient
+00B52B74 CNetMasterServerDownload
+00B52BF4 CNetMasterServerUptoDateCheck
+00B52DBC CNetIPSource
+00B53104 CNetFileTransfer
+00B53514 CNetFileTransferNod
+00B53624 CNetURLSource
+00B537FC CNetSource
+00B539D4 CNetClientInfo
+00B53A84 CNetTransferInfoQueue
+00B53B34 CNetConnection
+00B53FA4 CNetFileTransferUpload
+00B5441C CNetClient
+00B5479C CNetServer
+00B5518C CGbxApp
+00B5574C CHmsViewport
+00B55DAC CHmsCollisionManager
+00B55E28 CHmsCollisionBuffer
+00B56064 CHmsItem
+00B5655C CHmsCamera
+00B568DC CHmsPackLightMap
+00B56984 CFastCallbackInstance1P (generic)
+00B56E2C CHmsCorpus
+00B56FBC CHmsZoneDynamic
+00B57274 CHmsPortalProperty
+00B572F4 CHmsPocEmitter
+00B57394 CHmsEngine
+00B57484 CHmsPortal
+00B57684 CHmsConfig
+00B5795C CHmsZone
+00B58224 CHmsZoneOverlay
+00B583FC CHmsPrecalcRender
+00B58524 CHmsAmbientOcc
+00B58604 CHmsPicker
+00B5872C CHmsItemShadow
+00B58804 CHmsPoc
+00B588F4 CHmsLight
+00B58A2C CHmsPackLightMapCache
+00B58D5C GmLooseOctree (generic)
+00B58D70 CHmsZoneVPacker
+00B58DAC CHmsPackLightMapMood
+00B58E4C CHmsPackLightMapAlloc
+00B58EF4 CHmsCorpusLight
+00B59074 CHmsShadowGroup
+00B593E4 CHmsZoneElem
+00B59494 CHmsForceField
+00B595B4 CHmsCorpus2d
+00B5965C CHmsFogPlane
+00B596FC CHmsForceFieldUniform
+00B597D4 CHmsForceFieldBall
+00B598DC CHmsSoundSource
+00B59A3C CHmsListener
+00B59BDC CMotionManagerParticles
+00B59CEC CMotionEmitterParticles
+00B59EBC CMotionCmdBase
+00B59FDC CMotionTrackMobilRotate
+00B5A0CC CMotionEngine
+00B5A4D4 CMotionParticleType
+00B5AB6C CMotionManager
+00B5AC1C CMotion
+00B5ACF4 CMotionManaged
+00B5ADE4 CMotionParticleEmitterModel
+00B5AEEC CMotionPlayer
+00B5B08C CMotionCmdBaseParams
+00B5B144 CMotionTrack
+00B5B204 CMotionShader
+00B5B2F8 CFastCallbackInstance1P (generic)
+00B5B304 CMotionManagerMeteoPuffLull
+00B5B3CC CMotionDayTime
+00B5B5FC CMotionManagerWeathers
+00B5B73C CMotionWeather
+00B5B924 CMotionManagerMeteo
+00B5BB94 CMotionWindBlocker
+00B5BF8C CMotionManagerLeaves
+00B5C05C CMotionTrackMobilScale
+00B5C134 CMotionEmitterLeaves
+00B5C264 CMotionBone
+00B5C344 CMotionGroupPlayers
+00B5C464 CMotionManagerCharacterAdv
+00B5C64C CTeamMateInfo
+00B5C654 CMotionTeamManager
+00B5C78C CMotionManagerCharacter
+00B5C8F4 CMotionTrackTree
+00B5CA3C CMotionTrackMobilPitchin
+00B5CB6C CMotionTrackVisual
+00B5CC44 CMotionLight
+00B5CD1C CMotionTrackMobilMove
+00B5CE3C CMotionSkel
+00B5CF14 CMotionSkelSimple
+00B5CFBC CFuncSkel
+00B5D05C CMotionPlayCmd
+00B5D164 CMotionPath
+00B5D22C CMotionPlaySoundMobil
+00B5D304 CMotionPlaySound
+00B5D3EC CMotionFunc
+00B5D4AC CMotions
+00B5D5C4 CMotionTimerLoop
+00B5D684 CMotionTeamAction
+00B5D754 CMotionSkelBlender
+00B5D7DC CMotionPlay
+00B5D8BC CMotionTeamActionInfo
+00B5D9DC CFuncKeysReal
+00B5DAC4 CFuncPlug
+00B5DB40 CFastMap (generic)
+00B5DBBC CFuncEnum
+00B5DCBC CFunctionEngine
+00B5DD6C CFuncColorGradient
+00B5DE9C CFuncEnvelope
+00B5DFBC CFuncPuffLull
+00B5E22C CFuncWeather
+00B5E64C CFuncKeysPath
+00B5E77C CFuncPathMesh
+00B5E84C CFuncTreeSubVisualSequence
+00B5E944 CFuncManagerCharacter
+00B5E9F4 CFuncTree
+00B5EA8C CFuncVisual
+00B5EB44 CFuncLight
+00B5EC0C CFuncKeysTrans
+00B5ECE4 CFuncKeysTransQuat
+00B5EDA4 CFuncSkelValues
+00B5EE34 CFuncKeysSkel
+00B5EF04 CFuncKeysCmd
+00B5EFB4 CFuncKeysSound
+00B5F074 CFuncKeys
+00B5F12C CFunc
+00B5F1E4 CFuncNoise
+00B5F2D4 CFastBufferKey (generic)
+00B5F314 CFuncCurves2Real
+00B5F42C CFuncClouds
+00B5F574 CFastBufferKey (generic)
+00B5F5B4 CFuncCurvesReal
+00B5F674 CFuncFullColorGradient
+00B5F710 CFuncShader::CCache
+00B5F734 CFuncShaderTweakKeysTranss
+00B5F7C0 CFuncShaderTweakKeysTranss::CCacheTweakKeysTrans
+00B5F814 CFuncTreeElevator
+00B5F8F4 CFuncKeysNatural
+00B5F9BC CFuncGroup
+00B5FA6C CFuncGroupElem
+00B5FAFC CFuncManagerCharacterAdv
+00B5FB9C CFuncVisualBlendShapeSequence
+00B5FC44 CFuncKeysReals
+00B5FCFC CFuncPathMeshLocation
+00B5FDD4 CFuncTreeBend
+00B5FE84 CFuncTreeRotate
+00B5FF84 CFuncVisualShiver
+00B600C4 CFuncLightColor
+00B60174 CFuncColor
+00B60318 CFuncShaderLayerUV::CCacheLayerUV
+00B60334 CFuncShaderLayerUV
+00B6059C CFuncShaderFxFactor
+00B6069C CFuncShaders
+00B60728 CFuncShaders::CCacheArray
+00B60764 CFuncKeysVisual
+00B6081C CFuncSin
+00B608CC CFuncTreeTranslate
+00B609AC CFuncLightIntensity
+00B60A74 CFuncShader
+00B60BB4 CGameCtnMediaContext
+00B60C34 CGameApp_MenuContext
+00B60D74 CFastCallbackInstance1P (generic)
+00B60D7C CFastCallbackInstance2P (generic)
+00B60DFC CGameApp
+00B61174 CGameControlCard
+00B614AC CGameCtnCatalog
+00B615E4 CGameCtnEditor
+00B61AFC CGameCtnChallenge
+00B61FAC CFastCallbackInstance3P (generic)
+00B61FB4 CFastCallbackInstance2P (generic)
+00B6203C CGameMasterServer
+00B62C64 CGameNetwork
+00B634EC CGameControlGridCard
+00B638A4 CGameControlCardManager
+00B639DC CGameMultiLocalProfileHeader
+00B639E4 CFastMap (generic)
+00B639EC CGamePlayerProfile
+00B63D14 CGamePlayerScore
+00B63FCC CGameCtnCampaign
+00B64234 CGameCtnChallengeInfo
+00B643FC CGamePlayerTagData
+00B6447C CGamePlayerInfo
+00B6488C CGameControlCardCtnChallengeInfo
+00B64EE4 CGameCtnMediaBlockUiSimpleEvtsDisplay
+00B65034 CGameCtnMediaBlock
+00B6519C CGameCtnMediaBlockUi
+00B6531C CGameAvatar
+00B653D4 CGameControlCameraTarget
+00B65614 CGameControlCamera
+00B6587C CGameScene
+00B6592C CGameCtnMediaBlockEvent
+00B65A68 CFastBufferKey (generic)
+00B65B4C CGameCtnReplayRecord
+00B65D84 CGameRace
+00B65FCC CGameCtnChallengeParameters
+00B660E4 CGameCtnGhost
+00B663DC CGamePlaygroundInterface
+00B664C4 CGamePlayer
+00B6658C CGamePlayerCameraSet
+00B6664C CGamePlayground
+00B669B4 CFastCallbackInstance2P (generic)
+00B6890C CGameCtnApp
+00B69234 CGameDialogs
+00B6950C CGameCtnBlock
+00B69844 CGameCtnCollection
+00B69C1C CGameNetForm
+00B69DCC CXmlTiDocumentWrapper
+00B69E4C CGameNetManialinkPage
+00B6D924 CGameCtnPainterContext
+00B6D9A0 CFastCallbackInstance1P (generic)
+00B6D9A8 CCtrColorChooserCallbackInstance (generic)
+00B6D9B4 CGameCtnMenus::SGetManialinkResourceCmd
+00B6E11C CGameCtnMenus
+00B727CC CGameControlCardCtnNetServerInfo
+00B72ACC CGameSystemOverlay
+00B738EC CGameControlCardGeneric
+00B73BDC CGameLeague
+00B73DAC CGameManialinkBrowser
+00B73EFC CGameMasterServerRequest
+00B73F84 CGameMasterServerRequestParams
+00B74114 CFastCallbackInstance3P (generic)
+00B7411C CFastCallbackInstance2P (generic)
+00B74124 CFastCallbackInstance1P (generic)
+00B7412C CGameControlGrid
+00B746A0 CIPCRemoteControl::SRemoteControlContext
+00B76834 CGameCtnChallengeGroup
+00B76934 CGameCtnChapter
+00B76B74 CGameMenu
+00B76E54 CGameCtnReplayRecordInfo
+00B76F34 CGameCtnGhostInfo
+00B7705C CGameCtnCollectorVehicle
+00B772B4 CGameCtnBlockInfoClip
+00B773AC CGameOutlineBox
+00B77CDC CGameCtnCursor
+00B77E24 CGameCtnEditorScenePocLink
+00B78044 CGameCtnBlockInfo
+00B78624 CGameCtnMediaTracker::STimeLineIo
+00B78AB8 CCtrColorChooserCallbackInstance (generic)
+00B78BD4 CGameCtnMediaTracker
+00B7A854 CGameCtnMediaClipViewer
+00B7A98C CGameCtnMediaClip
+00B7AAA4 CGameGhost
+00B7B81C CGameCtnNetwork
+00B7C984 CGameControlCameraFree
+00B7CB2C CGameCamera
+00B7CBEC CGameControlCameraMaster
+00B7CCF4 CGameCtnMediaClipPlayer
+00B7CE3C CGameControlCameraOrbital3d
+00B7D0C4 CGameMobil
+00B7D17C CGameCtnMediaTrack
+00B7D250 CMwClassInfoCGameCtnMediaBlockCamera
+00B7D264 CMwClassInfoCGameCtnMediaBlockCameraSimple
+00B7D278 CFastBufferKey (generic)
+00B7D2B4 CGameCtnMediaBlockCameraSimple
+00B7D3E0 CMwClassInfoCGameCtnMediaBlockCameraOrbital
+00B7D42C CFastBufferKey (generic)
+00B7D46C CGameCtnMediaBlockCameraOrbital
+00B7D594 CGameCtnBench
+00B7DB24 CGameCtnArticle
+00B7DC94 CGameCtnSlideShow
+00B802CC CGameLadderRankingPlayer
+00B80DE8 CCtrColorChooserCallbackInstance (generic)
+00B80DF0 CFastCallbackInstance1P (generic)
+00B80F54 CGameCtnPainter
+00B8181C CGameCtnMasterServer
+00B819A4 CGameLeagueManager
+00B81D0C CGameGeneralScores
+00B81D8C CGameCampaignPlayerScores
+00B81E0C CGameCampaignScores
+00B81E8C CGameChallengeScores
+00B81F0C CGameCampaignsScoresManager
+00B81F8C CGamePlayerOfficialScores
+00B820B4 CGameLoadProgress::CHighFreqCallback
+00B82134 CGameLoadProgress::CFileReadCallback
+00B8213C CGameLoadProgress
+00B82FBC CGameCtnMediaVideoShooter
+00B834FC CGameDialogShootVideo
+00B835CC CGameCtnMediaVideoParams
+00B836B4 CGameCtnMediaTrackerContext
+00B837F8 CFastMapTable (generic)
+00B83808 CCallbackMeasureImpression
+00B83844 CGameAdvertising
+00B83C8C CGameSkin
+00B83DC4 CGameCtnBlockSkin
+00B83E7C CGameCtnCollectorList
+00B83F54 CGameCtnBlockInfoRoad
+00B84114 CGameCtnBlockInfoRectAsym
+00B843C4 CGameCtnBlockUnitInfo
+00B84524 CGameCtnBlockUnit
+00B8468C CFastBufferPool (generic)
+00B8469C CGameNetPlayerInfo
+00B8489C CGameNetServerInfo
+00B84B7C CGameCtnNetServerInfo
+00B84D8C CGameFid
+00B84E6C CGameCtnMediaClipGroup
+00B84F44 CGameHighScore
+00B84FDC CGameNetFormBuddy
+00B85094 CGameNetFormTunnel
+00B8514C CGameNetFormCallVote
+00B8520C CGameCtnNetForm
+00B852BC CGameNetFormTimeSync
+00B85374 CGameNetFormAdmin
+00B8542C CGameNetFormGameSync
+00B85524 CGameLadderScoresComputer
+00B855A4 CGameLadderScores
+00B8577C CGameControlCardProfile
+00B85A1C CGameNetServer
+00B85BD4 CGameAnalyzer
+00B85E74 CGameControlPlayerInput
+00B85F44 CGameControlPlayer
+00B86004 CGameNod
+00B86094 CGameEnvironmentManager
+00B8613C CGameEngine
+00B861DC CGameProcess
+00B8629C CGameCtnCollector
+00B86384 CGameCtnDecoration
+00B864EC CGameCtnBlockInfoPylon
+00B86704 CGameCtnPylonColumn
+00B867B4 CGameCtnFieldUnit
+00B867CC CGameRemoteBufferDataInfo
+00B868C0 CFastMapTable (generic)
+00B868CC CGameRemoteBufferPool
+00B86994 CGameNetOnlineMessage
+00B86A8C CGameNetOnlineEvent
+00B86B84 CGameNetOnlineNews
+00B86C0C CGameNetOnlineNewsReply
+00B86CB4 CGameNetClient
+00B86DF8 CGameAnswerData
+00B86E00 CGameRequestData
+00B86E08 CGameConnectChallengeData
+00B86E10 CGameConnectResponseData
+00B86E1C CGameNetFileTransfer
+00B86F14 CGameRemoteBuffer
+00B8701C CGameControlDataType
+00B870D4 CGameControlCameraEffectGroup
+00B873C4 CGameManialinkPage
+00B87538 CMwClassInfoCGameCtnMediaBlockSound
+00B87570 CFastBufferKey (generic)
+00B875AC CGameCtnMediaBlockSound
+00B8772C CGameLadderRanking
+00B8782C CGameNetTeamInfo
+00B87914 CGameManiaNetResource
+00B879CC CGameTournament
+00B87AC4 CGameChampionship
+00B87BF0 CMwClassInfoCGameCtnMediaBlockImage
+00B87C2C CGameCtnMediaBlockImage
+00B87E0C CGameInterface
+00B88564 CGameSkillScoreComputer
+00B8867C CGameCtnLoadProgress
+00B88794 CGameCtnZoneFlat
+00B8888C CGameCtnDecorationTerrainModifier
+00B8896C CGameCtnZone
+00B88B7C CGameControlCardNetOnlineNews
+00B88E74 CGameCtnMenuProfileScene
+00B88EF4 CGameNetSearchRequest_Servers
+00B88F8C CGameNetSearchRequest_Players
+00B8901C CGameNetSearchRequest_Leagues
+00B8918C CGameControlCardLeague
+00B8945C CGameMenuFrame
+00B8974C CMwClassInfoCGameCtnMediaBlockCameraGame
+00B89764 CGameCtnMediaBlockCameraGame
+00B898C8 CMwClassInfoCGameCtnMediaBlockCameraCustom
+00B89910 CFastBufferKey (generic)
+00B8994C CGameCtnMediaBlockCameraCustom
+00B89A88 CMwClassInfoCGameCtnMediaBlockCameraPath
+00B89ACC CFastBufferKey (generic)
+00B89B0C CGameCtnMediaBlockCameraPath
+00B89C7C CGameControlCameraEffectAdaptativeNearZ
+00B89D8C CMwClassInfoCGameCtnMediaBlockGhost
+00B89DC4 CGameCtnMediaBlockGhost
+00B89F20 CMwClassInfoCGameCtnMediaBlockText
+00B89F58 CFastBufferKey (generic)
+00B89F94 CGameCtnMediaBlockText
+00B8A0E4 CMwClassInfoCGameCtnMediaBlockTransitionFade
+00B8A130 CFastBufferKey (generic)
+00B8A16C CGameCtnMediaBlockTransitionFade
+00B8A298 CMwClassInfoCGameCtnMediaBlockTime
+00B8A2D0 CFastBufferKey (generic)
+00B8A30C CGameCtnMediaBlockTime
+00B8A424 CMwClassInfoCGameCtnMediaBlockFxColors
+00B8A464 CFastBufferKey (generic)
+00B8A4A4 CGameCtnMediaBlockFxColors
+00B8A5C0 CMwClassInfoCGameCtnMediaBlockFxBlur
+00B8A5D4 CMwClassInfoCGameCtnMediaBlockFxBlurDepth
+00B8A61C CFastBufferKey (generic)
+00B8A65C CGameCtnMediaBlockFxBlurDepth
+00B8A77C CMwClassInfoCGameCtnMediaBlockFxBloom
+00B8A7BC CFastBufferKey (generic)
+00B8A7FC CGameCtnMediaBlockFxBloom
+00B8A91C CMwClassInfoCGameCtnMediaBlockMusicEffect
+00B8A964 CFastBufferKey (generic)
+00B8A9A4 CGameCtnMediaBlockMusicEffect
+00B8AAC4 CMwClassInfoCGameCtnMediaBlockCameraEffectShake
+00B8AB1C CFastBufferKey (generic)
+00B8AB5C CGameCtnMediaBlockCameraEffectShake
+00B8AC90 CMwClassInfoCGameCtnMediaBlock3dStereo
+00B8ACD0 CFastBufferKey (generic)
+00B8AD0C CGameCtnMediaBlock3dStereo
+00B8AE6C CGamePopUp
+00B8AF14 CGameCtnMediaBlockFx
+00B8B08C CGameSafeFrame
+00B8B15C CGameCtnEdControlCamPath
+00B8B234 CGameCtnEdControlCamCustom
+00B8B33C CGameNetDataDownload
+00B8B40C CGameCtnMediaBlockCamera
+00B8B5FC CGameControlCardMessage
+00B8B8DC CGameLadderRankingSkill
+00B8B9A4 CGameLadderRankingLeague
+00B8BA54 CGameLadderRankingCtnChallengeAchievement
+00B8BB5C CGameCtnPainterSetting
+00B8BD8C CGameRemoteBufferDataInfoRankings
+00B8BFA4 CGameRemoteBufferDataInfoSearchs
+00B8C184 CGameRemoteBufferDataInfoFinds
+00B8C294 CGameAdvertising::CImplem
+00B8C3A4 CGameAdvertisingNadeo
+00B8C45C CGameAdvertisingRadial
+00B8C56C CFastMapTable (generic)
+00B8C574 CGameAdvertisingElement
+00B8C684 CGameCtnBlockInfoSlope
+00B8C75C CGameRule
+00B8C7FC CGamePlayerScoresShooter
+00B8C8EC CGameControlGridCtnChallengeGroup
+00B8CB6C CGamePlayerAttributesLiving
+00B8CC4C CGameControlGridCtnCampaign
+00B8CF3C CGameControlCardNetOnlineEvent
+00B8D264 CGameControlCardNetTeamInfo
+00B8D52C CGameControlCardCtnVehicle
+00B8D7E4 CGameControlCardCtnGhostInfo
+00B8DAD4 CGameControlCardChampionship
+00B8DDC4 CGameControlCardCtnChapter
+00B8E084 CGameControlCardCtnGhost
+00B8E3C4 CGameControlCardCtnCampaign
+00B8E6B4 CGameControlCardCtnArticle
+00B8E974 CGameControlCardCtnReplayRecordInfo
+00B8EC94 CGameControlCardCalendar
+00B8EFB4 CGameControlCardCalendarEvent
+00B8F364 CGameControlCardLadderRanking
+00B8F644 CMwClassInfoCGameCtnMediaBlockTrails
+00B8F65C CGameCtnMediaBlockTrails
+00B8F794 CMwClassInfoCGameCtnMediaBlockFxBlurMotion
+00B8F7AC CGameCtnMediaBlockFxBlurMotion
+00B8F914 CGameCtnZoneFrontier
+00B8FA04 CGameCtnZoneTest
+00B8FAFC CGameCtnBlockInfoClassic
+00B8FC04 CGameCtnBlockInfoFrontier
+00B8FD84 CGameCtnBlockInfoFlat
+00B8FE60 CMwClassInfoCGameCtnMediaBlockTriangles
+00B8FE74 CMwClassInfoCGameCtnMediaBlockTriangles2D
+00B8FE8C CGameCtnMediaBlockTriangles2D
+00B90000 CMwClassInfoCGameCtnMediaBlockTriangles3D
+00B90014 CGameCtnMediaBlockTriangles3D
+00B90564 CFastCallbackInstance1P (generic)
+00B9056C CFastCallbackInstance2P (generic)
+00B90574 CCtrColorChooserCallbackInstance (generic)
+00B90664 CGameCtnMediaBlockEditorTriangles
+00B90764 CGameCtnParticleParam
+00B90834 CGameCtnDecorationSize
+00B90944 CGameCtnDecorationMood
+00B90AEC CGameCtnDecorationAudio
+00B90BF4 CGameCtnObjectInfo
+00B90CEC CGameMenuScaleEffect
+00B90E84 CGameControlPlayerNet
+00B90F94 CGameBulletModel
+00B91180 SParamEffect
+00B9118C CGameMenuColorEffect
+00B9123C SParamColorEffect
+00B9136C CGameControlCameraEffect
+00B9142C CGameManialinkEntry
+00B914E4 CGameManialinkFileEntry
+00B9165C CGameNetSearchRequest
+00B916EC CGameCtnMediaBlockTransition
+00B91804 CGameCtnMediaBlockFxBlur
+00B9191C CGameCtnMediaBlockCameraEffect
+00B91A54 CGameControlCameraEffectShake
+00B91B6C CGameSafeFrameConfig
+00B91C14 CGameCtnEdControlCam
+00B91D1C CGameCtnMediaBlockTriangles
+00B91E34 CGameControlEditContext
+00B91EE8 GmLine2
+00B91EF4 CGameControlRotate
+00B91F74 CGameControlEdit
+00B91FF4 CGameControlMove
+00B92074 CGameControlSelection
+00B92124 CGameControlEditDisplay
+00B921B4 CGameCalendarEvent
+00B92314 CControlBase
+00B92834 CControlContainer
+00B92B3C CControlFrame
+00B92DB4 CControlLabel
+00B93004 CControlQuad
+00B9328C CControlGrid
+00B93614 CControlButton
+00B93ABC CControlStyle
+00B94054 CControlEnum
+00B942F4 CControlListItem
+00B943DC CControlStyleSheet
+00B94594 CControlEntry
+00B9487C CControlUiRange
+00B94ABC CControlText
+00B94DA4 CControlList
+00B951BC CControlEffectMaster
+00B9537C CControlFrameAnimated
+00B95724 CFastCallbackInstance5P (generic)
+00B9572C CControlDisplayGraph
+00B95944 CControlEngine
+00B95AA4 CControlField2
+00B95E0C CControlUrlLinks
+00B95FF4 CPlugFont::CUrlLinks
+00B960AC CControlFrameStyled
+00B96324 CControlColorChooser
+00B965F4 CControlCredit
+00B96914 CControlPager
+00B96CBC CControlTimeLine2
+00B97124 CControlColorChooser2
+00B97368 CCtrColorChooserCallbackInstance (generic)
+00B97418 CFastBufferKey (generic)
+00B97454 CControlEffectSimi
+00B97504 CControlEffectSimi::SParamEffectSimi
+00B975C4 CControlSimi2
+00B97694 CControlLayout
+00B97774 CControlMediaPlayer
+00B979F4 CControlEffect
+00B97ADC CControlSlider
+00B97D7C CControlUiDockable
+00B98064 CControlOverlay
+00B98250 CControlKeyboardInterface
+00B98264 CControlMediaItem
+00B9835C CControlImage
+00B985AC CControlRadar
+00B98804 CControlIconIndex
+00B989E4 CControlCurve
+00B98E14 CControlListMap
+00B9912C CControlListMap2
+00B99524 CControlEffectMoveFrame
+00B995D4 _ParamMoveFrameEffect
+00B99644 CControlEffectCombined
+00B996F4 SParamEffectCombined
+00B9971C CControlTimeLine
+00B9991C CControlForm
+00B99B9C CControlEffectMotion
+00B99C4C SParamEffectMotion
+00B99D24 CControlEffectSwitchStyle
+00B99E1C CControlUiElement
+00B9A0DC CAudioPort
+00B9A364 CAudioSound
+00B9A45C CAudioEngine
+00B9A4FC CAudioMusic
+00B9A5AC CAudioSoundMulti
+00B9A784 CAudioSoundSurface
+00B9A84C CAudioSoundEngine
+00B9A93C CAudioBufferKeeper
+00B9AF44 COalDevice
+00B9B13C COalAudioPort
+00B9CDCC CAudioPortNull
+00B9CF00 CAudioSoundEngine_Mixer_Implem (generic)
+00B9CF10 CAudioSoundEngine_Mixer_Implem (generic)
+00B9CF98 CAudioSoundEngine_Mixer_Implem (generic)
+00B9CFB0 CAudioSoundEngine_Mixer_Implem (generic)
+00B9CFD4 COalAudioBufferKeeper
+00B9D500 CAudioSound::CImplementation
+00B9D528 CAudioSoundBink
+00B9D564 COalAudioSound
+00B9DF34 CGenAudioMusic (generic)
+00B9DF74 CGenAudioSoundMulti (generic)
+00B9DFB4 CFastMapTable (generic)
+00B9DFC4 CGenAudioSoundSurface (generic)
+00B9E004 CGenAudioSoundEngine (generic)
+00B9E424 CScene2d
+00B9E578 CSceneMobilOnVisibleWake
+00B9E58C CSceneMobilOnRenderBeforeItem
+00B9E5BC CSceneMobilAbsorbContact
+00B9E5D4 CSceneMobil
+00B9E814 CSceneObject
+00B9E944 CSceneObjectLink
+00B9EAC4 CScene3d
+00B9EBDC CSceneFxNod
+00B9ECDC CScene
+00B9EDD4 CSceneSoundSource
+00B9EF6C CMwClassInfoCSceneVehicleCar
+00B9EFA0 CCallbackSceneVehicleCarAfterContacts
+00B9EFE4 CCallbackSceneVehicleCarComputeForces
+00B9EFFC CSceneVehicleCar
+00B9F314 CSceneVehicle
+00B9F4DC CSceneCamera
+00B9F63C CSceneEngine
+00B9F714 CSceneFxDistor2d
+00B9F9E4 CScenePath
+00B9FA7C CSceneLight
+00B9FBB4 CSceneMobilClouds
+00B9FE84 CSceneMobilSnow
+00BA0114 CSceneToySea
+00BA04B4 CSceneMobilLeaves
+00BA07B4 CScenePickedItem
+00BA0834 CScenePickerManager
+00BA09CC CSceneFxStereoscopy
+00BA0ECC CSceneController
+00BA0FAC CScenePoc
+00BA1170 CMwClassInfoCSceneToyBoat
+00BA1188 CFastBufferKey (generic)
+00BA1204 CCallbackSceneToyBoatSortCustom
+00BA12D4 CCallbackSceneToyBoatComputeForces
+00BA1464 CSceneToyBoat
+00BA1894 CSceneListener
+00BA1984 CSceneConfig
+00BA1A84 CSceneField
+00BA1CD4 CSceneFxColors
+00BA246C CSceneFxSuperSample
+00BA273C CSceneFx
+00BA27F4 CSceneToy
+00BA29B4 CSceneSector
+00BA2A6C CSceneMessageHandler
+00BA2B6C CSceneToyFxDynaBump
+00BA2D44 CSceneGate
+00BA2E4C CSceneMobilTraffic
+00BA301C CSceneTrafficPath
+00BA30E4 CSceneMood
+00BA317C CSceneTrafficGraph
+00BA321C CSceneLocation
+00BA3314 CSceneSoundManager
+00BA376C CSceneVehicleCarTuning
+00BA3884 CSceneVehicleStruct
+00BA3924 CSceneVehicleTunings
+00BA39DC CSceneVehicleMaterial
+00BA3A6C CSceneVehicleEnvironment
+00BA3B20 CMwClassInfoCSceneToyCharacter
+00BA3B38 CCallbackSceneToyCharacterAfterContacts
+00BA3B4C CSceneToyCharacter
+00BA3CD0 CCallbackSceneToyCharacterComputeForces
+00BA3F1C CBoatParam
+00BA43F4 CBoatTeamMateActionDesc
+00BA450C CBoatTeamMateLocationDesc
+00BA45D4 CBoatTeamActionDesc
+00BA46BC CBoatTeamDesc
+00BA481C CSceneToyStem
+00BA4B54 CSceneToyTrain
+00BA4DE4 CSceneVehicleGlider
+00BA4F90 CCallbackComputeForces
+00BA4FE4 CSceneFxOccZCmp
+00BA51A4 CSceneToyCharacterTuning
+00BA5234 CSceneToyCharacterTunings
+00BA52BC CSceneFxCameraBlend
+00BA53F4 CSceneFxGrayAccum
+00BA58BC CSceneFxMotionBlur
+00BA5D74 CSceneFxOverlay
+00BA5F04 CSceneFxDepthOfField
+00BA64D4 CSceneFxVisionK
+00BA6724 CSceneToyLeash
+00BA6934 CSceneToySubway
+00BA6D44 CSceneToyBird
+00BA6FD4 CSceneVehicleSpeedBoat
+00BA717C CCallbackComputeForcesSpeedBoat
+00BA7224 CSceneExtraFlocking
+00BA748C CSceneExtraFlockingCharacters
+00BA7664 CSceneMobilFlockAttractor
+00BA784C CSceneToyFilaments
+00BA7A54 CSceneVehicleBall
+00BA7BFC CCallbackSceneVehicleBallAfterContacts
+00BA7C10 CCallbackSceneVehicleBallComputeForces
+00BA7EDC CSceneToyMotorbike
+00BA84FC CSceneMoods
+00BA858C CSceneToyDisplayHistogram
+00BA872C CSceneToyDisplayGraph
+00BA88D4 CSceneToyDisplayProgress
+00BA8A94 CSceneFxHeadTrack
+00BA8B74 CSceneConfigVision
+00BA8C14 CSceneFxToneMapping
+00BA8EF4 CSceneFxBloomData
+00BA8FC4 CSceneVehicleGliderTuning
+00BA90E4 CSceneFxBloom
+00BA99AC CSceneToyRock
+00BA9B64 CSceneFxFlares
+00BA9EF4 CSceneLocationCamera
+00BAA07C CSceneVehicleSpeedBoatTuning
+00BAA154 CSceneToyBroomstick
+00BAA2D8 CCallbackSceneToyBroomStickComputeForces
+00BAA3E4 CSceneVehicleBallTuning
+00BAA4B4 CPlugBitmapRenderScene3d
+00BAA59C CSceneVehicleMaterialGroup
+00BAA634 CSceneToyCharacterDesc
+00BAA6F4 CSceneVehicleEmitter
+00BAA77C CSceneFxCompo
+00BAA884 CSceneToySeaHouleTable
+00BAA9AC CSceneToySeaHoule
+00BAAB84 CBoatSailState
+00BAAE1C CBoatSail
+00BAB33C CManoeuvre
+00BAB434 CSceneVehicleTuning
+00BAB4D4 CSceneMotorbikeEnvMaterial
+00BAB5C4 CSceneToySeaHouleFixe
+00BAB6DC GxLight
+00BAB89C GxLightDirectional
+00BAB924 GxLightNotAmbient
+00BABA64 GxFog
+00BABAF0 CFastBufferKey (generic)
+00BABB2C GxFogBlender
+00BABBEC GxLightAmbient
+00BABCF4 GxLightBall
+00BABF44 GxLightFrustum
+00BAC0B4 GxLightSpot
+00BAC1DC GxLightPoint
+00BAC2AC CPlugFile
+00BAC54C CPlugFileBink
+00BAC720 CPlugFileZip::CLoaderZip
+00BAC73C CPlugFileZip
+00BAC7F4 CClassicBufferZip
+00BACF14 CPlugBitmap
+00BAD5FC CPlugTree
+00BAD95C CPlugFileImg
+00BADB8C CPlugFont
+00BADC24 CPlugTreeVisualPlane
+00BADD6C CPlugSolid
+00BADF8C CPlugBitmapRenderCamera
+00BAE104 CPlugTreeGenText
+00BAE1CC CPlugMusic
+00BAE314 CPlugShaderGeneric
+00BAE504 CPlugMaterial
+00BAE65C CPlugBitmapSampler
+00BAE7FC CPlug
+00BAE87C CPlugVisual
+00BAEA7C CPlugVisualQuads2D
+00BAEC14 CClassicBufferPart
+00BAECD8 CPlugFilePack::CLoaderPack
+00BAECF4 CPlugFilePack
+00BAEDA0 CSystemFileMemMapped
+00BAEE44 CPlugFileFidContainer
+00BAEFBC CPlugEngine
+00BAF04C CPlugFurWind
+00BAF1BC CPlugShaderApply
+00BAF38C CPlugTreeVisualMip
+00BAF704 CPlugShader
+00BAFA90 CPlugMaterialCustom::SBitmap
+00BAFAA8 CPlugMaterialCustom::SGpuFx
+00BAFAC0 CPlugMaterialCustom::SParamShaderFlags
+00BAFADC CPlugMaterialCustom
+00BAFB58 CPlugMaterialCustom::SParamFuncShader
+00BAFD84 CPlugFileGen
+00BAFE5C CPlugFileDds
+00BB0094 CPlugPointsInSphereOpt
+00BB01B4 CPlugBitmapRenderSolid
+00BB0294 CPlugBitmapRenderShadow
+00BB0340 SPlugGpuParamSkipSampler
+00BB054C CPlugBitmapRender
+00BB099C CPlugFileGPUV
+00BB105C CPlugFileVHlsl
+00BB1CE4 CPlugVisualIndexedTriangles
+00BB1E9C CPlugVisualSprite
+00BB20DC CPlugVertexStream
+00BB218C CPlugFileGPUP
+00BB2324 CPlugSound
+00BB24F4 CPlugAudioEnvironment
+00BB25DC CPlugVisualQuads
+00BB276C CPlugVisualOctree
+00BB2804 CPlugVisualIndexedLines
+00BB2974 CPlugTreeViewDep
+00BB2A7C CPlugTreeLight
+00BB2BEC CPlugVisual3D
+00BB2E34 CPlugFileSnd
+00BB45D4 CPlugFileGPU
+00BB474C CPlugBlendShapes
+00BB48B4 CPlugBitmapAddress
+00BB4A34 CPlugSoundVideo
+00BB4AD4 CPlugFileJpg
+00BB4BC4 CPlugDecoratorSolid
+00BB4C84 CPlugFileText
+00BB4D44 CPlugFileFidCache
+00BB4E6C CPlugLight
+00BB4F7C CPlugVisualLines
+00BB50EC CPlugFilePsh
+00BB535C CPlugFileTga
+00BB5434 CFastMapTable (generic)
+00BB5444 CPlugVisualLines2D
+00BB559C CPlugVisualTriangles
+00BB5734 CPlugFileVideo
+00BB57F4 CFastCallbackInstance5P (generic)
+00BB5844 CPlugIndexBuffer
+00BB58F4 CPlugFileSndGen
+00BB59E4 CPlugSoundEngine
+00BB5A7C CPlugFileWav
+00BB5B8C CPlugSoundEngineComponent
+00BB5C9C CPlugBitmapRenderLightFromMap
+00BB6050 CPlugFileGpuBuilder
+00BB605C CPlugFilePHlsl
+00BB78B4 CPlugBitmapRenderLightOcc
+00BB798C CPlugGpuFxLocator
+00BB7A34 CPlugTreeFrustum
+00BB7B8C CPlugVisualGrid
+00BB7D54 CPlugModel
+00BB7E8C CPlugModelTree
+00BB801C CPlugModelLodMesh
+00BB826C CPlugModelMesh
+00BB848C CPlugBitmapShader
+00BB85EC CPlugBitmapRenderWater
+00BB884C CPlugBitmapRenderCubeMap
+00BB8A44 CPlugSurfaceGeom
+00BB8B4C CPlugVisualIndexed
+00BB8CC4 CPlugSurface
+00BB8D7C CPlugTreeGenerator
+00BB8E54 CPlugMusicType
+00BB8EFC CPlugMaterialFxs
+00BB8FBC CPlugVisualIndexedStrip
+00BB9134 CPlugVisual2D
+00BB9304 CPlugModelFences
+00BB9484 CPlugViewDepLocator
+00BB9614 CPlugDecoratorTree
+00BB976C CPlugBitmapRenderOverlay
+00BB9944 CPlugModelFur
+00BB9C9C CPlugFileModel3ds
+00BB9D5C CPlugFilePso
+00BB9E34 CPlugFileModelObj
+00BB9F3C CPlugTreeGenSolid
+00BBA0B4 CPlugFileVso
+00BBA184 CPlugFileGpuFxD3d
+00BBA244 CPlugBitmapRenderSub
+00BBA314 CPlugMaterialFxGenCV
+00BBA40C CPlugBitmapRenderVDepPlaneY
+00BBA4D4 CPlugMaterialFxGenUvProj
+00BBA584 CPlugMaterialFxDynaMobil
+00BBA64C CPlugMaterialFxDynaBump
+00BBA72C CPlugMaterialFxFlags
+00BBA834 CPlugMaterialFxFur
+00BBA95C CPlugShaderSpritePath
+00BBAA5C CPlugShaderSprite
+00BBABDC CPlugShaderPass::SGpuFx
+00BBABF4 CPlugShaderPass
+00BBACD4 CPlugSoundMulti
+00BBAD9C CPlugSoundSurface
+00BBAE54 CPlugBitmapRenderPortal
+00BBAF54 CPlugBitmapRenderPlaneR
+00BBB01C CPlugModelShell
+00BBB0E4 CPlugFileOggVorbis
+00BBB2E4 CPlugBitmapRenderHemisphere
+00BBB3C4 CPlugFileI18n
+00BBB484 CPlugRessourceStrings
+00BBB55C CPlugFont::CEditionData
+00BBB56C CFastMapTable (generic)
+00BBB574 CEditionDataBitmap
+00BBB584 CPlugFontBitmap
+00BBB704 CPlugBitmapPackInput
+00BBB7CC CPlugBitmapPackElem
+00BBB8A4 CPlugFileVsh
+00BBBA84 CPlugBitmapPack
+00BBBB6C CPlugFilePng
+00BBBC24 CPlugVisualPath
+00BBBDD4 CPlugBitmapPacker
+00BBBFFC CPlugFileAvi
+00BBC0D4 CPlugFileFont
+00BBC194 CPlugVisualHeightField
+00BBC314 CPlugSoundMood
+00BBC3D4 CPlugVisualStrip
+00BBC544 CPlugVisualVertexs
+00BBC8A4 CPlugBitmapApply
+00BBC9AC CPlugVisualIndexedTriangles2D
+00BBCB60 CMwClassInfoCPlugBitmapHighLevel
+00BBCB6C CPlugBitmapHighLevel
+00BBCC94 CPlugCrystal
+00BBCD4C CPlugTreeVisualGrider
+00BBCE34 CPlugVolumeShadow
+00BBD304 CPlugAudio
+00BBD394 CPlugMaterialFx
+00BBD43C CPlugFileModel
+00BBD564 CPlugFileGpuFx
+00BBD614 CPlugFileGpuInclude
+00BBDC78 GmSurf
+00BBDF8C GmField2Base
+00BBDFAC GmField2
+00BBE17C GmSurfMesh
+00BBE3A0 GmSurfEllipsoid
+00BBE414 GmSurfSphere
+00BBE488 GmSurfBox
+00BBE4FC GmSurfPolygon
+00BBEA74 CInputBindingsConfig
+00BBEB84 CInputPort::SActionMapDescription
+00BBEB94 CInputPort
+00BBEE84 CInputPortDx8
+00BBEF44 CInputEngine
+00BBF004 CInputDevice
+00BBF24C CInputDeviceDx8Pad
+00BBF304 CInputDeviceDx8Mouse
+00BBF3CC CInputDeviceDx8Keyboard
+00BBF48C CInputPortNull
+00BBF55C CInputDeviceMouse
+00BBF718 CClassicI18n
+00BBF8BC CStreamBuf
+00BBF8F8 CClassicLog
+00BBF9E8 CClassicBuffer
+00BBFB64 CClassicBufferMemory
+00BBFBD0 CClassicArchive
+00BC13A4 CFastStringList
+00BC13AC CFastStringIntList
+00BC13BC CClassicBufferZlib
+00BC13F0 CClassicBufferCrypted
+00BC4CC8 TiXmlBase
+00BC4CFC TiXmlAttribute
+00BC4D0C TiXmlNode
+00BC4D7C TiXmlComment
+00BC4E64 TiXmlUnknown
+00BC4EAC TiXmlElement
+00BC554C CHdrText
+00BC55EC CHdrUnknown
+00BC568C CHdrElement
+00BC5754 CHdrComment
+00BC57F4 CHdrDeclaration
+00BC5894 CHdrDocument
+00BC594C CXmlUnknown
+00BC59EC CXmlDocument
+00BC5A9C CXmlElement
+00BC5B4C CXmlText
+00BC5BFC CXmlDeclaration
+00BC5CB4 CXmlNod
+00BC5D64 CXmlAttribute
+00BC5DFC CXmlComment
+00BC5FA4 CMwCmdBufferCore
+00BC60AC CMwEngineMain
+00BC6144 CMwProfiler
+00BC61D4 CMwNod
+00BC628C CMwEngine
+00BC6334 CMwCmdFastCall
+00BC63BC CMwCmdFastCallUser
+00BC646C CMwCmd
+00BC64FC CMwClassInfo
+00BC661C CMwParamFastArray (generic)
+00BC66E4 CMwParamFastBuffer (generic)
+00BC67AC CMwParamFastBufferCat (generic)
+00BC6874 CMwParamFastArray (generic)
+00BC693C CMwParamFastBuffer (generic)
+00BC6A04 CMwParamFastBufferCat (generic)
+00BC6ACC CMwParamFastArray (generic)
+00BC6B94 CMwParamFastBuffer (generic)
+00BC6C5C CMwParamFastBufferCat (generic)
+00BC6D24 CMwParamFastArray (generic)
+00BC6DEC CMwParamFastBuffer (generic)
+00BC6EB4 CMwParamFastBufferCat (generic)
+00BC6F7C CMwParamFastArray (generic)
+00BC7044 CMwParamFastBuffer (generic)
+00BC710C CMwParamFastBufferCat (generic)
+00BC71D4 CMwParamFastArray (generic)
+00BC729C CMwParamFastBuffer (generic)
+00BC7364 CMwParamFastBufferCat (generic)
+00BC742C CMwParamFastArray (generic)
+00BC74F4 CMwParamFastBuffer (generic)
+00BC75BC CMwParamFastBufferCat (generic)
+00BC7684 CMwParamFastArray (generic)
+00BC774C CMwParamFastBuffer (generic)
+00BC7814 CMwParamFastBufferCat (generic)
+00BC78DC CMwParamFastArray (generic)
+00BC79A4 CMwParamFastBuffer (generic)
+00BC7A6C CMwParamFastBufferCat (generic)
+00BC7B34 CMwParamFastArray (generic)
+00BC7BFC CMwParamFastBuffer (generic)
+00BC7CC4 CMwParamFastBufferCat (generic)
+00BC7D8C CMwParamFastArray (generic)
+00BC7E54 CMwParamFastBuffer (generic)
+00BC7F1C CMwParamFastBufferCat (generic)
+00BC7FE4 CMwParamFastArray (generic)
+00BC80AC CMwParamFastBuffer (generic)
+00BC8174 CMwParamFastBufferCat (generic)
+00BC823C CMwParamFastArray (generic)
+00BC8304 CMwParamFastBuffer (generic)
+00BC83CC CMwParamFastBufferCat (generic)
+00BC8494 CMwParamFastArray (generic)
+00BC855C CMwParamFastBuffer (generic)
+00BC8624 CMwParamFastBufferCat (generic)
+00BC86EC CMwParamFastArray (generic)
+00BC87B4 CMwParamFastBuffer (generic)
+00BC887C CMwParamFastBufferCat (generic)
+00BC8944 CMwParamAction
+00BC8A0C CMwParamBool
+00BC8AD4 CMwParamClass
+00BC8B9C CMwParamRefBuffer
+00BC8C64 CMwParamStruct
+00BC8D2C CMwParamColor
+00BC8DF4 CMwParamEnum
+00BC8EBC CMwParamNatural
+00BC8F84 CMwParamNaturalRange
+00BC904C CMwParamInteger
+00BC9114 CMwParamIntegerRange
+00BC91DC CMwParamReal
+00BC92A4 CMwParamRealRange
+00BC936C CMwParamString
+00BC9434 CMwParamStringInt
+00BC94FC CMwParamMwId
+00BC95C4 CMwParamIso4
+00BC968C CMwParamIso3
+00BC9754 CMwParamVec4
+00BC981C CMwParamVec3
+00BC98E4 CMwParamVec2
+00BC99AC CMwParamQuat
+00BC9A74 CMwParamProc
+00BC9B3C CMwParamNodRef
+00BC9C18 CMwStack
+00BC9C64 CMwCmdInst
+00BC9D14 CMwCmdExpClass
+00BC9E0C CMwCmdBlockMain
+00BC9F6C CMwCmdScript
+00BCA0BC CMwCmdContainer
+00BCA154 CMwCmdFiber
+00BCA24C CMwStatsValue
+00BCA484 CMwRefBuffer
+00BCA53C CMwFoundationsEngine
+00BCA5DC CMwCmdBuffer
+00BCA680 CMwEngineManager
+00BCA844 CMwParam
+00BCAC0C CMwCmdParamInterface
+00BCAC1C CMwCmdExp
+00BCACEC CMwCmdBlock
+00BCADC4 CBlockVariable
+00BCAE54 CMwCmdBlockProcedure
+00BCAF24 CMwCmdScriptVar
+00BCAFBC CMwCmdExpEnumCastedNum
+00BCB08C CMwCmdExpNumCastedEnum
+00BCB15C CMwCmdExpStringUpDownCase
+00BCB23C CMwCmdScriptVarEnum
+00BCB2D4 CMwCmdExpEnumIdent
+00BCB3A4 CMwCmdAffectIdentEnum
+00BCB464 CMwCmdExpStringTrunc
+00BCB534 CMwCmdArrayAdd
+00BCB5EC CMwCmdArrayRemove
+00BCB6A4 CMwCmdExpClassThis
+00BCB774 CMwCmdExpVec3Function
+00BCB844 CMwCmdExpVec2Function
+00BCB914 CMwCmdExpStringFunction
+00BCB9E4 CMwCmdExpClassFunction
+00BCBAB4 CMwCmdExpIso4Function
+00BCBB84 CMwCmdExpBoolFunction
+00BCBC54 CMwCmdProc
+00BCBD04 CMwCmdBlockFunction
+00BCBDCC CMwCmdContinue
+00BCBE84 CMwCmdBreak
+00BCBF34 CMwCmdReturn
+00BCBFEC CMwCmdExpNumDotProduct2
+00BCC0BC CMwCmdExpNumDotProduct3
+00BCC18C CMwCmdExpIso4Inverse
+00BCC25C CMwCmdExpIso4Mult
+00BCC32C CMwCmdExpVec3Product
+00BCC3FC CMwCmdExpVec3Mult
+00BCC4CC CMwCmdExpVec3MultIso
+00BCC59C CMwCmdExpVec3Neg
+00BCC66C CMwCmdExpVec3Sub
+00BCC73C CMwCmdExpVec3Add
+00BCC80C CMwCmdExpVec2Neg
+00BCC8DC CMwCmdExpVec2Mult
+00BCC9AC CMwCmdExpVec2Sub
+00BCCA84 CMwCmdWait
+00BCCB4C CMwCmdLog
+00BCCBFC CMwCmdExpVec2Add
+00BCCCD4 CMwCmdSleep
+00BCCD84 CMwCmdAffectParamVec3
+00BCCE44 CMwCmdAffectParamString
+00BCCF04 CMwCmdAffectParamVec2
+00BCCFC4 CMwCmdAffectParamNum
+00BCD084 CMwCmdAffectParamClass
+00BCD144 CMwCmdAffectParamEnum
+00BCD204 CMwCmdAffectParamIso4
+00BCD2C4 CMwCmdAffectParamBool
+00BCD384 CMwCmdAffectIdentVec3
+00BCD444 CMwCmdAffectIdentVec2
+00BCD504 CMwCmdAffectIdentNum
+00BCD5C4 CMwCmdAffectIdentString
+00BCD684 CMwCmdAffectIdentIso4
+00BCD74C CMwCmdScriptVarVec3
+00BCD7EC CMwCmdAffectIdentBool
+00BCD8AC CMwCmdAffectIdentClass
+00BCD974 CMwCmdScriptVarVec2
+00BCDA1C CMwCmdScriptVarString
+00BCDAC4 CMwCmdScriptVarIso4
+00BCDB6C CMwCmdScriptVarFloat
+00BCDC1C CMwCmdScriptVarInt
+00BCDCC4 CMwCmdScriptVarClass
+00BCDD74 CMwCmdScriptVarBool
+00BCDE1C CMwCmdSwitchType
+00BCDEF4 CMwCmdBlockCast
+00BCDFBC CMwCmdExpIso4Param
+00BCE08C CMwCmdExpIso4Ident
+00BCE15C CMwCmdExpVec3Param
+00BCE22C CMwCmdExpIso4
+00BCE2F4 CMwCmdExpVec3Ident
+00BCE3C4 CMwCmdExpVec2Ident
+00BCE494 CMwCmdExpVec2Param
+00BCE574 CMwCmdExpVec3
+00BCE664 CMwCmdExpVec2
+00BCE73C CMwCmdSwitch
+00BCE7FC CMwCmdExpEnumParam
+00BCE8CC CMwCmdExpClassParam
+00BCE99C CMwCmdExpEnum
+00BCEA64 CMwCmdExpClassIdent
+00BCEB3C CMwCmdExpBoolBin
+00BCEC1C CMwCmdExpNumFunction
+00BCED2C CMwCmdExpNumBin
+00BCEDFC CMwCmdExpStringParam
+00BCEECC CMwCmdExpStringIdent
+00BCEF9C CMwCmdExpSupEgal
+00BCF074 CMwCmdExpString
+00BCF13C CMwCmdExpSup
+00BCF214 CMwCmdExpOr
+00BCF2DC CMwCmdExpPower
+00BCF3AC CMwCmdExpSub
+00BCF47C CMwCmdExpNumParam
+00BCF54C CMwCmdExpNumIdent
+00BCF624 CMwCmdExpNum
+00BCF6F4 CMwCmdExpNeg
+00BCF7C4 CMwCmdExpNot
+00BCF88C CMwCmdExpMult
+00BCF95C CMwCmdExpInfEgal
+00BCFA2C CMwCmdExpInf
+00BCFAFC CMwCmdExpDiv
+00BCFBD4 CMwCmdExpEgal
+00BCFC9C CMwCmdExpDiff
+00BCFD64 CMwCmdExpBoolParam
+00BCFE34 CMwCmdExpBoolIdent
+00BCFF0C CMwCmdExpAnd
+00BCFFDC CMwCmdExpBool
+00BD00A4 CMwCmdExpAdd
+00BD0184 CMwCmdFor
+00BD0254 CMwCmdIf
+00BD0324 CMwCmdWhile
+00BD03D4 CMwCmdCall
+00BD0484 CMwCmdAffectParam
+00BD054C CMwCmdAffectIdent
+00BD0614 CMwClassInfoViewer
+00BD06AC CMwCmdExpStringConcat
+00BD0778 CMwEngineInfo
+00BD0780 CMwCmdIdentInterface
+00BD0788 CMwCmdFunctionInterface
+00BD0794 CVisionEngine
+00BD08BC CFastCallbackInstance1P (generic)
+00BD08C4 CFastCallbackInstance1P (generic)
+00BD08CC CFastCallbackInstance1P (generic)
+00BD08D4 CFastCallbackInstance1P (generic)
+00BD08DC CFastCallbackInstance1P (generic)
+00BD08E4 CFastCallbackInstance1P (generic)
+00BD08EC CFastCallbackInstance1P (generic)
+00BD08F4 CFastCallbackInstance1P (generic)
+00BD08FC CFastCallbackInstance1P (generic)
+00BD0904 CVisionViewport
+00BD0B3C CVisionVideoAvi
+00BD0B64 CVisionResourceFile
+00BD0E14 CFastCallbackInstance3P (generic)
+00BD0E1C CFastCallbackInstance3P (generic)
+00BD0E24 CFastCallbackInstance1P (generic)
+00BD0E2C CFastCallbackInstance3P (generic)
+00BD0E34 CFastCallbackInstance2P (generic)
+00BD0E3C CFastCallbackInstance3P (generic)
+00BD0E44 CFastCallbackInstance1P (generic)
+00BD0E4C CFastCallbackInstance1P (generic)
+00BD10BC CVisionViewportDx9
+00BD180C CVisionViewportNull
+00BD1A40 CVisionShaderKeeper
+00BD1A9C CVisionVisualKeeper
+00BD2274 CDx9ShaderKeeper
+00BD23B0 CDx9VisualKeeper
+00BD24D4 CDx9IndexBuffer
+00BD2A1C CDx9DeviceCaps
+00BD3FAC CVisionViewportDx9::CCameraFxDx9
+00BD5B20 CDx9GpuBuilder
+00BD7E6C CVisionTexConverter
+00BD9500 CHmsZone::CVisionData
+00BD950C CVisionHmsZone
+00C3E4E4 CRpcCallInternal
+00C4045C CSystemDialogManagerWin32
+00C404B4 CSystemData
+00C4053C CSystemDialogManager
+00C405AC CNetEngine
+00C40654 CNetIPC
+00C407EC CNetMasterServerInfo
+00C408A4 CNetUPnP
+00C40930 CPfmMeshInterface
+00C40938 CPfmPath
+00C40948 CPfmPlane
+00C40950 CPfmMesh
+00C40958 CPfmHeap
+00C4096C CCrystal
+00C40984 CCrystalEdge
+00C4099C CCrystalFace
+00C40A24 CCrystalTriangleEqui
+00C40AAC CCrystalQuadEqui
+00C40B38 CCrystalLink
+00C40B44 CCrystalQuadRaw
+00C40BCC CCrystalTriangleRaw
+00C40C54 CCrystalVertex
+00C40C64 CCrystalGroup
+00C40C7C CCrystalTriangle
+00C40D00 GmSurfTriangle
+00C40D0C CCrystalQuad
+00C40D90 GmSurfQuad
+00C40DA8 CFastBufferKey (generic)
+00C40DE4 CFuncSegment
+00C40E98 GxImage
+00C40EA4 GxSurfQuadHeight
+00C40EC8 GxClipper
+00C40ED4 GxMesh
+00C40EE0 GmFuncRealFromReal2
+00C40EE8 GxSurfTriangleHeight
+00C40FDC CPlugVolumeProjector
+00C414CC CClassicDependant

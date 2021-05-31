@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E15E62D-A550-48DC-BF71-51251FD7BCAD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModTMNF</RootNamespace>
+    <AssemblyName>ModTMNF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\ModTMNF\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\ModTMNF\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressTable.cs" />
+    <Compile Include="Analysis\Asm\BeaEngine\Constants.cs" />
+    <Compile Include="Analysis\Asm\BeaEngine\Engine.cs" />
+    <Compile Include="Analysis\Asm\BeaEngine\Mnemonic.cs" />
+    <Compile Include="Analysis\Asm\BeaEngine\Structs.cs" />
+    <Compile Include="Analysis\Asm\BeaEngine\UnsafeStructs.cs" />
+    <Compile Include="Analysis\Asm\ExeInfo\ExeInfo.cs" />
+    <Compile Include="Analysis\Asm\ExeInfo\FunctionInfo.cs" />
+    <Compile Include="Analysis\Asm\ExeInfo\FunctionLengthHelper.cs" />
+    <Compile Include="Analysis\Asm\ExeInfo\PEHeader.cs" />
+    <Compile Include="Analysis\Asm\AsmHelper.cs" />
+    <Compile Include="Analysis\Asm\ExeInfo\UnmanagedBuffer.cs" />
+    <None Include="Analysis\Docs\Generated\StructSizes_Code.cs" />
+    <Compile Include="Game\Classic\CFastBuffer.cs" />
+    <Compile Include="Game\Classic\CFastStringInt.cs" />
+    <Compile Include="Game\Classic\CStringInt.cs" />
+    <Compile Include="Game\Game\CGameCtnMenus.cs" />
+    <Compile Include="Game\Hms\CHmsZoneDynamic.cs" />
+    <Compile Include="Game\Misc\StringPtrArray.cs" />
+    <Compile Include="Game\Misc\StructArray.cs" />
+    <Compile Include="Game\Misc\StructInfo.cs" />
+    <Compile Include="Game\Classic\CClassicArchive.cs" />
+    <Compile Include="Game\Classic\CFastString.cs" />
+    <Compile Include="Game\MwFoundations\CMwClassInfo.cs" />
+    <Compile Include="Game\MwFoundations\CMwEngineInfo.cs" />
+    <Compile Include="Game\MwFoundations\CMwEngineManager.cs" />
+    <Compile Include="Game\MwFoundations\CMwId.cs" />
+    <Compile Include="Game\MwFoundations\CMwNod.cs" />
+    <Compile Include="Game\Classic\CFastArray.cs" />
+    <Compile Include="Game\MwFoundations\CMwNodRef.cs" />
+    <Compile Include="Game\MwFoundations\EMwEngineId.cs" />
+    <Compile Include="Game\Misc\Memory.cs" />
+    <Compile Include="Game\MwFoundations\CMwParam.cs" />
+    <Compile Include="Game\Classic\CString.cs" />
+    <Compile Include="Game\MwFoundations\EMwIconList.cs" />
+    <Compile Include="Game\MwFoundations\EMwParamType.cs" />
+    <Compile Include="Game\MwFoundations\EStackType.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Vec4.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Proc.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Vec3.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Vec2.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Action.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Array.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Class.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Enum.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Range.cs" />
+    <Compile Include="Game\System\CSystemFid.cs" />
+    <Compile Include="Game\System\CSystemFidParameters.cs" />
+    <Compile Include="Game\TrackMania\CTrackManiaMenus.cs" />
+    <Compile Include="Game\MwFoundations\EMwClassId.cs" />
+    <Compile Include="Game\MwFoundations\CMwStack.cs" />
+    <Compile Include="Game\MwFoundations\CMwValueStd.cs" />
+    <Compile Include="Game\MwFoundations\SMwParamInfo.cs" />
+    <Compile Include="Hook.cs" />
+    <Compile Include="Analysis\SymbolsHelper.cs" />
+    <Compile Include="Mods\Mod.cs" />
+    <Compile Include="Mods\TestMod.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrackmaniaLauncher.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Analysis\Docs\DownloadLinks.md" />
+    <Content Include="Analysis\Docs\Generated\ClassHierarchy.txt" />
+    <Content Include="Analysis\Docs\Generated\ClassListByEngine.txt" />
+    <Content Include="Analysis\Docs\Generated\ClassMembers.txt" />
+    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncList.txt" />
+    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncListNonVirtual.txt" />
+    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncListNonVirtual_SHORT.txt" />
+    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncListVirtual.txt" />
+    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncListVirtual_SHORT.txt" />
+    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncList_SHORT.txt" />
+    <Content Include="Analysis\Docs\Generated\Funcs\FuncAll_SHORT.txt" />
+    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscAll.txt" />
+    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscAll_SHORT.txt" />
+    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscUnscoped.txt" />
+    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscUnscoped_SHORT.txt" />
+    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscVirtual.txt" />
+    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscVirtual_SHORT.txt" />
+    <None Include="Analysis\Docs\DesignPatterns.md" />
+    <None Include="Analysis\Docs\Misc.md" />
+    <None Include="Analysis\Docs\OtherProjects.md" />
+    <None Include="Analysis\Docs\README.md" />
+    <Content Include="Analysis\Docs\Generated\NamespaceList.txt" />
+    <Content Include="Analysis\Docs\Generated\ObjList.txt" />
+    <Content Include="Analysis\Docs\Generated\ObjListByNamespace.txt" />
+    <Content Include="Analysis\Docs\Generated\StructSizes.txt" />
+    <Content Include="Analysis\Docs\Generated\TypeList.txt" />
+    <Content Include="Analysis\Docs\Generated\TypeListFlat.txt" />
+    <Content Include="Analysis\Docs\Generated\VirtualParam_Get.txt" />
+    <Content Include="Analysis\Docs\Generated\VTables.txt" />
+    <Content Include="Analysis\Docs\SourceFileNames.txt" />
+    <None Include="Analysis\Docs\TMN manual.pdf" />
+    <None Include="Analysis\Docs\TMUnited-Game-Manual.pdf" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Analysis\Docs\StructMembers.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
