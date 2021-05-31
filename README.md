@@ -4,6 +4,14 @@ Currently this project doesn't have any real functionality but might be a useful
 
 See [technical information](/ModTMNF/Analysis/Docs/README.md), [other projects](/ModTMNF/Analysis/Docs/OtherProjects.md), and [official download links](/ModTMNF/Analysis/Docs/DownloadLinks.md).
 
+## Project status
+
+Load .NET into TmForever, hook functions, read/write memory, access the reflection system.
+
+A proper API needs to be devloped, and many things need to be wrapped / exposed.
+
+See [TestMod.cs](/ModTMNF/Mods/TestMod.cs)
+
 ## Compiling
 
 - Build `ModTMNF.sln` with Visual Studio or by running `Build.bat`.
