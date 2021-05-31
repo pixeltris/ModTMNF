@@ -31,9 +31,9 @@ Other projects contain useful information for getting familiar with TrackMania:
 
 ## TODO
 
-[ ] Add function to hook VTable entries (multiple classes / single class) VT.Hook(entryIndex, type) / VT.HookAll(entryIndex, typeArray)
-[ ] Add WinMain hook from C++ and fully load .NET before continuing execution.
-[ ] Implement more of the `Classic` classes, and finish the current implementations (especially array access).
-[ ] Implement more essential classes / finish current implementations.
-[ ] Document interesting functions / interactions / call chains.
-[ ] Start working on some type of modding project so that more functionality gets added.
+- [ ] Add function to hook VTable entries (multiple classes / single class) VT.Hook(entryIndex, type) / VT.HookAll(entryIndex, typeArray)
+- [ ] Add WinMain hook from C++ and fully load .NET before continuing execution.
+- [ ] Implement more of the `Classic` classes, and finish the current implementations (especially array access).
+- [ ] Implement more essential classes / finish current implementations.
+- [ ] Document interesting functions / interactions / call chains.
+- [ ] Start working on some type of modding project so that more functionality gets added.
