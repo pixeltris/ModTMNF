@@ -5,7 +5,6 @@
 - [OtherProjects.md](OtherProjects.md) provides links to other projects.
 - [DownloadLinks.md](DownloadLinks.md) provides links to game installers / dedicated servers.
 - [Misc.md](Misc.md) contains other miscellaneous bits of information such as interesting call chains.
-- [TMN Manual.pdf](TMN Manual.pdf) and [TMUnited-Game-Manual.pdf](TMUnited-Game-Manual.pdf) are official user manuals for TMN ESWC / TMU taken from the game folders.
 
 ## Analyzing TMNF
 
