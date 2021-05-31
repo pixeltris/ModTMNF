@@ -10,7 +10,7 @@ Load .NET into TmForever, hook functions, read/write memory, access the reflecti
 
 A proper API needs to be devloped, and many things need to be wrapped / exposed.
 
-See [TestMod.cs](/ModTMNF/Mods/TestMod.cs)
+See [TestMod.cs](/ModTMNF/Mods/TestMod.cs) (2x physics step / reflection example)
 
 ## Compiling
 
