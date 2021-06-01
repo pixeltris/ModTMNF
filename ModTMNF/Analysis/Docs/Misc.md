@@ -20,7 +20,7 @@ CGbxApp::Init
 ```
 WinMain
  WinMainInternal
-  CGbxApp::CreateStaticInstance
+  CGbxApp::CreateStaticInstance - (creates CGbxApp::ThisApp global instance)
   CreateWindowExW
   CGbxApp::InitSystem
   CGbxApp::Start
@@ -37,4 +37,26 @@ Not quite sure where the invoker of this starts
  CTrackManiaMenus::DoMenus
   CGameCtnMenus::MenuMain
    CGameCtnMenus::MenuMain_Init
+```
+
+```
+CTrackMania::UpdateGame (00497830)
+- 
+EGameState CTrackMania::GetCurrentState (00484B30) - TmDbg_GameStateToText
+```
+
+```
+This function is one to look at for seeing access context for rendering
+CVisionViewportDx9::Create (00960D50)
+```
+
+```
+CTrackManiaRace::SwitchFromRace
+ CTrackManiaRace::Ghosts_Stop
+ CTrackManiaRace::StopReplayRecordAndKeepCopy
+ CGameRace::SwitchFromRace
+ CMwCmdBufferCore::StopSimulation
+ CMwCmdBufferCore::SetSimulationRelativeSpeed
+ CTrackManiaRace::ValidateCleanup
+ CTrackManiaRace::AssignCamFreePrimaryActionKeys
 ```

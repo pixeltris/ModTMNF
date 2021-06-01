@@ -32,7 +32,7 @@ TODO: Make sure there are archive.org links for all of these.
   - The binary is a different size to the original one as the original is packed with StarForce(3.07.012.005 / 3.7.19.5 (1.8.0 TMNF update)).
   - The binary was unpacked by russian cracker `KRBDZSKL` and apparently posted it on `rutracker.ru`. It was then reuploaded [here](https://www.old-games.ru/forum/threads/obnovlenija-ot-krbdzskl-shlak43-cyberdemon-i-neizvestnogo.85661) which links to [this](https://cloud.mail.ru/public/iYvU/3PdAhoPsm) folder which has a download with a file name of `Trackmania Nations Electronic Sports World Cup (ESWC).zip` inside the zip is `TmNationsESWC_1.80.rar`. This `.rar` shares the same hashes as the the `mega.nz` link (which was made by `St1ngLeR` for a YouTube guide who renamed the .rar clarity).
   - As with most unpacks; this process was not documented and anything could have been inserted into the binary. Given the number of niche old games that this person has worked on it's probably safe.
-  **TmNationsESWC_1.80.rar** / **TmNationsESWC_Win7-10.rar**
+  - **TmNationsESWC_1.80.rar** / **TmNationsESWC_Win7-10.rar**
   - MD5: 2C7DD992AFBC1DD82616C10AC5548B15
   - SHA1: C88F69CB9527D87CCA52B71781873C44420CDCEC
   - SHA256: A4C47BA7C345A3CCFBCE0F3925F12E4A044E0095F6F7A788A273C9738C630DB9

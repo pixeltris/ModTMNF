@@ -1336,7 +1336,7 @@ namespace ModTMNF.Analysis
                     CMwClassInfo classInfo = CMwNod.StaticGetClassInfo(classId);
                     if (classInfo.Parent.Address != IntPtr.Zero)
                     {
-                        tw.WriteLine("public class " + classId + " : " + classInfo.Parent.Id +
+                        tw.WriteLine("public class " + classId + " : VT." + classInfo.Parent.Id +
                             " { public static class Offsets { public static IntPtr VTable = (IntPtr)0x" +
                             entry.Value.ToString("X8") + "; } }");
                     }

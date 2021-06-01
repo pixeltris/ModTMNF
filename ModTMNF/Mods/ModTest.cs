@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace ModTMNF.Mods
 {
-    public class TestMod : Mod
+    public class ModTest : Mod
     {
         Hook<FT.CHmsZoneDynamic.Del_PhysicsStep2> PhysicsStep2HK;
         Hook<FT.CTrackManiaMenus.Del_MenuMain_Init> MenuMain_InitHK;
@@ -52,6 +52,8 @@ namespace ModTMNF.Mods
             PhysicsStep2HK.OriginalFunc(thisPtr);
             //PhysicsStep2HK.OriginalFunc(thisPtr);
 
+            //CMwCmdBufferCore.TheCoreCmdBuffer.StopSimulation();
+            //CMwCmdBufferCore.TheCoreCmdBuffer.SetSimulationRelativeSpeed(3.0f);
         }
 
         /// <summary>

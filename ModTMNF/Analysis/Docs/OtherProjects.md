@@ -10,7 +10,7 @@ Tools made which modify the game at runtime
 - https://github.com/osvein/TM2Unlimiter
 - https://github.com/codecat/maniafix
 - https://openplanet.nl *(rich feature set ideal for making addons, but the core is closed source)*
-- https://donadigo.github.io/tmtas *(closed source and non-public)*
+- https://donadigo.github.io/tminterface *(closed source)*
 
 ## Static tools (gbx, tmx, maniaplanet, etc)
 

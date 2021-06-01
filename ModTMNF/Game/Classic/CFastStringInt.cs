@@ -13,26 +13,26 @@ namespace ModTMNF.Game
     /// </summary>
     public unsafe struct CFastStringInt
     {
-        public IntPtr CharPtr;
         public int Length;
-        public IntPtr StringPtr;
+        public IntPtr CharPtr;
+        //public IntPtr StringPtr;
 
         public string Value
         {
             get
             {
-                if (StringPtr != IntPtr.Zero)
+                /*if (StringPtr != IntPtr.Zero)
                 {
                     return ((CString*)StringPtr)->Value;
-                }
+                }*/
                 return Marshal.PtrToStringUni(CharPtr);
             }
             set
             {
-                if (StringPtr != IntPtr.Zero)
+                /*if (StringPtr != IntPtr.Zero)
                 {
                     Delete();
-                }
+                }*/
                 // Duplicate of CStringInt code
                 {
                     if (value.Length > Length || CharPtr == IntPtr.Zero)
@@ -61,13 +61,13 @@ namespace ModTMNF.Game
         public void Delete()
         {
             Memory.Delete(CharPtr);
-            if (StringPtr != IntPtr.Zero)
+            /*if (StringPtr != IntPtr.Zero)
             {
                 ((CStringInt*)StringPtr)->Delete();
-            }
+            }*/
             CharPtr = IntPtr.Zero;
             Length = 0;
-            StringPtr = IntPtr.Zero;
+            //StringPtr = IntPtr.Zero;
         }
     }
 
@@ -92,11 +92,11 @@ namespace ModTMNF.Game
             set { ptr->Length = value; }
         }
 
-        public IntPtr StringPtr
+        /*public IntPtr StringPtr
         {
             get { return ptr->StringPtr; }
             set { ptr->StringPtr = value; }
-        }
+        }*/
 
         public string Value
         {

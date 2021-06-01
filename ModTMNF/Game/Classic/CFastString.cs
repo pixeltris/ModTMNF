@@ -8,22 +8,22 @@ namespace ModTMNF.Game
 {
     // See CFastStringBase<T>
 
-    // NOTE: Something weird going on here... for now flipped Length/CharPtr (if correct, flip CFastStringInt too).
+    // NOTE: We really aren't doing this right. This seems to be a packed bit structure.
 
     public unsafe struct CFastString
     {
         public int Length;
         public IntPtr CharPtr;
-        public IntPtr StringPtr;
+        //public IntPtr StringPtr;
 
         public string Value
         {
             get
             {
-                if (StringPtr != IntPtr.Zero)
+                /*if (StringPtr != IntPtr.Zero)
                 {
                     return ((CString*)StringPtr)->Value;
-                }
+                }*/
                 return Marshal.PtrToStringAnsi(CharPtr);
             }
             set
@@ -34,10 +34,10 @@ namespace ModTMNF.Game
                 ((CString*)StringPtr)->CharPtr = IntPtr.Zero;
                 ((CString*)StringPtr)->Value = value;*/
 
-                if (StringPtr != IntPtr.Zero)
+                /*if (StringPtr != IntPtr.Zero)
                 {
                     Delete();
-                }
+                }*/
                 // Duplicate of CString code
                 {
                     if (value.Length > Length || CharPtr == IntPtr.Zero)
@@ -72,13 +72,13 @@ namespace ModTMNF.Game
         public void Delete()
         {
             Memory.Delete(CharPtr);
-            if (StringPtr != IntPtr.Zero)
+            /*if (StringPtr != IntPtr.Zero)
             {
                 ((CString*)StringPtr)->Delete();
-            }
+            }*/
             CharPtr = IntPtr.Zero;
             Length = 0;
-            StringPtr = IntPtr.Zero;
+            //StringPtr = IntPtr.Zero;
         }
     }
 
@@ -103,11 +103,11 @@ namespace ModTMNF.Game
             set { ptr->Length = value; }
         }
 
-        public IntPtr StringPtr
+        /*public IntPtr StringPtr
         {
             get { return ptr->StringPtr; }
             set { ptr->StringPtr = value; }
-        }
+        }*/
 
         public string Value
         {
