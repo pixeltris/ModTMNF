@@ -47,7 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddressTable.cs" />
+    <Compile Include="AddressTable\TMNF\FT.cs" />
+    <Compile Include="AddressTable\TMNF\OT.cs" />
+    <Compile Include="AddressTable\TMNF\ST.cs" />
+    <Compile Include="AddressTable\TMNF\VT.cs" />
     <Compile Include="Analysis\Asm\BeaEngine\Constants.cs" />
     <Compile Include="Analysis\Asm\BeaEngine\Engine.cs" />
     <Compile Include="Analysis\Asm\BeaEngine\Mnemonic.cs" />
@@ -59,6 +62,7 @@
     <Compile Include="Analysis\Asm\ExeInfo\PEHeader.cs" />
     <Compile Include="Analysis\Asm\AsmHelper.cs" />
     <Compile Include="Analysis\Asm\ExeInfo\UnmanagedBuffer.cs" />
+    <Compile Include="TrackmaniaLauncher.cs" />
     <None Include="Analysis\Docs\Generated\StructSizes_Code.cs" />
     <Compile Include="Game\Game\CGameApp.cs" />
     <Compile Include="Game\Game\CGameProcess.cs" />
@@ -72,6 +76,8 @@
     <Compile Include="Game\Hms\CHmsViewport.cs" />
     <Compile Include="Game\Hms\CHmsZoneDynamic.cs" />
     <Compile Include="Game\Input\CInputPort.cs" />
+    <Compile Include="Game\Misc\BOOL.cs" />
+    <Compile Include="Game\Misc\StackWalk64.cs" />
     <Compile Include="Game\Misc\StringPtrArray.cs" />
     <Compile Include="Game\Misc\StructArray.cs" />
     <Compile Include="Game\Misc\StructInfo.cs" />
@@ -94,6 +100,7 @@
     <Compile Include="Game\Classic\CString.cs" />
     <Compile Include="Game\MwFoundations\EMwIconList.cs" />
     <Compile Include="Game\MwFoundations\EMwParamType.cs" />
+    <Compile Include="Game\MwFoundations\Engines\CSystemEngine.cs" />
     <Compile Include="Game\MwFoundations\Engines\CVisionEngine.cs" />
     <Compile Include="Game\MwFoundations\EStackType.cs" />
     <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Vec4.cs" />
@@ -107,6 +114,7 @@
     <Compile Include="Game\MwFoundations\SMwParamInfos\SMwParamInfo_Range.cs" />
     <Compile Include="Game\System\CNodSystem.cs" />
     <Compile Include="Game\System\CSystemConfig.cs" />
+    <Compile Include="Game\System\CSystemDialogManager.cs" />
     <Compile Include="Game\System\CSystemFid.cs" />
     <Compile Include="Game\System\CSystemFidParameters.cs" />
     <Compile Include="Game\System\CSystemWindow.cs" />
@@ -121,10 +129,10 @@
     <Compile Include="Analysis\SymbolsHelper.cs" />
     <Compile Include="Mods\ModCore.cs" />
     <Compile Include="Mod.cs" />
+    <Compile Include="Mods\ModStackTraceFinder.cs" />
     <Compile Include="Mods\ModTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TrackmaniaLauncher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Analysis\Docs\DownloadLinks.md" />

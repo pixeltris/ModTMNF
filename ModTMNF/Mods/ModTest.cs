@@ -63,6 +63,8 @@ namespace ModTMNF.Mods
         {
             menusPtr = thisPtr;
 
+            Program.Log(StackWalk64.GetCallstack());
+
             // Example of reflection to get a param value (slow, at least cache the param if doing this often).
             CMwClassInfo classInfo = ((CMwNod)thisPtr.Address).MwGetClassInfo();
             SMwParamInfo param = classInfo.GetMwParamFromName("TimeLimit", 0);

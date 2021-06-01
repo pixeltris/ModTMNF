@@ -15,6 +15,7 @@ namespace ModTMNF.Analysis
         public const string MapName = "TmForever.map";
         public const string ExeName = "TmForever.exe";
         static List<SymbolInfo> symbolsCached;
+        static List<SymbolInfo> allFunctionsCached;
 
         public static void GenerateDocs()
         {
@@ -203,6 +204,92 @@ namespace ModTMNF.Analysis
             {
                 GetGenericTypeNames(names, outer);
             }
+        }
+
+        public static string FixVsCallstack(string callstack)
+        {
+            StringBuilder sb = new StringBuilder();
+            string[] lines = callstack.Replace("\r", string.Empty).Split('\n');
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string line = lines[i];
+                string hdr = ExeName + "!";
+                int idx1 = line.IndexOf(hdr);
+                if (idx1 >= 0)
+                {
+                    int idx2 = line.IndexOf("(", idx1);
+                    if (idx2 > 0)
+                    {
+                        int addrIdx = idx1 + hdr.Length;
+                        uint addr;
+                        if (uint.TryParse(line.Substring(addrIdx, idx2 - addrIdx), System.Globalization.NumberStyles.HexNumber, null, out addr))
+                        {
+                            SymbolInfo sym = ResolveFunction(addr);
+                            if (sym != null)
+                            {
+                                line = line.Substring(0, idx1) + sym.FuncComp.FullName + " - " + addr.ToString("X8");
+                            }
+                        }
+                    }
+                }
+                sb.AppendLine(line);
+            }
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Approximately gets the function for a given addres
+        /// </summary>
+        public static SymbolInfo ResolveFunction(uint address)
+        {
+            LoadSymbols();
+            if (address < allFunctionsCached[0].Address ||
+                address > allFunctionsCached[allFunctionsCached.Count - 1].Address + 200)
+            {
+                // Not within the exe code section address range (+200 for last address as we don't know the length).
+                return null;
+            }
+            int first = 0;
+            int last = allFunctionsCached.Count - 1;
+            int mid = 0;
+            do
+            {
+                mid = first + (last - first) / 2;
+                uint addr = allFunctionsCached[mid].Address;
+                if (addr == address)
+                {
+                    return allFunctionsCached[mid];
+                }
+                else if (addr < address)
+                {
+                    first = mid + 1;
+                }
+                else
+                {
+                    last = mid - 1;
+                }
+            }
+            while (first <= last);
+            SymbolInfo sym = allFunctionsCached[mid];
+            while (sym.Address > address && mid > 0)
+            {
+                mid--;
+                sym = allFunctionsCached[mid];
+            }
+            while (mid < allFunctionsCached.Count - 2)
+            {
+                SymbolInfo sym2 = allFunctionsCached[mid + 1];
+                if (sym2.Address > sym.Address && sym2.Address < address)
+                {
+                    sym = sym2;
+                    mid++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return sym;
         }
 
         public static List<SymbolInfo> LoadSymbols()
@@ -485,6 +572,15 @@ namespace ModTMNF.Analysis
                 }
                 symbolsCached.Add(symbolInfo);
             }
+            allFunctionsCached = new List<SymbolInfo>();
+            foreach (SymbolInfo symbol in symbolsCached)
+            {
+                if (symbol.FuncComp != null)
+                {
+                    allFunctionsCached.Add(symbol);
+                }
+            }
+            allFunctionsCached.Sort((x, y) => x.Address.CompareTo(y.Address));
             return symbolsCached;
         }
 

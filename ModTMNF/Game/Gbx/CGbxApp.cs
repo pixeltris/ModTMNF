@@ -91,8 +91,8 @@ namespace ModTMNF.Game
         /// </summary>
         public bool WindowFocusIfExisting
         {
-            get { return *(bool*)(Address + OT.CGbxApp.WindowFocusIfExisting); }
-            set { *(bool*)(Address + OT.CGbxApp.WindowFocusIfExisting) = value; }
+            get { return *(BOOL*)(Address + OT.CGbxApp.WindowFocusIfExisting); }
+            set { *(BOOL*)(Address + OT.CGbxApp.WindowFocusIfExisting) = value; }
         }
 
         /// <summary>
@@ -113,8 +113,13 @@ namespace ModTMNF.Game
 
         public bool ConsoleEnabled
         {
-            get { return *(bool*)(Address + OT.CGbxApp.ConsoleEnabled); }
-            set { *(bool*)(Address + OT.CGbxApp.ConsoleEnabled) = value; }
+            get { return *(BOOL*)(Address + OT.CGbxApp.ConsoleEnabled); }
+            set { *(BOOL*)(Address + OT.CGbxApp.ConsoleEnabled) = value; }
+        }
+
+        public bool IsFullScreen()
+        {
+            return FT.CGbxApp.IsFullScreen(this);
         }
     }
 }

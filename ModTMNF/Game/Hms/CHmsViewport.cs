@@ -23,5 +23,10 @@ namespace ModTMNF.Game
         {
             return new CHmsViewport(address);
         }
+
+        public bool IsFullScreen
+        {
+            get { return *(BOOL*)(Address + OT.CHmsViewport.IsFullScreen); }
+        }
     }
 }

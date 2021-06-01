@@ -4,17 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Runtime.InteropServices;
 using System.IO;
-using ModTMNF.Game;
 using System.Diagnostics;
+using ModTMNF.Game;
 
 namespace ModTMNF
 {
     public class Program
     {
+        public const string BaseDir = "ModTMNF";
+
+        [STAThread]
         unsafe static void Main(string[] args)
         {
             Environment.CurrentDirectory = Path.Combine(Environment.CurrentDirectory, "../");
-
+            
             if (args.Length > 0)
             {
                 switch (args[0].ToLower())
@@ -22,14 +25,20 @@ namespace ModTMNF
                     case "gendocs":
                         // Generates all docs based on the .map file
                         Analysis.SymbolsHelper.GenerateDocs();
-                        break;
+                        return;
+                    case "cs":
+                        // Fixes up copied from Visual Studio "Call Stack" window (has better results than StackWalk64 - TODO: use better stack walker)
+                        string str = Analysis.SymbolsHelper.FixVsCallstack(File.ReadAllText(Path.Combine(BaseDir, "callstack.txt")));
+                        Console.WriteLine(str);
+                        System.Windows.Forms.Clipboard.SetText(str);
+                        return;
                 }
             }
 
             Console.WriteLine("Launching Trackmania...");
 
             string error;
-            if (!NativeDll.LaunchTrackmania(out error))
+            if (!TrackmaniaLauncher.Launch(out error))
             {
                 Console.WriteLine(error);
                 Console.ReadLine();
@@ -46,6 +55,7 @@ namespace ModTMNF
                 FT.Init();
                 VT.Init();
                 Mods.ModManager.Add(new Mods.ModCore());
+                Mods.ModManager.Add(new Mods.ModStackTraceFinder());
                 Mods.ModManager.Add(new Mods.ModTest());
             }
             catch (Exception e)

@@ -103,8 +103,8 @@ namespace ModTMNF.Game
         /// </summary>
         public bool DeleteMemory
         {
-            get { return *(bool*)(Address + OT.CMwStack.DeleteMemory); }
-            set { *(bool*)(Address + OT.CMwStack.DeleteMemory) = value; }
+            get { return *(BOOL*)(Address + OT.CMwStack.DeleteMemory); }
+            set { *(BOOL*)(Address + OT.CMwStack.DeleteMemory) = value; }
         }
 
         public void Delete()
@@ -123,7 +123,7 @@ namespace ModTMNF.Game
             PushItem(value.Address, EStackType.Param);
         }
 
-        public void PushBool(bool* value)
+        public void PushBool(BOOL* value)
         {
             PushItem((IntPtr)value, EStackType.Bool);
         }
@@ -285,7 +285,7 @@ namespace ModTMNF.Game
         /// <summary>
         /// Assumes bool is 4 bytes in size (not always true for Mono)
         /// </summary>
-        public void PushBool(bool* value)
+        public void PushBool(BOOL* value)
         {
             PushItem(new CMwStackItem((IntPtr)value, EStackType.Bool));
         }
@@ -323,50 +323,51 @@ namespace ModTMNF.Game
         public void PushUInt3(GmInt3* value)
         {
             PushItem(new CMwStackItem((IntPtr)value, EStackType.UInt3));
-        }*//*
+        }*/
+    /*
 
-        public void PushInt(int* value)
-        {
-            PushItem(new CMwStackItem((IntPtr)value, EStackType.Int));
-        }
+ public void PushInt(int* value)
+ {
+     PushItem(new CMwStackItem((IntPtr)value, EStackType.Int));
+ }
 
-        public void PushUInt(uint* value)
-        {
-            PushItem(new CMwStackItem((IntPtr)value, EStackType.UInt));
-        }
+ public void PushUInt(uint* value)
+ {
+     PushItem(new CMwStackItem((IntPtr)value, EStackType.UInt));
+ }
 
-        public void PushFloat(float* value)
-        {
-            PushItem(new CMwStackItem((IntPtr)value, EStackType.Float));
-        }
+ public void PushFloat(float* value)
+ {
+     PushItem(new CMwStackItem((IntPtr)value, EStackType.Float));
+ }
 
-        public void PushString(CString* value)
-        {
-            PushItem(new CMwStackItem((IntPtr)value, EStackType.String));
-        }
+ public void PushString(CString* value)
+ {
+     PushItem(new CMwStackItem((IntPtr)value, EStackType.String));
+ }
 
-        public void PushStringInt(CStringInt* value)
-        {
-            PushItem(new CMwStackItem((IntPtr)value, EStackType.StringInt));
-        }
+ public void PushStringInt(CStringInt* value)
+ {
+     PushItem(new CMwStackItem((IntPtr)value, EStackType.StringInt));
+ }
 
-        public void PushItem(CMwStackItem item)
-        {
-            Size++;
-            *GetItem(Size - 1) = item;
-        }
-    }
+ public void PushItem(CMwStackItem item)
+ {
+     Size++;
+     *GetItem(Size - 1) = item;
+ }
+}
 
-    [StructLayout(LayoutKind.Sequential)]
-    public struct CMwStackItem
-    {
-        public IntPtr Value;
-        public EStackType Type;
+[StructLayout(LayoutKind.Sequential)]
+public struct CMwStackItem
+{
+ public IntPtr Value;
+ public EStackType Type;
 
-        public CMwStackItem(IntPtr value, EStackType type)
-        {
-            Value = value;
-            Type = type;
-        }
-    }*/
+ public CMwStackItem(IntPtr value, EStackType type)
+ {
+     Value = value;
+     Type = type;
+ }
+}*/
 }
