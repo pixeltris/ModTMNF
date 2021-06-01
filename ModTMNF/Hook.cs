@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace ModTMNF
 {
@@ -102,20 +103,82 @@ namespace ModTMNF
 
     public static class NativeDll
     {
-        [DllImport(TrackmaniaLauncher.LoaderDll)]
+        public const string ExeName = "TmForever.exe";
+        public const string LoaderDll = "ModTMNF_ManagedLoader.dll";
+        private static string LoaderDllPath = Path.Combine("ModTMNF", LoaderDll);
+
+        [DllImport(LoaderDll)]
         public static extern int WL_InitHooks();
-        [DllImport(TrackmaniaLauncher.LoaderDll)]
+        [DllImport(LoaderDll)]
         public static extern int WL_HookFunction(IntPtr target, IntPtr detour, ref IntPtr original);
-        [DllImport(TrackmaniaLauncher.LoaderDll)]
+        [DllImport(LoaderDll)]
         public static extern int WL_CreateHook(IntPtr target, IntPtr detour, ref IntPtr original);
-        [DllImport(TrackmaniaLauncher.LoaderDll)]
+        [DllImport(LoaderDll)]
         public static extern int WL_RemoveHook(IntPtr target);
-        [DllImport(TrackmaniaLauncher.LoaderDll)]
+        [DllImport(LoaderDll)]
         public static extern int WL_EnableHook(IntPtr target);
-        [DllImport(TrackmaniaLauncher.LoaderDll)]
+        [DllImport(LoaderDll)]
         public static extern int WL_DisableHook(IntPtr target);
 
-        [DllImport(TrackmaniaLauncher.LoaderDll)]
+        [DllImport(LoaderDll)]
+        static extern int DetourCreateProcessWithDll_Exported(string lpApplicationName, string lpCommandLine, IntPtr lpProcessAttributes, IntPtr lpThreadAttributes, bool bInheritHandles, int dwCreationFlags, IntPtr lpEnvironment, string lpCurrentDirectory, ref STARTUPINFO lpStartupInfo, out PROCESS_INFORMATION lpProcessInformation, string lpDllName, IntPtr pfCreateProcessA);
+
+        [DllImport(LoaderDll)]
         public static extern Game.EMwClassId GetMwClassId(IntPtr address);
+
+        public static bool LaunchTrackmania(out string launchError)
+        {
+            if (!File.Exists(ExeName))
+            {
+                launchError = "Couldn't find '" + ExeName + "'";
+                return false;
+            }
+            if (!File.Exists(LoaderDllPath))
+            {
+                launchError = "Couldn't find '" + LoaderDll + "'";
+                return false;
+            }
+
+            STARTUPINFO si = default(STARTUPINFO);
+            PROCESS_INFORMATION pi = default(PROCESS_INFORMATION);
+
+            if (DetourCreateProcessWithDll_Exported(ExeName, null, IntPtr.Zero, IntPtr.Zero, false, 0, IntPtr.Zero, null, ref si, out pi, LoaderDllPath, IntPtr.Zero) == 0)
+            {
+                launchError = "DetourCreateProcessWithDll failed " + Marshal.GetLastWin32Error();
+            }
+
+            launchError = null;
+            return true;
+        }
+
+        struct STARTUPINFO
+        {
+            public uint cb;
+            public string lpReserved;
+            public string lpDesktop;
+            public string lpTitle;
+            public uint dwX;
+            public uint dwY;
+            public uint dwXSize;
+            public uint dwYSize;
+            public uint dwXCountChars;
+            public uint dwYCountChars;
+            public uint dwFillAttribute;
+            public uint dwFlags;
+            public short wShowWindow;
+            public short cbReserved2;
+            public IntPtr lpReserved2;
+            public IntPtr hStdInput;
+            public IntPtr hStdOutput;
+            public IntPtr hStdError;
+        }
+
+        struct PROCESS_INFORMATION
+        {
+            public IntPtr hProcess;
+            public IntPtr hThread;
+            public uint dwProcessId;
+            public uint dwThreadId;
+        }
     }
 }

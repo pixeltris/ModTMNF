@@ -62,12 +62,12 @@
     <None Include="Analysis\Docs\Generated\StructSizes_Code.cs" />
     <Compile Include="Game\Game\CGameApp.cs" />
     <Compile Include="Game\Game\CGameProcess.cs" />
-    <Compile Include="Game\App\CGbxApp.cs" />
+    <Compile Include="Game\Gbx\CGbxApp.cs" />
     <Compile Include="Game\Classic\CFastBuffer.cs" />
     <Compile Include="Game\Classic\CFastStringInt.cs" />
     <Compile Include="Game\Classic\CStringInt.cs" />
     <Compile Include="Game\Game\CGameCtnMenus.cs" />
-    <Compile Include="Game\App\CGbxGame.cs" />
+    <Compile Include="Game\Gbx\CGbxGame.cs" />
     <Compile Include="Game\Game\EGameState.cs" />
     <Compile Include="Game\Hms\CHmsViewport.cs" />
     <Compile Include="Game\Hms\CHmsZoneDynamic.cs" />

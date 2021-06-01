@@ -105,13 +105,63 @@ void LoadDotNet()
     result = runtimeHost->ExecuteInDefaultAppDomain(L"ModTMNF\\ModTMNF.exe", L"ModTMNF.Program", L"DllMain", NULL, NULL);
 }
 
+BOOL FileExists(LPCTSTR szPath)
+{
+    DWORD dwAttrib = GetFileAttributes(szPath);
+    return (dwAttrib != INVALID_FILE_ATTRIBUTES && !(dwAttrib & FILE_ATTRIBUTE_DIRECTORY));
+}
+
+typedef int (__stdcall *WinMain_t)(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd);
+WinMain_t WinMainOriginal;
+
+int WinMainHook(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
+{
+    LoadDotNet();
+    return WinMainOriginal(hInstance, hPrevInstance, lpCmdLine, nShowCmd);
+}
+
+BOOL TryHookWinMain()
+{
+    WL_InitHooks();
+    const char* winmainFile = "ModTMNF\\WinMain.txt";
+    if (!FileExists(winmainFile))
+    {
+        MessageBox(NULL, "Couldn't find WinMain.txt", "Error", 0);
+        return false;
+    }
+    
+    FILE* fp = fopen(winmainFile, "r");
+    if (fp == NULL)
+    {
+        MessageBox(NULL, "Failed to open WinMain.txt", "Error", 0);
+        return false;
+    }
+    DWORD addr = 0;
+    if (fscanf(fp, "%x", &addr) == 0)
+    {
+        addr = 0;
+    }
+    fclose(fp);
+    if (!addr)
+    {
+        MessageBox(NULL, "Failed to read WinMain address from WinMain.txt", "Error", 0);
+        return false;
+    }
+    WL_HookFunction((LPVOID)addr, WinMainHook, (LPVOID*)&WinMainOriginal);
+    return true;
+}
+
 BOOL WINAPI DllMain(HINSTANCE hDll, DWORD dwReason, LPVOID lpReserved)
 {
     switch (dwReason)
     {
         case DLL_PROCESS_ATTACH:
+            if (!TryHookWinMain())
+            {
+                ExitProcess(0);
+            }
             DisableThreadLibraryCalls(hDll);
-            CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)LoadDotNet, NULL, NULL, NULL);
+            //CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)LoadDotNet, NULL, NULL, NULL);
             break;
     }
     return TRUE;

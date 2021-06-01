@@ -27,12 +27,12 @@ Other projects contain useful information for getting familiar with TrackMania:
 - Feel free to make a PR for a *seperate* newer `.sln`. But do not break `ModTMNF.sln`, `ModTMNF.csproj`, or the ability to compile with VS2010 (C# 4.0).
 - Design patterns in this project are subject to change and there may be large structural changes.
 - While there is C++ reflection info, I wouldn't advise using it at runtime from C# due to overhead. Manually write code to read at the desired offsets where possible.
+- Exception from C# will close the game without errors, try/catch where possible (though this wont always work such as some access violations).
 
 ## TODO
 
-- [ ] Add function to hook VTable entries (multiple classes / single class) VT.Hook(entryIndex, type) / VT.HookAll(entryIndex, typeArray)
-- [ ] Add WinMain hook from C++ and fully load .NET before continuing execution.
-- [ ] Implement more of the `Classic` classes, and finish the current implementations (especially array access).
-- [ ] Implement more essential classes / finish current implementations.
-- [ ] Document interesting functions / interactions / call chains.
-- [ ] Start working on some type of modding project so that more functionality gets added.
+- Add function to hook VTable entries (multiple classes / single class) VT.Hook(entryIndex, type) / VT.HookAll(entryIndex, typeArray)
+- Implement more of the `Classic` classes, and finish the current implementations (especially array access).
+- Implement more essential classes / finish current implementations.
+- Document interesting functions / interactions / call chains.
+- Start working on some type of modding project so that more functionality gets added.

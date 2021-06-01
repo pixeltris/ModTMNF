@@ -12,7 +12,6 @@ namespace ModTMNF.Mods
         Hook<FT.CHmsZoneDynamic.Del_PhysicsStep2> PhysicsStep2HK;
         Hook<FT.CTrackManiaMenus.Del_MenuMain_Init> MenuMain_InitHK;
         Hook<FT.CTrackManiaMenus.Del_MenuSolo> MenuSoloHK;
-        Hook<FT.Globals.Del_WinMain> WinMain;
         Hook<FT.Globals.Del_WinMainInternal> WinMainInternal;
         CTrackManiaMenus menusPtr;
 
@@ -21,7 +20,6 @@ namespace ModTMNF.Mods
             PhysicsStep2HK = Hook<FT.CHmsZoneDynamic.Del_PhysicsStep2>.Create(FT.CHmsZoneDynamic.Addresses.PhysicsStep2, PhysicsStep2);
             MenuMain_InitHK = Hook<FT.CTrackManiaMenus.Del_MenuMain_Init>.Create(FT.CTrackManiaMenus.Addresses.MenuMain_Init, MenuMain_Init);
             MenuSoloHK = Hook<FT.CTrackManiaMenus.Del_MenuSolo>.Create(FT.CTrackManiaMenus.Addresses.MenuSolo, MenuSolo);
-            WinMain = Hook<FT.Globals.Del_WinMain>.Create(FT.Globals.Addresses.WinMain, OnWinMain);
             WinMainInternal = Hook<FT.Globals.Del_WinMainInternal>.Create(FT.Globals.Addresses.WinMainInternal, OnWinMainInternal);
         }
 
@@ -29,14 +27,7 @@ namespace ModTMNF.Mods
         {
             PhysicsStep2HK.Disable();
             MenuMain_InitHK.Disable();
-            WinMain.Disable();
             WinMainInternal.Disable();
-        }
-
-        private int OnWinMain(IntPtr hInstance, IntPtr hPrevInstance, string lpCmdLine, int nCmdShow)
-        {
-            Program.Log("WinMain");
-            return WinMain.OriginalFunc(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
         }
 
         private int OnWinMainInternal(IntPtr hInstance, int nCmdShow)

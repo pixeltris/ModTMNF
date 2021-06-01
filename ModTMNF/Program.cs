@@ -28,9 +28,8 @@ namespace ModTMNF
 
             Console.WriteLine("Launching Trackmania...");
 
-            // If you want to hook earlier than "Launch" allows you to then use "LaunchAlt" (which can hook as early as CRT startup / WinMain).
             string error;
-            if (!TrackmaniaLauncher.LaunchAlt(out error))
+            if (!NativeDll.LaunchTrackmania(out error))
             {
                 Console.WriteLine(error);
                 Console.ReadLine();
@@ -42,8 +41,6 @@ namespace ModTMNF
         /// </summary>
         public static int DllMain(string arg)
         {
-            NativeDll.WL_InitHooks();
-
             try
             {
                 FT.Init();
