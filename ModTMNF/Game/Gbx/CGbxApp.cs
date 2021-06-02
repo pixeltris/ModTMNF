@@ -39,6 +39,11 @@ namespace ModTMNF.Game
             get { return *(IntPtr*)ST.CGbxApp.TheApp; }
         }
 
+        public CGameApp GameApp
+        {
+            get { return *(IntPtr*)(Address + OT.CGbxApp.GameApp); }
+        }
+
         /// <summary>
         /// Holds the window handle
         /// </summary>
@@ -117,9 +122,100 @@ namespace ModTMNF.Game
             set { *(BOOL*)(Address + OT.CGbxApp.ConsoleEnabled) = value; }
         }
 
+        public void TerminateApp()
+        {
+            FT.CGbxApp.TerminateApp(this);
+        }
+
         public bool IsFullScreen()
         {
             return FT.CGbxApp.IsFullScreen(this);
+        }
+
+        public void InitSystem()
+        {
+            FT.CGbxApp.InitSystem(this);
+        }
+
+        public void Start()
+        {
+            FT.CGbxApp.Start(this);
+        }
+
+        public void MainLoop()
+        {
+            FT.CGbxApp.MainLoop(this);
+        }
+
+        public void GoFullScreen()
+        {
+            FT.CGbxApp.GoFullScreen(this);
+        }
+
+        public void GoWindowed()
+        {
+            FT.CGbxApp.GoWindowed(this);
+        }
+
+        public void LogAppInfo()
+        {
+            FT.CGbxApp.LogAppInfo(this);
+        }
+
+        public void Destroy()
+        {
+            VT.Get<VT.CGbxApp>(Address).Destroy(this);
+        }
+
+        public void Init()
+        {
+            VT.Get<VT.CGbxApp>(Address).Init(this);
+        }
+
+        public void StartApp()
+        {
+            VT.Get<VT.CGbxApp>(Address).StartApp(this);
+        }
+
+        public void StopApp()
+        {
+            VT.Get<VT.CGbxApp>(Address).StopApp(this);
+        }
+
+        public bool IsForceWindowed()
+        {
+            return VT.Get<VT.CGbxApp>(Address).IsForceWindowed(this);
+        }
+
+        public void RenderWaitingFrame()
+        {
+            VT.Get<VT.CGbxApp>(Address).RenderWaitingFrame(this);
+        }
+
+        public void EngineInitEnd()
+        {
+            VT.Get<VT.CGbxApp>(Address).EngineInitEnd(this);
+        }
+
+        public int SetCmdLineUrl(string value)
+        {
+            CFastString str = new CFastString(value);
+            int ret = VT.Get<VT.CGbxApp>(Address).SetCmdLineUrl(this, ref str);
+            str.Delete();
+            return ret;
+        }
+
+        public int SetCmdLineFile(string value)
+        {
+            CFastStringInt str = new CFastStringInt(value);
+            int ret = VT.Get<VT.CGbxApp>(Address).SetCmdLineFile(this, ref str);
+            str.Delete();
+            return ret;
+        }
+
+        public int ApplyCommandLineArgs()
+        {
+            return VT.Get<VT.CGbxApp>(Address).ApplyCommandLineArgs(this);
         }
     }
 }

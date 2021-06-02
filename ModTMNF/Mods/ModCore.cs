@@ -12,6 +12,8 @@ namespace ModTMNF.Mods
     // CGbxGame::CGbxGame
     //  CSystemEngine::s_GameName = "TmForever" (00D54310)
 
+    // See CGbxApp::WindowedSetWindowTitle / CGameApp::CallbackSetWindowTitle_Set
+
     class ModCore : Mod
     {
         Hook<FT.CGbxApp.Del_CreateStaticInstance> CreateStaticInstance;
@@ -23,6 +25,7 @@ namespace ModTMNF.Mods
 
         private void OnCreateStaticInstance()
         {
+            //Program.DebugBreak();
             Program.Log("OnCreateStaticInstance");
             CreateStaticInstance.OriginalFunc();
             CGbxApp app = CGbxApp.TheApp;

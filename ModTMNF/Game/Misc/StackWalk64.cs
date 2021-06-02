@@ -55,7 +55,6 @@ namespace ModTMNF
             symbolInfo.MaxNameLen = Native.MAX_SYMBOL_NAME;
             symbolInfo.SizeOfStruct = (uint)(Marshal.SizeOf(typeof(Native.SYMBOL_INFO)) - Native.MAX_SYMBOL_NAME);
 
-            Program.DebugBreak();
             StringBuilder callstack = new StringBuilder();
             bool foundManagedDll = false;
             bool foundUnmanagedDll = false;

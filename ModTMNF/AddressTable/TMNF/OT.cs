@@ -71,6 +71,7 @@ namespace ModTMNF
             public static int UnkString220 = 220;// type:CFastStringInt
             public static int UnkString228 = 228;// type:CFastStringInt
             public static int FileLog = 236;// type:CSystemFile
+            public static int GameApp = 252;// type:CGameApp
         }
 
         public static class CGbxGame

@@ -24,6 +24,7 @@ WinMain
   CreateWindowExW
   CGbxApp::InitSystem
   CGbxApp::Start
+   CGbxApp::StartApp - virtual function (only implemented by CGbxGame). Last call made in "CGbxApp::Start".
   while(1) - (the game loop)
    CGbxApp::MainLoop - (this is the only function call in the game loop other than Peek/Translate/Dispatch message)
     CMwCmdBufferCore::Run - (invoker for all functions which subscribe to be called by the game loop)

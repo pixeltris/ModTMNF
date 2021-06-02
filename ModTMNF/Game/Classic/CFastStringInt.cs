@@ -58,6 +58,12 @@ namespace ModTMNF.Game
             return str.Value;
         }
 
+        public CFastStringInt(string value)
+        {
+            this = default(CFastStringInt);
+            Value = value;
+        }
+
         public void Delete()
         {
             Memory.Delete(CharPtr);

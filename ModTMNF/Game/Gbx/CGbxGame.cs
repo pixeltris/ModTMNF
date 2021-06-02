@@ -31,5 +31,10 @@ namespace ModTMNF.Game
         {
             get { return *(IntPtr*)ST.CGbxApp.TheApp; }
         }
+
+        public int CheckNetwork()
+        {
+            return FT.CGbxGame.CheckNetwork(this);
+        }
     }
 }

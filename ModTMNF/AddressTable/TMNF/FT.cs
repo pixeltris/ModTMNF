@@ -74,15 +74,68 @@ namespace ModTMNF
             [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
             public delegate void Del_CreateStaticInstance();
             [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_GetWindowSizeFromClientSize(Game.CGbxApp thisPtr, ref GmNat2 unk1, ref GmNat2 unk2);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_WindowedSetClientSize(Game.CGbxApp thisPtr, ref GmNat2 size);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_TerminateApp(Game.CGbxApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_WindowedSetWindowTitle(Game.CGbxApp thisPtr, ref CFastStringInt title);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
             public delegate BOOL Del_IsFullScreen(Game.CGbxApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_InitSystem(Game.CGbxApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Start(Game.CGbxApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_MainLoop(Game.CGbxApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_GoFullScreen(Game.CGbxApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_GoWindowed(Game.CGbxApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_LogAppInfo(Game.CGbxApp thisPtr);
 
             public static Del_CreateStaticInstance CreateStaticInstance;
+            public static Del_GetWindowSizeFromClientSize GetWindowSizeFromClientSize;
+            public static Del_WindowedSetClientSize WindowedSetClientSize;
+            public static Del_TerminateApp TerminateApp;
+            public static Del_WindowedSetWindowTitle WindowedSetWindowTitle;
             public static Del_IsFullScreen IsFullScreen;
+            public static Del_InitSystem InitSystem;
+            public static Del_Start Start;
+            public static Del_MainLoop MainLoop;
+            public static Del_GoFullScreen GoFullScreen;
+            public static Del_GoWindowed GoWindowed;
+            public static Del_LogAppInfo LogAppInfo;
 
             public static class Addresses
             {
                 public static IntPtr CreateStaticInstance = (IntPtr)0x004029C0;
+                public static IntPtr GetWindowSizeFromClientSize = (IntPtr)0x00528BB0;
+                public static IntPtr WindowedSetClientSize = (IntPtr)0x00528C00;
+                public static IntPtr TerminateApp = (IntPtr)0x00528C80;
+                public static IntPtr WindowedSetWindowTitle = (IntPtr)0x0052A3F0;
                 public static IntPtr IsFullScreen = (IntPtr)0x0052A4B0;
+                public static IntPtr InitSystem = (IntPtr)0x0052A670;
+                public static IntPtr Start = (IntPtr)0x0052A7B0;
+                public static IntPtr MainLoop = (IntPtr)0x0052A8B0;
+                public static IntPtr GoFullScreen = (IntPtr)0x0052A9A0;
+                public static IntPtr GoWindowed = (IntPtr)0x0052A9E0;
+                public static IntPtr LogAppInfo = (IntPtr)0x0052AD20;
+            }
+        }
+
+        public static class CGbxGame
+        {
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate int Del_CheckNetwork(Game.CGbxGame thisPtr);
+
+            public static Del_CheckNetwork CheckNetwork;
+
+            public static class Addresses
+            {
+                public static IntPtr CheckNetwork = (IntPtr)0x00401E80;
             }
         }
 

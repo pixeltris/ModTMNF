@@ -5,6 +5,10 @@ using System.Text;
 
 namespace ModTMNF.Game
 {
+    // Classes which don't have their own class id value:
+    // CGbxApp
+    // CGbxGame
+
     // NOTE: Ids are bitflagged as follows:
     // 0xFF000000 - engine id
     // 0x00FFF000 - class id (typically "classid" in the exe is referred to as 0xFFFFF000)

@@ -29,7 +29,17 @@ namespace ModTMNF
         // NOTE: We could potentially add a fake CMwClassInfo::Children entry. We could reallocate
         //       the buffer and place a pointer to a managed object there. Giving us a managed object
         //       for every class without having to do array lookups (or the interoped call).
-        static CMwNod[][] vtables;
+        static VT.CMwNod[][] vtables;
+
+        /// <summary>
+        /// Use this lookup where there isn't a unique class id for a given class.
+        /// Slower than the array lookup. Might need to think of another method if this gets too big.
+        /// vtablePtr->vtableObj
+        /// </summary>
+        static Dictionary<IntPtr, VT.CMwNod> vtablesSlowLookup = new Dictionary<IntPtr, VT.CMwNod>();
+
+        // Add this to any types which fail to resolve due to not having a class id (CGbxApp/CGbxGame).
+        class AddSlowLookupAttribute : Attribute { }
 
         public static bool Init()
         {
@@ -44,7 +54,7 @@ namespace ModTMNF
                 }
                 maxClassId[eeid] = 0;
             }
-            vtables = new CMwNod[highestEngineId + 1][];
+            vtables = new VT.CMwNod[highestEngineId + 1][];
             foreach (EMwClassId classId in Enum.GetValues(typeof(EMwClassId)))
             {
                 int cid = CMwEngineManager.LongToShortClassId((int)classId);
@@ -56,27 +66,32 @@ namespace ModTMNF
             }
             foreach (KeyValuePair<int, int> kvp in maxClassId)
             {
-                vtables[kvp.Key] = new CMwNod[kvp.Value + 1];
+                vtables[kvp.Key] = new VT.CMwNod[kvp.Value + 1];
             }
             foreach (Type type in typeof(VT).GetNestedTypes())
             {
-                EMwClassId classId;
-                if (Enum.TryParse<EMwClassId>(type.Name, out classId))
+                if (typeof(VT.CMwNod).IsAssignableFrom(type))
                 {
-                    EMwEngineId engineId = CMwEngineManager.GetEngineIdFromClassId(classId);
-                    int eeid = CMwEngineManager.LongToShortEngineId((int)engineId);
-                    int cid = CMwEngineManager.LongToShortClassId((int)classId);
-                    CMwNod obj = (CMwNod)Activator.CreateInstance(type);
+                    VT.CMwNod obj = (VT.CMwNod)Activator.CreateInstance(type);
                     InitVTable(obj, type);
-                    try
+
+                    // NOTE: A few classes don't have a class id... (CGbxApp/CGbxGame)
+                    EMwClassId classId;
+                    if (Enum.TryParse<EMwClassId>(type.Name, out classId))
                     {
-                        vtables[eeid][cid] = obj;
-                    }
-                    catch (Exception e)
-                    {
-                        Program.Log(eeid + " " + cid);
-                        Program.Log(e.ToString());
-                        throw;
+                        EMwEngineId engineId = CMwEngineManager.GetEngineIdFromClassId(classId);
+                        int eeid = CMwEngineManager.LongToShortEngineId((int)engineId);
+                        int cid = CMwEngineManager.LongToShortClassId((int)classId);
+                        try
+                        {
+                            vtables[eeid][cid] = obj;
+                        }
+                        catch (Exception e)
+                        {
+                            Program.Log(eeid + " " + cid);
+                            Program.Log(e.ToString());
+                            throw;
+                        }
                     }
                 }
                 else
@@ -87,7 +102,7 @@ namespace ModTMNF
             return true;
         }
 
-        private static void InitVTable(CMwNod obj, Type type)
+        private static void InitVTable(VT.CMwNod obj, Type type)
         {
             Type offsetsType = type.GetNestedType("Offsets");
             if (offsetsType != null)
@@ -98,13 +113,17 @@ namespace ModTMNF
                     IntPtr vtablePtr = (IntPtr)vtablePtrField.GetValue(null);
                     if (vtablePtr != IntPtr.Zero)
                     {
+                        if (vtablePtrField.GetCustomAttributes(typeof(AddSlowLookupAttribute), false).Length > 0)
+                        {
+                            vtablesSlowLookup[vtablePtr] = obj;
+                        }
                         InitVTable(obj, type, vtablePtr);
                     }
                 }
             }
         }
 
-        private static void InitVTable(CMwNod obj, Type type, IntPtr vtablePtr)
+        private static void InitVTable(VT.CMwNod obj, Type type, IntPtr vtablePtr)
         {
             Type offsetsType = type.GetNestedType("Offsets");
             foreach (FieldInfo fieldInfo in offsetsType.GetFields())
@@ -117,15 +136,26 @@ namespace ModTMNF
                     delegateFieldInfo.SetValue(obj, Marshal.GetDelegateForFunctionPointer(funcPtr, delegateFieldInfo.FieldType));
                 }
             }
-            if (typeof(CMwNod).IsAssignableFrom(type.BaseType))
+            if (typeof(VT.CMwNod).IsAssignableFrom(type.BaseType))
             {
                 InitVTable(obj, type.BaseType, vtablePtr);
             }
         }
 
-        public static TTable Get<TTable>(IntPtr nodAddress) where TTable : CMwNod
+        public static TTable Get<TTable>(IntPtr nodAddress) where TTable : VT.CMwNod
         {
             EMwClassId classId = NativeDll.GetMwClassId(nodAddress);
+            if (classId == EMwClassId.CMwNod)
+            {
+                // CMwNod is an abstract type. This is possible a non-registered class.
+                VT.CMwNod result;
+                vtablesSlowLookup.TryGetValue(*(IntPtr*)nodAddress, out result);
+                if (result == null)
+                {
+                    Program.Log("ERROR - no vtable found for ptr " + nodAddress.ToInt32().ToString("X8"));
+                }
+                return (TTable)result;
+            }
             EMwEngineId engineId = CMwEngineManager.GetEngineIdFromClassId(classId);
             int eeid = CMwEngineManager.LongToShortEngineId((int)engineId);
             int cid = CMwEngineManager.LongToShortClassId((int)classId);
@@ -368,21 +398,22 @@ namespace ModTMNF
             [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
             public delegate int Del_ApplyCommandLineArgs(Game.CGbxApp thisPtr);
 
-            public static Del_Destroy Destroy;
-            public static Del_Init Init;
-            public static Del_StartApp StartApp;
-            public static Del_ExitGame ExitGame;
-            public static Del_StopApp StopApp;
-            public static Del_OnViewportCreation OnViewportCreation;
-            public static Del_IsForceWindowed IsForceWindowed;
-            public static Del_RenderWaitingFrame RenderWaitingFrame;
-            public static Del_EngineInitEnd EngineInitEnd;
-            public static Del_SetCmdLineUrl SetCmdLineUrl;
-            public static Del_SetCmdLineFile SetCmdLineFile;
-            public static Del_ApplyCommandLineArgs ApplyCommandLineArgs;
+            public Del_Destroy Destroy;
+            public Del_Init Init;
+            public Del_StartApp StartApp;
+            public Del_ExitGame ExitGame;
+            public Del_StopApp StopApp;
+            public Del_OnViewportCreation OnViewportCreation;
+            public Del_IsForceWindowed IsForceWindowed;
+            public Del_RenderWaitingFrame RenderWaitingFrame;
+            public Del_EngineInitEnd EngineInitEnd;
+            public Del_SetCmdLineUrl SetCmdLineUrl;
+            public Del_SetCmdLineFile SetCmdLineFile;
+            public Del_ApplyCommandLineArgs ApplyCommandLineArgs;
 
             public static class Offsets
             {
+                [AddSlowLookup]
                 public static IntPtr VTable = (IntPtr)0x00B5518C;
                 public static int Destroy = 120;
                 public static int Init = 124;
@@ -403,6 +434,7 @@ namespace ModTMNF
         {
             public static class Offsets
             {
+                [AddSlowLookup]
                 public static IntPtr VTable = (IntPtr)0x00B2BCEC;
             }
         }

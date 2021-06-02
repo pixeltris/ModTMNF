@@ -17,7 +17,7 @@ namespace ModTMNF
         unsafe static void Main(string[] args)
         {
             Environment.CurrentDirectory = Path.Combine(Environment.CurrentDirectory, "../");
-            
+   
             if (args.Length > 0)
             {
                 switch (args[0].ToLower())
@@ -27,7 +27,7 @@ namespace ModTMNF
                         Analysis.SymbolsHelper.GenerateDocs();
                         return;
                     case "cs":
-                        // Fixes up copied from Visual Studio "Call Stack" window (has better results than StackWalk64 - TODO: use better stack walker)
+                        // Fixes up copied from Visual Studio "Call Stack" window (vs has better results than StackWalk64 - TODO: use better a stack walker)
                         string str = Analysis.SymbolsHelper.FixVsCallstack(File.ReadAllText(Path.Combine(BaseDir, "callstack.txt")));
                         Console.WriteLine(str);
                         System.Windows.Forms.Clipboard.SetText(str);

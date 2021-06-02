@@ -35,6 +35,7 @@ namespace ModTMNF
         public static class CGbxApp
         {
             public static IntPtr TheApp = (IntPtr)0x00D66FF8;
+            public static IntPtr s_WindowClassName = (IntPtr)0x00D67008;// CFastStringInt
         }
 
         public static class CGameApp

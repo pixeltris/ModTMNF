@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Runtime.InteropServices;
 
 namespace ModTMNF.Mods
 {
@@ -11,9 +12,21 @@ namespace ModTMNF.Mods
     /// </summary>
     class ModStackTraceFinder : Mod
     {
+        [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+        public delegate void Del_Func1(IntPtr thisPtr);
+
+        Hook<Del_Func1> hook1;
+
         protected override void OnApply()
         {
-            base.OnApply();
+            //hook1 = Hook<Del_Func1>.Create((IntPtr)0x004023E0, OnFunc1);//CGbxGame::StartApp
+        }
+
+        void OnFunc1(IntPtr thisPtr)
+        {
+            Program.Log("OnFunc1");
+            Program.Log(StackWalk64.GetCallstack());
+            hook1.OriginalFunc(thisPtr);
         }
     }
 }
