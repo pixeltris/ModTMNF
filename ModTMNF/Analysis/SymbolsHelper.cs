@@ -32,11 +32,11 @@ namespace ModTMNF.Analysis
             GenerateFuncListNonCMwNodAll(shortName: false);
             GenerateFuncListNonCMwNodAllUnscoped(shortName: true);
             GenerateFuncListNonCMwNodAllUnscoped(shortName: false);
-            GenerateFuncListAllShort();
+            GenerateFuncListAllShort(uniqueOnly: true);
+            GenerateFuncListAllShort(uniqueOnly: false);
             GenerateTypeList();
             GenerateTypeListFlat();
             GenerateVirtualParamGetList();
-            Asm.AsmHelper.GenerateDocs();
         }
 
         public static void GenerateRuntimeDocs()
@@ -1180,20 +1180,22 @@ namespace ModTMNF.Analysis
             }
         }
 
-        public static void GenerateFuncListAllShort()
+        public static void GenerateFuncListAllShort(bool uniqueOnly)
         {
             int numDuplicates = 0;
             Dictionary<string, SymbolInfo> funcNames = new Dictionary<string, SymbolInfo>();
+            Dictionary<string, SymbolInfo> allFuncs = new Dictionary<string, SymbolInfo>();
             HashSet<string> duplicates = new HashSet<string>();
-            using (TextWriter tw = File.CreateText(Path.Combine(DocsDir, "FuncAll_SHORT.txt")))
+            using (TextWriter tw = File.CreateText(Path.Combine(DocsDir, "FuncAll" + (!uniqueOnly ? "Ex" : string.Empty) + "_SHORT.txt")))
             {
-                tw.WriteLine("List all functions (unique function names only)");
+                tw.WriteLine("List all functions" + (uniqueOnly ? " (unique function names only)" : string.Empty));
                 tw.WriteLine();
                 List<SymbolInfo> symbols = LoadSymbols();
                 foreach (SymbolInfo sym in symbols)
                 {
                     if (sym.FuncComp != null)
                     {
+                        allFuncs[sym.FuncComp.FullName] = sym;
                         string className = sym.FuncComp.FullNameOuter;
                         if (!funcNames.ContainsKey(sym.FuncComp.Name))
                         {
@@ -1205,11 +1207,24 @@ namespace ModTMNF.Analysis
                         }
                     }
                 }
-                tw.WriteLine("Duplicates: " + numDuplicates);
-                tw.WriteLine();
-                foreach (SymbolInfo sym in funcNames.Values.OrderBy(x => x.FuncComp.FullName))
+                if (uniqueOnly)
                 {
-                    tw.WriteLine(sym.FuncComp.FullName + " - " + sym.Address.ToString("X8"));
+                    tw.WriteLine("Duplicates: " + numDuplicates);
+                    tw.WriteLine();
+                }
+                if (uniqueOnly)
+                {
+                    foreach (SymbolInfo sym in funcNames.Values.OrderBy(x => x.FuncComp.FullName))
+                    {
+                        tw.WriteLine(sym.FuncComp.FullName + " - " + sym.Address.ToString("X8"));
+                    }
+                }
+                else
+                {
+                    foreach (SymbolInfo sym in allFuncs.Values.OrderBy(x => x.FuncComp.FullName))
+                    {
+                        tw.WriteLine(sym.FuncComp.FullName + " - " + sym.Address.ToString("X8"));
+                    }
                 }
             }
         }

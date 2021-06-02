@@ -63,5 +63,12 @@ namespace ModTMNF
         {
             public static IntPtr TheCoreCmdBuffer = (IntPtr)0x00D731E0;
         }
+
+        public static class SMwSchemeTimedProperties
+        {
+            // CMwCmdBufferCore::SetSchemePatternsProperties. offset +200 of CMwCmdBufferCore
+            public const int StructSize = 56;
+            public static IntPtr Instance = (IntPtr)0x00B3DC40;
+        }
     }
 }

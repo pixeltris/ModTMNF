@@ -63,7 +63,13 @@ namespace ModTMNF.Mods
         {
             menusPtr = thisPtr;
 
-            Program.Log(StackWalk64.GetCallstack());
+            //Program.Log(StackWalk64.GetCallstack());
+
+            // Useful globals:
+            //CGameApp.TheGame
+            //CGbxApp.TheApp <--- has InputPort,SystemConfig,SystemWindow,GameApp,etc
+            //CMwCmdBufferCore.TheCoreCmdBuffer <--- handles invokers for the game loop
+            //CMwEngineManager.Instance
 
             // Example of reflection to get a param value (slow, at least cache the param if doing this often).
             CMwClassInfo classInfo = ((CMwNod)thisPtr.Address).MwGetClassInfo();

@@ -6,11 +6,9 @@ using System.Text;
 namespace ModTMNF.Game
 {
     /// <summary>
-    /// Unsigned variant of GmInt2
+    /// Paying / non-paying account
     /// </summary>
-    public struct GmNat2
+    public enum EAccountType : int
     {
-        public uint X;
-        public uint Y;
     }
 }

@@ -6,6 +6,7 @@ using System.IO;
 using System.Diagnostics;
 using ModTMNF.Game;
 using Bea;
+using System.Runtime.InteropServices;
 
 namespace ModTMNF.Analysis.Asm
 {
@@ -14,11 +15,6 @@ namespace ModTMNF.Analysis.Asm
         private static void LogSlowWarning()
         {
             Console.WriteLine("Running ASM helper doc gen (slow pre-processing step)");
-        }
-
-        public static void GenerateDocs()
-        {
-            //LogSlowWarning();
         }
 
         public static void RuntimeGenerateDocs()
@@ -34,11 +30,144 @@ namespace ModTMNF.Analysis.Asm
             Dictionary<uint, FunctionInfo> functions = ExeInfo.ParseFile(SymbolsHelper.ExeName, SymbolsHelper.LoadSymbols());
             using (UnmanagedBuffer buffer = ExeInfo.GetBuffer(SymbolsHelper.ExeName))
             {
-                GenerateStructSizes(functions, newFunc, buffer);
+                //RuntimeGenerateStructSizes(buffer, functions, newFunc);
+                RuntimeGenerateVTableList(functions);
             }
         }
 
-        private static void GenerateStructSizes(Dictionary<uint, FunctionInfo> functions, SymbolsHelper.SymbolInfo newFuncSym, UnmanagedBuffer buffer)
+        private static void RuntimeGenerateVTableList(Dictionary<uint, FunctionInfo> functions)
+        {
+            List<SymbolsHelper.SymbolInfo> syms = SymbolsHelper.LoadSymbols();
+            HashSet<uint> vtableAddrs = new HashSet<uint>();
+            Dictionary<SymbolsHelper.SymbolInfo, List<SymbolsHelper.SymbolInfo>> vtables = new Dictionary<SymbolsHelper.SymbolInfo, List<SymbolsHelper.SymbolInfo>>();
+            Dictionary<uint, SymbolsHelper.SymbolInfo> funcSyms = new Dictionary<uint, SymbolsHelper.SymbolInfo>();
+            Dictionary<uint, SymbolsHelper.SymbolInfo> allSyms = new Dictionary<uint, SymbolsHelper.SymbolInfo>();
+            foreach (SymbolsHelper.SymbolInfo sym in syms)
+            {
+                allSyms[sym.Address] = sym;
+                if (sym.FuncComp != null)
+                {
+                    funcSyms[sym.Address] = sym;
+                }
+                if (sym.Type == SymbolsHelper.SymbolType.VTable)
+                {
+                    vtableAddrs.Add(sym.Address);
+                }
+            }
+            foreach (SymbolsHelper.SymbolInfo sym in syms)
+            {
+                if (sym.Type == SymbolsHelper.SymbolType.VTable)
+                {
+                    List<SymbolsHelper.SymbolInfo> table = new List<SymbolsHelper.SymbolInfo>();
+                    vtables[sym] = table;
+                    for (int i = 0; i < 1000; i++)
+                    {
+                        uint addr = (uint)(sym.Address + (i * 4));
+                        if (i > 0 && vtableAddrs.Contains(addr))
+                        {
+                            // vtable overlap
+                            break;
+                        }
+                        try
+                        {
+                            addr = (uint)Marshal.ReadInt32((IntPtr)addr);
+                        }
+                        catch
+                        {
+                            // Invalid read
+                            break;
+                        }
+                        SymbolsHelper.SymbolInfo targetSym;
+                        if (allSyms.TryGetValue(addr, out targetSym))
+                        {
+                            table.Add(targetSym);
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+
+            RuntimeGenerateVTableList(vtables, trimmedNodTypes: true);
+            RuntimeGenerateVTableList(vtables, trimmedNodTypes: false);
+        }
+
+        private static void RuntimeGenerateVTableList(Dictionary<SymbolsHelper.SymbolInfo, List<SymbolsHelper.SymbolInfo>> vtables, bool trimmedNodTypes)
+        {
+            Dictionary<EMwClassId, List<SymbolsHelper.SymbolInfo>> nodVTables = null;
+            if (trimmedNodTypes)
+            {
+                nodVTables = new Dictionary<EMwClassId, List<SymbolsHelper.SymbolInfo>>();
+                foreach (KeyValuePair<SymbolsHelper.SymbolInfo, List<SymbolsHelper.SymbolInfo>> vtable in vtables)
+                {
+                    EMwClassId classId;
+                    if (Enum.TryParse<EMwClassId>(vtable.Key.CompType.Name, out classId))
+                    {
+                        nodVTables[classId] = vtable.Value;
+                    }
+                }
+            }
+            using (TextWriter tw = File.CreateText(Path.Combine(SymbolsHelper.DocsDir, "VTablesEx" + (trimmedNodTypes ? "Nod" : string.Empty) + ".txt")))
+            {
+                tw.WriteLine("List of vtables for " + (trimmedNodTypes ?
+                    " all CMwNod types (and duplicate vtable entries from child classes removed)" : " all types"));
+                tw.WriteLine("TODO: Fix trash entries (due to shared function addresses)");
+                tw.WriteLine();
+                foreach (KeyValuePair<SymbolsHelper.SymbolInfo, List<SymbolsHelper.SymbolInfo>> vtable in vtables.OrderBy(x => x.Key.CompType.Name))
+                {
+                    string baseClassStr = "";
+                    int baseFunctionCount = 0;
+                    if (trimmedNodTypes)
+                    {
+                        EMwClassId classId;
+                        if (!Enum.TryParse<EMwClassId>(vtable.Key.CompType.Name, out classId))
+                        {
+                            // Not a nod type
+                            continue;
+                        }
+                        CMwClassInfo classInfo = CMwNod.StaticGetClassInfo(classId);
+                        if (classInfo.Address == IntPtr.Zero)
+                        {
+                            continue;
+                        }
+                        classInfo = classInfo.Parent;
+                        if (classInfo.Address != IntPtr.Zero)
+                        {
+                            baseClassStr = " baseClass:" + classInfo.Id;
+                        }
+                        while (classInfo.Address != IntPtr.Zero)
+                        {
+                            List<SymbolsHelper.SymbolInfo> baseFunctions;
+                            if (nodVTables.TryGetValue(classInfo.Id, out baseFunctions))
+                            {
+                                baseFunctionCount = Math.Max(baseFunctionCount, baseFunctions.Count);
+                            }
+                            classInfo = classInfo.Parent;
+                        }
+                    }
+                    if (!trimmedNodTypes || vtable.Value.Count > baseFunctionCount)
+                    {
+                        tw.WriteLine(vtable.Key.CompType.Name + " - entries:" + vtable.Value.Count + " addr:" + vtable.Key.Address.ToString("X8") + baseClassStr);
+                        int cnt = 0;
+                        foreach (SymbolsHelper.SymbolInfo entry in vtable.Value)
+                        {
+                            if (cnt++ < baseFunctionCount)
+                            {
+                                continue;
+                            }
+                            tw.WriteLine(" " + entry.Address.ToString("X8") + " " + (cnt-1).ToString().PadLeft(3, '0') + " " +
+                                ((cnt - 1) * 4).ToString().PadLeft(4, '0') + " " +
+                                (entry.FuncComp != null ? entry.FuncComp.FullName : entry.CompType != null ? entry.CompType.FullName : entry.Name));
+                        }
+                        tw.WriteLine();
+                    }
+                }
+            }
+        }
+
+        private static void RuntimeGenerateStructSizes(UnmanagedBuffer buffer, Dictionary<uint, FunctionInfo> functions, SymbolsHelper.SymbolInfo newFuncSym)
         {
             // <ctorAddr, list<sizes>>
             Dictionary<uint, HashSet<int>> foundStructSizes = new Dictionary<uint, HashSet<int>>();

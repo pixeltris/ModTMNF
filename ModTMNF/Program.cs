@@ -17,7 +17,7 @@ namespace ModTMNF
         unsafe static void Main(string[] args)
         {
             Environment.CurrentDirectory = Path.Combine(Environment.CurrentDirectory, "../");
-   
+
             if (args.Length > 0)
             {
                 switch (args[0].ToLower())

@@ -87,10 +87,37 @@ namespace ModTMNF
             public static int UnkString316 = 316;// type:CFastString
         }
 
+        public static class CMwCmd
+        {
+            public static Type BaseType = typeof(OT.CMwNod);
+            public static int StructSize = 28;
+            public static int Buffer = 20;// type:CMwCmdBuffer
+            public static int State = 24;
+        }
+
+        public static class CMwCmdFastCall
+        {
+            public static Type BaseType = typeof(OT.CMwCmd);
+            public static int StructSize = 36;
+            public static int ObjPtr = 28;
+            public static int FuncPtr = 32;
+        }
+
+        public static class CMwCmdFastCallUser
+        {
+            public static Type BaseType = typeof(OT.CMwCmd);
+            public static int StructSize = 40;
+            public static int ObjPtr = 28;
+            public static int FuncPtr = 32;
+            public static int Unk1 = 36;
+        }
+
         public static class CMwCmdContainer
         {
             public static Type BaseType = typeof(OT.CMwNod);
             public static int StructSize = 36;
+            public static int Cmds = 20;// type:CFastBuffer
+            public static int Installed = 32;
         }
 
         public static class CGameProcess
@@ -103,6 +130,7 @@ namespace ModTMNF
         {
             public static Type BaseType = typeof(OT.CGameProcess);
             public static int StructSize = 404;
+            public static int SystemConfig = 120;// type:CSystemConfig
         }
 
         public static class CSystemConfig

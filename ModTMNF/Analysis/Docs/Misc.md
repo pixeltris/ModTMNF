@@ -25,13 +25,15 @@ WinMain
   CGbxApp::InitSystem
   CGbxApp::Start
    CGbxApp::StartApp - virtual function (only implemented by CGbxGame). Last call made in "CGbxApp::Start".
+    CMwCmdBufferCore::StartSimulation
+	CMwCmdBufferCore::Enable
   while(1) - (the game loop)
    CGbxApp::MainLoop - (this is the only function call in the game loop other than Peek/Translate/Dispatch message)
     CMwCmdBufferCore::Run - (invoker for all functions which subscribe to be called by the game loop)
 ```
 
 ```
-======================= 
+=======================
 Called when after selecting the profile to use
 =======================
 Not quite sure where the invoker of this starts
@@ -60,4 +62,29 @@ CTrackManiaRace::SwitchFromRace
  CMwCmdBufferCore::SetSimulationRelativeSpeed
  CTrackManiaRace::ValidateCleanup
  CTrackManiaRace::AssignCamFreePrimaryActionKeys
+```
+
+```
+CTrackMania::UpdateGame
+ CTrackMania::ReplayValidatePath
+  CTrackMania::ReplayValidate
+   CTrackManiaRace::Validate
+```
+
+```
+CTrackManiaRaceNet::RaceInputsValidateBest
+ CTrackManiaRace::Validate_NonBlocking
+```
+
+```
+=======================
+Entering finish (NOTE: This is called many times when entering finish line)
+=======================
+CGbxApp::MainLoop
+ CMwCmdBufferCore::Run
+  CMwCmdBuffer::Run
+   CHmsZoneDynamic::PhysicsStep2
+    CHmsZoneDynamic::ComputeCollisionResponse
+     CTrackManiaRaceTriggerAbsorbContact::AbsorbContact - virtual call
+      CTrackManiaRace1P::OnFinishLine - virtual call
 ```

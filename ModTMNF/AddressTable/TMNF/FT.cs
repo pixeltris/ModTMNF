@@ -11,10 +11,12 @@ using ModTMNF.Game;
 
 namespace ModTMNF
 {
+    // Things flagged as SHARED_ADDRESS use a shared address and aren't safe to hook without impacting other functions.
+
     /// <summary>
     /// Function tables
     /// </summary>
-    static class FT
+    unsafe static class FT
     {
         // NOTE: Rename overloaded functions! This code doesn't compare signatures when matching functions.
         public static void Init()
@@ -36,7 +38,10 @@ namespace ModTMNF
                             if (field.IsStatic)
                             {
                                 IntPtr address = (IntPtr)field.GetValue(null);
-                                addressTable[field.Name] = address;
+                                if (address != IntPtr.Zero)
+                                {
+                                    addressTable[field.Name] = address;
+                                }
                             }
                         }
                     }
@@ -139,20 +144,330 @@ namespace ModTMNF
             }
         }
 
-        public static class CMwCmdBufferCore
+        public static class CGameApp
         {
             [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-            public delegate void Del_SetSimulationRelativeSpeed(Game.CMwCmdBufferCore thisPtr, float speed);
+            public delegate void Del_ShowMainMenu(Game.CGameApp thisPtr);
             [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-            public delegate void Del_StopSimulation(Game.CMwCmdBufferCore thisPtr);
+            public delegate void Del_HideMainMenu(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_ShowMenu(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_HideMenu(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_EnablePick(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_DisablePick(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate int Del_AvatarGetCount(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Exit(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_ToggleFullScreen(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_SetCursorPos(Game.CGameApp thisPtr, ref GmVec2 pos);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CHmsPicker Del_GetPicker(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate GmVec2* Del_GetMousePos(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_SetCursorPosX(Game.CGameApp thisPtr, float posX);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_SetCursorPosY(Game.CGameApp thisPtr, float posY);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_StopMusics(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate BOOL Del_IsPayingInstall(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate EAccountType Del_GetPayingAccountType(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate BOOL Del_IsPayingSolo(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_SaveSystemConfig(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CGameMenu Del_GetCurrentMenu(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_MenusClear(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CGameDialogs Del_GetBasicDialogs(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CGameSystemOverlay Del_GetSystemOverlay(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CGameManialinkBrowser Del_GetManialinkBrowser(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate BOOL Del_IsPickEnabled(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CSceneMobil Del_GetPickedMobil(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_AvatarGetFromIndex(Game.CGameApp thisPtr, int index, ref CMwNodRef result);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_AvatarGetRand(Game.CGameApp thisPtr, ref CMwNodRef result);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_AvatarGetRandName(Game.CGameApp thisPtr, ref CFastStringInt result);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate int Del_AvatarIndexFromName(Game.CGameApp thisPtr, ref CFastStringInt name);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate CAudioSound Del_GetSound(Game.CGameApp thisPtr, EInterfaceSound sound);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_PlaySound(Game.CGameApp thisPtr, EInterfaceSound sound, int unk1);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CPlugMusic Del_GetNextMusic(Game.CGameApp thisPtr, EInterfaceMusic music);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_PlayCustomMusic(Game.CGameApp thisPtr, Game.CPlugMusic music);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_PlayMusic(Game.CGameApp thisPtr, EInterfaceMusic music, int unk1);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_UpdateMusic(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate BOOL Del_Profile_IsChatEnabled(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate BOOL Del_Profile_IsAvatarsEnabled(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_UnregisterPlayer(Game.CGameApp thisPtr, Game.CGamePlayer player);
 
-            public static Del_SetSimulationRelativeSpeed SetSimulationRelativeSpeed;
-            public static Del_StopSimulation StopSimulation;
+            public static Del_ShowMainMenu ShowMainMenu;
+            public static Del_HideMainMenu HideMainMenu;
+            public static Del_ShowMenu ShowMenu;
+            public static Del_HideMenu HideMenu;
+            public static Del_EnablePick EnablePick;
+            public static Del_DisablePick DisablePick;
+            public static Del_AvatarGetCount AvatarGetCount;
+            public static Del_Exit Exit;
+            public static Del_ToggleFullScreen ToggleFullScreen;
+            public static Del_SetCursorPos SetCursorPos;
+            public static Del_GetPicker GetPicker;
+            public static Del_GetMousePos GetMousePos;
+            public static Del_SetCursorPosX SetCursorPosX;
+            public static Del_SetCursorPosY SetCursorPosY;
+            public static Del_StopMusics StopMusics;
+            public static Del_IsPayingInstall IsPayingInstall;
+            public static Del_GetPayingAccountType GetPayingAccountType;
+            public static Del_IsPayingSolo IsPayingSolo;
+            public static Del_SaveSystemConfig SaveSystemConfig;
+            public static Del_GetCurrentMenu GetCurrentMenu;
+            public static Del_MenusClear MenusClear;
+            public static Del_GetBasicDialogs GetBasicDialogs;
+            public static Del_GetSystemOverlay GetSystemOverlay;
+            public static Del_GetManialinkBrowser GetManialinkBrowser;
+            public static Del_IsPickEnabled IsPickEnabled;
+            public static Del_GetPickedMobil GetPickedMobil;
+            public static Del_AvatarGetFromIndex AvatarGetFromIndex;
+            public static Del_AvatarGetRand AvatarGetRand;
+            public static Del_AvatarGetRandName AvatarGetRandName;
+            public static Del_AvatarIndexFromName AvatarIndexFromName;
+            public static Del_GetSound GetSound;
+            public static Del_PlaySound PlaySound;
+            public static Del_GetNextMusic GetNextMusic;
+            public static Del_PlayCustomMusic PlayCustomMusic;
+            public static Del_PlayMusic PlayMusic;
+            public static Del_UpdateMusic UpdateMusic;
+            public static Del_Profile_IsChatEnabled Profile_IsChatEnabled;
+            public static Del_Profile_IsAvatarsEnabled Profile_IsAvatarsEnabled;
+            public static Del_UnregisterPlayer UnregisterPlayer;
 
             public static class Addresses
             {
-                public static IntPtr SetSimulationRelativeSpeed = (IntPtr)0x00922A00;
+                public static IntPtr ShowMainMenu = (IntPtr)0x0059EFC0;
+                public static IntPtr HideMainMenu = (IntPtr)0x0059EFE0;
+                public static IntPtr ShowMenu = (IntPtr)0x0059D110;
+                public static IntPtr HideMenu = (IntPtr)0x0059D160;
+                public static IntPtr EnablePick = (IntPtr)0x0059D4C0;
+                public static IntPtr DisablePick = (IntPtr)0x0059D500;
+                public static IntPtr AvatarGetCount = (IntPtr)0x00676270;// SHARED_ADDRESS
+                public static IntPtr Exit = (IntPtr)0x0059B060;
+                public static IntPtr ToggleFullScreen = (IntPtr)0x0059B0C0;
+                public static IntPtr SetCursorPos = (IntPtr)0x0059B140;
+                public static IntPtr GetPicker = (IntPtr)0x0059B210;
+                public static IntPtr GetMousePos = (IntPtr)0x0059B220;
+                public static IntPtr SetCursorPosX = (IntPtr)0x0059B230;
+                public static IntPtr SetCursorPosY = (IntPtr)0x0059B260;
+                public static IntPtr StopMusics = (IntPtr)0x0059B300;
+                public static IntPtr IsPayingInstall = (IntPtr)0x0059B340;
+                public static IntPtr GetPayingAccountType = (IntPtr)0x0059B350;
+                public static IntPtr IsPayingSolo = (IntPtr)0x0059B390;
+                public static IntPtr SaveSystemConfig = (IntPtr)0x0059B4B0;
+                public static IntPtr GetCurrentMenu = (IntPtr)0x0059B7F0;
+                public static IntPtr MenusClear = (IntPtr)0x0059B820;
+                public static IntPtr GetBasicDialogs = (IntPtr)0x0059BCA0;
+                public static IntPtr GetSystemOverlay = (IntPtr)0x0059BCB0;
+                public static IntPtr GetManialinkBrowser = (IntPtr)0x0059BCC0;
+                public static IntPtr IsPickEnabled = (IntPtr)0x0059BCD0;
+                public static IntPtr GetPickedMobil = (IntPtr)0x0059BCE0;
+                public static IntPtr AvatarGetFromIndex = (IntPtr)0x0059BD00;
+                public static IntPtr AvatarGetRand = (IntPtr)0x0059BD70;
+                public static IntPtr AvatarGetRandName = (IntPtr)0x0059BDC0;
+                public static IntPtr AvatarIndexFromName = (IntPtr)0x0059D540;
+                public static IntPtr RemoteControlInit = (IntPtr)0x0059BEA0;
+                public static IntPtr GetSound = (IntPtr)0x0059C0B0;
+                public static IntPtr PlaySound = (IntPtr)0x0059C130;
+                public static IntPtr GetNextMusic = (IntPtr)0x0059C170;
+                public static IntPtr PlayCustomMusic = (IntPtr)0x0059C250;
+                public static IntPtr PlayMusic = (IntPtr)0x0059D880;
+                public static IntPtr UpdateMusic = (IntPtr)0x0059DB20;
+                public static IntPtr Profile_IsChatEnabled = (IntPtr)0x0059C2D0;
+                public static IntPtr Profile_IsAvatarsEnabled = (IntPtr)0x0059C300;
+                public static IntPtr UnregisterPlayer = (IntPtr)0x0059CC60;
+            }
+        }
+
+        public static class CMwCmd
+        {
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate int Del_SetSchemeLocation(Game.CMwCmd thisPtr, int location);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_SetCmdBuffer(Game.CMwCmd thisPtr, Game.CMwCmdBuffer buffer);
+
+            public static Del_SetSchemeLocation SetSchemeLocation;
+            public static Del_SetCmdBuffer SetCmdBuffer;
+
+            public static class Addresses
+            {
+                public static IntPtr SetSchemeLocation = (IntPtr)0x00925790;
+                public static IntPtr SetCmdBuffer = (IntPtr)0x00848550;// SHARED_ADDRESS
+            }
+        }
+
+        public static class CMwCmdFastCall
+        {
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CMwCmdFastCall Del_Ctor1(Game.CMwCmdFastCall thisPtr, IntPtr objPtr, IntPtr funcPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CMwCmdFastCall Del_Ctor2(Game.CMwCmdFastCall thisPtr, IntPtr objPtr, IntPtr funcPtr, int location);
+
+            public static Del_Ctor1 Ctor1;
+            public static Del_Ctor2 Ctor2;
+
+            public static class Addresses
+            {
+                public static IntPtr Ctor1 = (IntPtr)0x009255C0;
+                public static IntPtr Ctor2 = (IntPtr)0x00925650;
+            }
+        }
+
+        public static class CMwCmdFastCallUser
+        {
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CMwCmdFastCallUser Del_Ctor(Game.CMwCmdFastCallUser thisPtr, IntPtr objPtr, IntPtr funcPtr, int unk1);
+
+            public static Del_Ctor Ctor;
+
+            public static class Addresses
+            {
+                public static IntPtr Ctor = (IntPtr)0x009254E0;
+            }
+        }
+
+        public static class CMwCmdContainer
+        {
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_AddCmd(Game.CMwCmdContainer thisPtr, Game.CMwCmd cmd, int location);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CMwCmd Del_AddFastCall(Game.CMwCmdContainer thisPtr, IntPtr objPtr, IntPtr funcPtr, int location);
+
+            public static Del_AddCmd AddCmd;
+            public static Del_AddFastCall AddFastCall;
+
+            public static class Addresses
+            {
+                public static IntPtr AddCmd = (IntPtr)0x0093A990;
+                public static IntPtr AddFastCall = (IntPtr)0x0093A9D0;
+            }
+        }
+
+        public static class CMwCmdBufferCore
+        {
+            [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+            public delegate void Del_DestroyCoreCmdBuffer();
+            [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+            public delegate void Del_CreateCoreCmdBuffer();
+            [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+            public delegate void Del_ForceFpuCwForSimulationX86(int flags);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_StopSimulation(Game.CMwCmdBufferCore thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_SetIsSimulationOnly(Game.CMwCmdBufferCore thisPtr, BOOL value);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_SetSimulationRelativeSpeed(Game.CMwCmdBufferCore thisPtr, float speed);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_EnableFixedTickTime(Game.CMwCmdBufferCore thisPtr, int unk1, int unk2, int unk3);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_HighFrequencyAddCmd(Game.CMwCmdBufferCore thisPtr, IntPtr objPtr, IntPtr funcPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_HighFrequencyRun(Game.CMwCmdBufferCore thisPtr, int unk1);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_HighFrequencyEnterSafeSection(Game.CMwCmdBufferCore thisPtr, int unk1);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_HighFrequencyLeaveSafeSection(Game.CMwCmdBufferCore thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_HighFrequencyYield(Game.CMwCmdBufferCore thisPtr, int unk1);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Run(Game.CMwCmdBufferCore thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Enable(Game.CMwCmdBufferCore thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Disable(Game.CMwCmdBufferCore thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_StartSimulation(Game.CMwCmdBufferCore thisPtr, int unk1, int unk2, float speed);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_SetSimulationCurrentTime(Game.CMwCmdBufferCore thisPtr, int tickMs);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_EnableFixedTickFrequency(Game.CMwCmdBufferCore thisPtr, int unk1, int unk2);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_InitCmdBuffer(Game.CMwCmdBufferCore thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CMwCmdFastCall Del_AddNotifySetTime(Game.CMwCmdBufferCore thisPtr, IntPtr objPtr, IntPtr funcPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_SubNotifySetTime(Game.CMwCmdBufferCore thisPtr, IntPtr objPtr, IntPtr funcPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_HighFrequencySubCmd(Game.CMwCmdBufferCore thisPtr, IntPtr objPtr, IntPtr funcPtr);
+
+            public static Del_DestroyCoreCmdBuffer DestroyCoreCmdBuffer;
+            public static Del_CreateCoreCmdBuffer CreateCoreCmdBuffer;
+            public static Del_ForceFpuCwForSimulationX86 ForceFpuCwForSimulationX86;
+            public static Del_StopSimulation StopSimulation;
+            public static Del_SetIsSimulationOnly SetIsSimulationOnly;
+            public static Del_SetSimulationRelativeSpeed SetSimulationRelativeSpeed;
+            public static Del_EnableFixedTickTime EnableFixedTickTime;
+            public static Del_HighFrequencyAddCmd HighFrequencyAddCmd;
+            public static Del_HighFrequencyRun HighFrequencyRun;
+            public static Del_HighFrequencyEnterSafeSection HighFrequencyEnterSafeSection;
+            public static Del_HighFrequencyLeaveSafeSection HighFrequencyLeaveSafeSection;
+            public static Del_HighFrequencyYield HighFrequencyYield;
+            public static Del_Run Run;
+            public static Del_Enable Enable;
+            public static Del_Disable Disable;
+            public static Del_StartSimulation StartSimulation;
+            public static Del_SetSimulationCurrentTime SetSimulationCurrentTime;
+            public static Del_EnableFixedTickFrequency EnableFixedTickFrequency;
+            public static Del_InitCmdBuffer InitCmdBuffer;
+            public static Del_AddNotifySetTime AddNotifySetTime;
+            public static Del_SubNotifySetTime SubNotifySetTime;
+            public static Del_HighFrequencySubCmd HighFrequencySubCmd;
+
+            public static class Addresses
+            {
+                public static IntPtr DestroyCoreCmdBuffer = (IntPtr)0x00922970;
+                public static IntPtr CreateCoreCmdBuffer = (IntPtr)0x00923430;
+                public static IntPtr ForceFpuCwForSimulationX86 = (IntPtr)0x00922990;
                 public static IntPtr StopSimulation = (IntPtr)0x009229D0;
+                public static IntPtr SetIsSimulationOnly = (IntPtr)0x009229F0;
+                public static IntPtr SetSimulationRelativeSpeed = (IntPtr)0x00922A00;
+                public static IntPtr EnableFixedTickTime = (IntPtr)0x00922A40;
+                public static IntPtr HighFrequencyAddCmd = (IntPtr)0x00922A80;
+                public static IntPtr HighFrequencyRun = (IntPtr)0x00922B00;
+                public static IntPtr HighFrequencyEnterSafeSection = (IntPtr)0x00922BE0;
+                public static IntPtr HighFrequencyLeaveSafeSection = (IntPtr)0x00922BF0;
+                public static IntPtr HighFrequencyYield = (IntPtr)0x00922C00;
+                public static IntPtr Run = (IntPtr)0x00922DB0;
+                public static IntPtr Enable = (IntPtr)0x00923000;
+                public static IntPtr Disable = (IntPtr)0x00923020;
+                public static IntPtr StartSimulation = (IntPtr)0x00923040;
+                public static IntPtr SetSimulationCurrentTime = (IntPtr)0x00923130;
+                public static IntPtr EnableFixedTickFrequency = (IntPtr)0x009231C0;
+                public static IntPtr InitCmdBuffer = (IntPtr)0x009234B0;
+                public static IntPtr AddNotifySetTime = (IntPtr)0x00923670;
+                public static IntPtr SubNotifySetTime = (IntPtr)0x009237A0;
+                public static IntPtr HighFrequencySubCmd = (IntPtr)0x00923850;
             }
         }
 

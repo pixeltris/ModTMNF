@@ -8,6 +8,8 @@ Most classes in the game belong to the object system. It's possible instantiate 
 - `CMwClassInfo` holds [reflection](https://en.wikipedia.org/wiki/Reflective_programming) info about `CMwNod` classes.
 - `CMwEngineManager::First` can be used to traverse the class list (it's global a static `CMwClassInfo*` linked list). Alternatiely itterate `CMwEngineInfo` array in `CMwEngineManager` global instance (see "Engines" below).
 
+As part of the reflection system class members can have a memory offset of -1. These act similar to C# properties where there are C++ implementations to handle getting/setting those members.
+
 ## Naming conventions
 
 Prefixes `C` (class), `S` (struct), `E` (enum) are used on most types defined in the code. Namespaces (often shortned) are also prefixed on most types.

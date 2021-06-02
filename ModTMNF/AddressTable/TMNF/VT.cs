@@ -439,6 +439,194 @@ namespace ModTMNF
             }
         }
 
+        public class CGameApp : VT.CGameProcess
+        {
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CGameCtnChallenge Del_GetChallenge(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate BOOL Del_CanUseManialinkAnywhere(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate BOOL Del_CanUseMessenger(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate BOOL Del_CanUseMoney(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_QuitGame(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate int Del_RegisterPlayer(Game.CGameApp thisPtr, Game.CGamePlayer player);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_UnregisterPlayers(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_ResetGame(Game.CGameApp thisPtr, BOOL resetTime);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_ApplySystemConfig(Game.CGameApp thisPtr, Game.CSystemConfig systemConfig);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CGameNetwork Del_GetNetwork(Game.CGameApp thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate Game.CGameInterface Del_GetInterface(Game.CGameApp thisPtr);
+
+            public Del_GetChallenge GetChallenge;
+            public Del_CanUseManialinkAnywhere CanUseManialinkAnywhere;
+            public Del_CanUseMessenger CanUseMessenger;
+            public Del_CanUseMessenger CanUseMoney;
+            public Del_QuitGame QuitGame;
+            public Del_RegisterPlayer RegisterPlayer;
+            public Del_UnregisterPlayers UnregisterPlayers;
+            public Del_ResetGame ResetGame;
+            public Del_ApplySystemConfig ApplySystemConfig;
+            public Del_GetNetwork GetNetwork;
+            public Del_GetInterface GetInterface;
+
+            public static class Offsets
+            {
+                public static IntPtr VTable = (IntPtr)0x00B60DFC;
+                public static int Unk_128 = 128;
+                public static int GetChallenge = 132;
+                public static int CameraSetCreate = 136;
+                public static int VehicleSetVisibility = 140;
+                public static int CreatePlayerMobilInstance = 144;
+                public static int ReleasePlayerMobilInstance = 148;
+                public static int UpdateBlockMobils = 152;
+                public static int GetCollectorVehicle = 156;
+                public static int Start = 160;
+                public static int OnStartGame = 164;
+                public static int QuitGame = 168;
+                public static int Destroy = 172;
+                public static int RegisterPlayer = 176;
+                public static int UnregisterPlayers = 180;
+                public static int ResetGame = 184;
+                public static int ApplySystemConfig = 188;
+                public static int OpenMessenger = 192;
+                public static int OnGraphicSettings = 196;
+                public static int UrlLinkProcess = 200;
+                public static int UrlLinkTransform = 204;
+                public static int CanUseManialinkAnywhere = 208;
+                public static int CanUseMessenger = 212;
+                public static int CanUseMoney = 216;
+                public static int OnMenuDisplayed = 220;
+                public static int OnMenuHiden = 224;
+                public static int Unk_228 = 228;
+                public static int ProcessMenuInput = 232;
+                public static int CmdLineUrlTmtp_JoinServer = 236;
+                public static int CmdLineUrlTmtp_AddBuddy = 240;
+                public static int CmdLineUrlTmtp_InviteBuddy = 244;
+                public static int CmdLineUrlTmtp_AddFavourite = 248;
+                public static int CmdLineUrlTmtp_StartDirectScore = 252;
+                public static int CmdLineFile_Open = 256;
+                public static int Unk_260 = 260;
+                public static int Unk_264 = 264;
+                public static int Unk_268 = 268;
+                public static int Unk_272 = 272;
+                public static int UpdatePacksAvailabilityAndUse = 276;
+                public static int Unk_280 = 280;
+            }
+        }
+
+        public class CGameCtnApp : VT.CGameApp
+        {
+            public static class Offsets
+            {
+                public static IntPtr VTable = (IntPtr)0x00B6890C;
+                public static int StartUpShowIntroSlidesAndRollingDemo = 284;
+                public static int QuitGameAndExit = 288;
+                public static int QuitGameInternal = 292;
+                public static int InitAfterProfiles = 296;
+                public static int AskConnectionType = 300;
+                public static int ConnectToInternetAccount = 304;
+                public static int InitShadows = 308;
+                public static int SetMessengerActivated = 312;
+                public static int CloseMessenger = 316;
+                public static int LoadChallenge = 320;
+                public static int LoadChallenge_PostLoading = 324;
+                public static int LaunchMoveFromLeagueRequest = 328;
+                public static int ScanDiskForChallenges = 332;
+                public static int ScanDiskForCampaigns = 336;
+                public static int ScanDiskForCollectors = 340;
+                public static int ScanDiskForProfilesAndScores = 344;
+                public static int ScanDiskForMatchSettings = 348;
+                public static int InitCampaigns = 352;
+                public static int OnChallengeInfoDeleted = 356;
+                public static int SaveProfileAndScore = 360;
+                public static int GetPlayground = 364;
+                public static int GetVehicleNameFont = 368;
+                public static int PlayerMobilDecorateMobil = 372;
+                public static int GetDefaultVehicleIdentifier = 376;
+                public static int ChallengeCreateSceneGraph = 380;
+                public static int ExitChallenge = 384;
+                public static int PrepareEditorChallengeSave = 388;
+                public static int MediaTrackerGhostLoad = 392;
+                public static int MediaTrackerGhostSave = 396;
+                public static int OnPlayFieldModified = 400;
+                public static int PlayerMobilInstanceFillUpStruct = 404;
+                public static int FillAllowedCtnMediaBlockClassIds = 408;
+                public static int GetChallengesScoresAndPlayerRecords_OnSuccess = 412;
+                public static int GetChallengesScoresAndPlayerRecords_OnFailure = 416;
+                public static int GetAllSoloCampaigns = 420;
+                public static int AssociateCampaignOfficialRecords = 424;
+                public static int OnTrackReceivedForManiaCodePlayTrack1 = 428;
+                public static int OnTrackReceivedForManiaCodePlayTrack2 = 432;
+                public static int OnReplayReceivedForManiaCodePlayReplay = 436;
+                public static int OnReplayReceivedForManiaCodeViewReplay = 440;
+                public static int OnManiaCodeJoinServer = 444;
+                public static int OnManiaCodeAddBuddy = 448;
+                public static int OnManiaCodeInviteBuddy = 452;
+                public static int OnManiaCodeAddFavourite = 456;
+                public static int OnManiaCodePlayScore = 460;
+            }
+        }
+
+        public class CTrackMania : VT.CGameCtnApp
+        {
+            public static class Offsets
+            {
+                public static IntPtr VTable = (IntPtr)0x00B3E074;
+                public static int StopOfficialRecord_OnSuccess = 464;
+                public static int OfficialRecord_OnFailure = 468;
+                public static int OfficialRecord_OnFailure2 = 472;
+                public static int StartOfficialRecord_OnFailureImmediate = 476;
+                public static int StartOfficialRecord_OnFailureImmediate2 = 480;
+            }
+        }
+
+        public class CMwCmd : VT.CMwNod
+        {
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Run(Game.CMwCmd thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Install(Game.CMwCmd thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Uninstall(Game.CMwCmd thisPtr);
+
+            public Del_Run Run;
+            public Del_Install Install;
+            public Del_Uninstall Uninstall;
+
+            public static class Offsets
+            {
+                public static IntPtr VTable = (IntPtr)0x00BC646C;
+                public static int Run = 120;
+                public static int Install = 124;
+                public static int Uninstall = 128;
+            }
+        }
+
+        public class CMwCmdContainer : VT.CMwNod
+        {
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Install(Game.CMwCmdContainer thisPtr);
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            public delegate void Del_Uninstall(Game.CMwCmdContainer thisPtr);
+
+            public Del_Install Install;
+            public Del_Uninstall Uninstall;
+
+            public static class Offsets
+            {
+                public static IntPtr VTable = (IntPtr)0x00BCA0BC;
+                public static int Install = 120;
+                public static int Uninstall = 124;
+            }
+        }
+
         public class CAudioBufferKeeper : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B9A93C; } }
         public class CAudioMusic : VT.CAudioSound { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B9A4FC; } }
         public class CAudioPort : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B9A0DC; } }
@@ -562,7 +750,6 @@ namespace ModTMNF
         public class CGameAdvertising : VT.CGameNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B83844; } }
         public class CGameAdvertisingElement : VT.CGameNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B8C574; } }
         public class CGameAnalyzer : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B85BD4; } }
-        public class CGameApp : VT.CGameProcess { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B60DFC; } }
         public class CGameAvatar : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B6531C; } }
         public class CGameBulletModel : VT.CGameNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B90F94; } }
         public class CGameCalendar : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00000000; } }
@@ -616,7 +803,6 @@ namespace ModTMNF
         public class CGameControlPlayer : VT.CGameRule { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B85F44; } }
         public class CGameControlPlayerInput : VT.CGameControlPlayer { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B85E74; } }
         public class CGameControlPlayerNet : VT.CGameControlPlayer { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B90E84; } }
-        public class CGameCtnApp : VT.CGameApp { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B6890C; } }
         public class CGameCtnArticle : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B7DB24; } }
         public class CGameCtnBlock : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B6950C; } }
         public class CGameCtnBlockInfo : VT.CGameCtnCollector { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B78044; } }
@@ -880,7 +1066,6 @@ namespace ModTMNF
         public class CMotionWeather : VT.CMotionManaged { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B5B73C; } }
         public class CMotionWindBlocker : VT.CMotionManaged { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B5BB94; } }
         public class CMwClassInfoViewer : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BD0614; } }
-        public class CMwCmd : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BC646C; } }
         public class CMwCmdAffectIdent : VT.CMwCmdInst { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BD054C; } }
         public class CMwCmdAffectIdentBool : VT.CMwCmdAffectIdent { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BCD7EC; } }
         public class CMwCmdAffectIdentClass : VT.CMwCmdAffectIdent { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BCD8AC; } }
@@ -910,7 +1095,6 @@ namespace ModTMNF
         public class CMwCmdBuffer : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BCA5DC; } }
         public class CMwCmdBufferCore : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BC5FA4; } }
         public class CMwCmdCall : VT.CMwCmdInst { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BD03D4; } }
-        public class CMwCmdContainer : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BCA0BC; } }
         public class CMwCmdContinue : VT.CMwCmdInst { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BCBDCC; } }
         public class CMwCmdExp : VT.CMwCmdScript { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BCAC1C; } }
         public class CMwCmdExpAdd : VT.CMwCmdExpNumBin { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00BD00A4; } }
@@ -1317,7 +1501,6 @@ namespace ModTMNF
         public class CSystemPackDesc : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B32EE4; } }
         public class CSystemPackManager : VT.CMwNod { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B32E0C; } }
         public class CSystemWindow : VT.CNodSystem { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B31CCC; } }
-        public class CTrackMania : VT.CGameCtnApp { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B3E074; } }
         public class CTrackManiaControlCard : VT.CGameControlCard { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B3503C; } }
         public class CTrackManiaControlCheckPointList : VT.CControlFrame { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B378EC; } }
         public class CTrackManiaControlMatchSettingsCard : VT.CTrackManiaControlCard { public static class Offsets { public static IntPtr VTable = (IntPtr)0x00B33154; } }
