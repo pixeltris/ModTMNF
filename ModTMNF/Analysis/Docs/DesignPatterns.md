@@ -47,3 +47,11 @@ Here are some file names (taken from ManiaPlanet logs build) which gives an indi
 Note that `TrackMania` / `Game` are both engines.
 
 Engines are managed by `CMwEngineManager` and each engine is represented by a `CMwEngineInfo` which holds a list of `CMwClassInfo` (classes) which belong to the given engine. `CMwEngineInfo` don't have any functionality other than holding the class list.
+
+## Game loop
+
+- WinMainInternal
+- CGbxApp::MainLoop
+- CMwCmdBufferCore::Run
+
+CMwCmdBufferCore is responsible for invoking all functions (render,physics,input,etc) and managing time.

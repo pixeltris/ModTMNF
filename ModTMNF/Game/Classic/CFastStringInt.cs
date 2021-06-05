@@ -15,41 +15,32 @@ namespace ModTMNF.Game
     {
         public int Length;
         public IntPtr CharPtr;
-        //public IntPtr StringPtr;
+
+        public static CFastStringInt Empty
+        {
+            get
+            {
+                return new CFastStringInt()
+                {
+                    Length = 0,
+                    CharPtr = ST.CFastStringBase.s_EmptyCharsInt
+                };
+            }
+        }
 
         public string Value
         {
             get
             {
-                /*if (StringPtr != IntPtr.Zero)
-                {
-                    return ((CString*)StringPtr)->Value;
-                }*/
                 return Marshal.PtrToStringUni(CharPtr);
             }
             set
             {
-                /*if (StringPtr != IntPtr.Zero)
+                if (CharPtr != IntPtr.Zero)
                 {
                     Delete();
-                }*/
-                // Duplicate of CStringInt code
-                {
-                    if (value.Length > Length || CharPtr == IntPtr.Zero)
-                    {
-                        Delete();
-                        CharPtr = Memory.New(value.Length + sizeof(char));
-                        if (CharPtr == IntPtr.Zero)
-                        {
-                            return;
-                        }
-                        *(char*)(CharPtr) = '\0';
-                    }
-                    byte[] buff = Encoding.Unicode.GetBytes(value == null ? string.Empty : value);
-                    Marshal.Copy(buff, 0, CharPtr, buff.Length);
-                    *(char*)(CharPtr + buff.Length) = '\0';
-                    Length = value.Length;
                 }
+                FT.CFastStringInt.Ctor(ref this, value);
             }
         }
 
@@ -60,20 +51,13 @@ namespace ModTMNF.Game
 
         public CFastStringInt(string value)
         {
-            this = default(CFastStringInt);
+            this = Empty;
             Value = value;
         }
 
         public void Delete()
         {
-            Memory.Delete(CharPtr);
-            /*if (StringPtr != IntPtr.Zero)
-            {
-                ((CStringInt*)StringPtr)->Delete();
-            }*/
-            CharPtr = IntPtr.Zero;
-            Length = 0;
-            //StringPtr = IntPtr.Zero;
+            FT.CFastStringInt.Dtor(ref this);
         }
     }
 
@@ -97,12 +81,6 @@ namespace ModTMNF.Game
             get { return ptr->Length; }
             set { ptr->Length = value; }
         }
-
-        /*public IntPtr StringPtr
-        {
-            get { return ptr->StringPtr; }
-            set { ptr->StringPtr = value; }
-        }*/
 
         public string Value
         {

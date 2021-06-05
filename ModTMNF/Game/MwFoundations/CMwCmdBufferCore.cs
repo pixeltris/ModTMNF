@@ -32,6 +32,41 @@ namespace ModTMNF.Game
             get { return *(IntPtr*)ST.CMwCmdBufferCore.TheCoreCmdBuffer; }
         }
 
+        /// <summary>
+        /// CGameCtnMediaBlockTime::SwitchOn
+        /// CGameCtnMediaBlockTime::SwitchOff
+        /// CGameCtnMediaBlockTime::Install
+        /// </summary>
+        public CMwTimerAdapter MediaBlockTimerAdapter
+        {
+            get { return *(IntPtr*)(Address + OT.CMwCmdBufferCore.MediaBlockTimerAdapter); }
+        }
+
+        //CMwTimer::InitTimer((CMwTimer *)(v1 + 112));
+        //CMwTimerAdapter::InitTimer(v1 + 160, v1 + 112, 1.0);
+        public CMwTimerAdapter TimerAdapter
+        {
+            get { return Address + OT.CMwCmdBufferCore.TimerAdapter; }
+        }
+
+        public CMwTimerAdapter ActiveTimerAdapter
+        {
+            get
+            {
+                CMwTimerAdapter timer = MediaBlockTimerAdapter;
+                if (timer.Address != IntPtr.Zero)
+                {
+                    return timer;
+                }
+                return TimerAdapter;
+            }
+        }
+
+        public CMwTimer Timer
+        {
+            get { return Address + OT.CMwCmdBufferCore.Timer; }
+        }
+
         public static void DestroyCoreCmdBuffer()
         {
             FT.CMwCmdBufferCore.DestroyCoreCmdBuffer();
@@ -117,9 +152,9 @@ namespace ModTMNF.Game
             FT.CMwCmdBufferCore.StartSimulation(this, unk1, unk2, speed);
         }
 
-        public void SetSimulationCurrentTime(int tickMs)
+        public void SetSimulationCurrentTime(uint time)
         {
-            FT.CMwCmdBufferCore.SetSimulationCurrentTime(this, tickMs);
+            FT.CMwCmdBufferCore.SetSimulationCurrentTime(this, time);
         }
 
         public void EnableFixedTickFrequency(int unk1, int unk2)

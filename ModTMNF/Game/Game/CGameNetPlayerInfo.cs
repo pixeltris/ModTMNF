@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ModTMNF.Game
 {
-    public struct CSystemFid
+    public unsafe struct CGameNetPlayerInfo
     {
         public IntPtr Address;
 
@@ -14,14 +14,14 @@ namespace ModTMNF.Game
             get { return new CMwNod(Address); }
         }
 
-        public CSystemFid(IntPtr address)
+        public CGameNetPlayerInfo(IntPtr address)
         {
             Address = address;
         }
 
-        public static implicit operator CSystemFid(IntPtr address)
+        public static implicit operator CGameNetPlayerInfo(IntPtr address)
         {
-            return new CSystemFid(address);
+            return new CGameNetPlayerInfo(address);
         }
     }
 }

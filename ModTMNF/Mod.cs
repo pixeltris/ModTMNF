@@ -51,5 +51,17 @@ namespace ModTMNF.Mods
             mod.Remove();
             Mods.Remove(mod);
         }
+
+        public static T GetMod<T>() where T : Mod
+        {
+            foreach (Mod mod in Mods)
+            {
+                if (mod.GetType() == typeof(T))
+                {
+                    return mod as T;
+                }
+            }
+            return null;
+        }
     }
 }

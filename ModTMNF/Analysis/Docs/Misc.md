@@ -12,9 +12,8 @@ Also see [SourceFileNames.txt](SourceFileNames.txt).
 
 ```
 CGbxApp::Init
- CGbxGame::Init
-  CMwNod::StaticInit
-   CMwNod::MwBuildClassInfoTree - (traverses all classes and adds fills in the child classes array for each class)
+ CMwNod::StaticInit
+  CMwNod::MwBuildClassInfoTree - (traverses all classes and adds fills in the child classes array for each class)
 ```
 
 ```
@@ -36,7 +35,7 @@ WinMain
 =======================
 Called when after selecting the profile to use
 =======================
-Not quite sure where the invoker of this starts
+...
  CTrackManiaMenus::DoMenus
   CGameCtnMenus::MenuMain
    CGameCtnMenus::MenuMain_Init
@@ -49,7 +48,7 @@ EGameState CTrackMania::GetCurrentState (00484B30) - TmDbg_GameStateToText
 ```
 
 ```
-This function is one to look at for seeing access context for rendering
+This function is one to look at to get a context for rendering
 CVisionViewportDx9::Create (00960D50)
 ```
 
@@ -87,4 +86,69 @@ CGbxApp::MainLoop
     CHmsZoneDynamic::ComputeCollisionResponse
      CTrackManiaRaceTriggerAbsorbContact::AbsorbContact - virtual call
       CTrackManiaRace1P::OnFinishLine - virtual call
+```
+
+```
+=======================
+Pressing respawn at cp key
+=======================
+CGbxApp::MainLoop
+ CMwCmdBufferCore::Run
+  CMwCmdBuffer::Run
+   CTrackManiaRace::InputRace
+    CTrackManiaRace::OnInputEvent
+	 CTrackManiaPlayerInfo::AddInputEvent
+```
+
+```
+=======================
+Starting a new race
+=======================
+...
+ CTrackMania::ChallengeMainLoop
+  CTrackMania::ChallengeCreateSceneGraph
+   CTrackManiaSwitcher::Init
+    CTrackManiaSwitcher::CreateNewRace
+	 CTrackManiaSwitcher::ChangeRace
+	  CTrackMania::SetRace
+```
+
+## Other info
+
+```
+Info for changing the game name...
+Nadeo.init - "WindowTitle" will set the window title (fetched in CSystemEngine::InitForGbxGame)
+CSystemEngine::s_GameWindowTitle - has a few hard coded locations where it's set to "TmForever"
+CGbxGame::CGbxGame
+ CSystemEngine::s_GameName = "TmForever" (00D54310)
+
+See CGbxApp::WindowedSetWindowTitle / CGameApp::CallbackSetWindowTitle_Set
+```
+
+```
+Info on input...
+CTrackManiaRace::InputRace - handles input
+CTrackManiaRace::OnInputEvent - has no impact on physics (vtable+284)
+CTrackManiaControlPlayerInput::UpdateVehicleStateFromInputs - applies forces to the cars physics
+
+------
+
+CInputPort::GetEventsNotTimed / CInputPort::GetEvents actually fetches the input events
+
+------
+
+These are important to register the input events with the player, which are then handled in UpdateVehicleStateFromInputs
+
+CTrackManiaPlayerInfo::AddInputEvent
+CTrackManiaPlayerInfo::SetInputState
+CTrackManiaPlayerInfo::GetInputState
+CTrackManiaPlayerInfo::LockInputs
+
+------
+
+These are actions which are used with the input handler code
+
+00CD3F58 public: static struct SInputActionDesc const * const CTrackManiaRace::ActionSwitchToEditorMode
+...
+00CD4010 public: static struct SInputActionDesc const * const CTrackManiaRace::ActionFakeIsRaceRunning
 ```

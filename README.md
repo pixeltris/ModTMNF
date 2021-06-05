@@ -1,16 +1,16 @@
 # ModTMNF
 
-Currently this project doesn't have any real functionality but might be a useful resource for creating runtime mods for Trackmania Nations Forever.
+This was a hastily put together project exploring modifying `Trackmania Nations Forever` (TMNF) at runtime using C#. TMNF is an enjoyable modding / reverse engineering experience due to the available debug symbols (`TmForever.map`).
+
+There probably wont be any more development on this, but hopefully it will be a useful resource to those getting into modding the game.
 
 See [technical information](/ModTMNF/Analysis/Docs/), [other projects](/ModTMNF/Analysis/Docs/OtherProjects.md), and [official download links](/ModTMNF/Analysis/Docs/DownloadLinks.md).
 
-## Project status
+## Features
 
-Load .NET into TmForever, hook functions, read/write memory, access the reflection system.
+Load .NET into TmForever, hook functions, access game state.
 
-A proper API needs to be devloped, and many things need to be wrapped / exposed.
-
-See [ModTest.cs](/ModTMNF/Mods/ModTest.cs) (2x physics step / reflection example)
+[ModTest.cs](/ModTMNF/Mods/ModTest.cs) simulates the input of the active replay file (respawn events aren't handled).
 
 ## Compiling
 

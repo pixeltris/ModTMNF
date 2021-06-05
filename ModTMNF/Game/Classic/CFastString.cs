@@ -8,53 +8,36 @@ namespace ModTMNF.Game
 {
     // See CFastStringBase<T>
 
-    // NOTE: We really aren't doing this right. This seems to be a packed bit structure.
-
     public unsafe struct CFastString
     {
         public int Length;
         public IntPtr CharPtr;
-        //public IntPtr StringPtr;
+
+        public static CFastString Empty
+        {
+            get
+            {
+                return new CFastString()
+                {
+                    Length = 0,
+                    CharPtr = ST.CFastStringBase.s_EmptyChars
+                };
+            }
+        }
 
         public string Value
         {
             get
             {
-                /*if (StringPtr != IntPtr.Zero)
-                {
-                    return ((CString*)StringPtr)->Value;
-                }*/
                 return Marshal.PtrToStringAnsi(CharPtr);
             }
             set
             {
-                /*Delete();
-                StringPtr = Memory.New(sizeof(CString));
-                ((CString*)StringPtr)->Length = 0;
-                ((CString*)StringPtr)->CharPtr = IntPtr.Zero;
-                ((CString*)StringPtr)->Value = value;*/
-
-                /*if (StringPtr != IntPtr.Zero)
+                if (CharPtr != IntPtr.Zero)
                 {
                     Delete();
-                }*/
-                // Duplicate of CString code
-                {
-                    if (value.Length > Length || CharPtr == IntPtr.Zero)
-                    {
-                        Delete();
-                        CharPtr = Memory.New(value.Length + sizeof(byte));
-                        if (CharPtr == IntPtr.Zero)
-                        {
-                            return;
-                        }
-                        *(byte*)(CharPtr) = 0;
-                    }
-                    byte[] buff = Encoding.ASCII.GetBytes(value == null ? string.Empty : value);
-                    Marshal.Copy(buff, 0, CharPtr, buff.Length);
-                    *(byte*)(CharPtr + value.Length) = 0;
-                    Length = value.Length;
                 }
+                FT.CFastString.Ctor(ref this, value);
             }
         }
 
@@ -65,20 +48,13 @@ namespace ModTMNF.Game
 
         public CFastString(string value)
         {
-            this = default(CFastString);
+            this = Empty;
             Value = value;
         }
 
         public void Delete()
         {
-            Memory.Delete(CharPtr);
-            /*if (StringPtr != IntPtr.Zero)
-            {
-                ((CString*)StringPtr)->Delete();
-            }*/
-            CharPtr = IntPtr.Zero;
-            Length = 0;
-            //StringPtr = IntPtr.Zero;
+            FT.CFastString.Dtor(ref this);
         }
     }
 
@@ -102,12 +78,6 @@ namespace ModTMNF.Game
             get { return ptr->Length; }
             set { ptr->Length = value; }
         }
-
-        /*public IntPtr StringPtr
-        {
-            get { return ptr->StringPtr; }
-            set { ptr->StringPtr = value; }
-        }*/
 
         public string Value
         {

@@ -39,6 +39,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,10 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddressTable\TMNF\FT.cs" />
-    <Compile Include="AddressTable\TMNF\OT.cs" />
-    <Compile Include="AddressTable\TMNF\ST.cs" />
-    <Compile Include="AddressTable\TMNF\VT.cs" />
+    <Compile Include="Game\AddressTable\TMNF\FT.cs" />
+    <Compile Include="Game\AddressTable\TMNF\OT.cs" />
+    <Compile Include="Game\AddressTable\TMNF\ST.cs" />
+    <Compile Include="Game\AddressTable\TMNF\VT.cs" />
     <Compile Include="Analysis\Asm\BeaEngine\Constants.cs" />
     <Compile Include="Analysis\Asm\BeaEngine\Engine.cs" />
     <Compile Include="Analysis\Asm\BeaEngine\Mnemonic.cs" />
@@ -66,25 +67,40 @@
     <Compile Include="Game\Audio\CAudioSound.cs" />
     <Compile Include="Game\Audio\EInterfaceMusic.cs" />
     <Compile Include="Game\Audio\EInterfaceSound.cs" />
+    <Compile Include="Game\Game\CGameControlPlayer.cs" />
+    <Compile Include="Game\Game\CGameControlPlayerInput.cs" />
+    <Compile Include="Game\Game\CGameCtnApp.cs" />
     <Compile Include="Game\Game\CGameCtnChallenge.cs" />
+    <Compile Include="Game\Game\CGameCtnGhost.cs" />
+    <Compile Include="Game\Game\CGameCtnReplayRecord.cs" />
     <Compile Include="Game\Game\CGameDialogs.cs" />
+    <Compile Include="Game\Game\CGameGhost.cs" />
     <Compile Include="Game\Game\CGameInterface.cs" />
     <Compile Include="Game\Game\CGameManialinkBrowser.cs" />
     <Compile Include="Game\Game\CGameMenu.cs" />
+    <Compile Include="Game\Game\CGameNetPlayerInfo.cs" />
     <Compile Include="Game\Game\CGameNetwork.cs" />
     <Compile Include="Game\Game\CGameNod.cs" />
     <Compile Include="Game\Game\CGamePlayer.cs" />
+    <Compile Include="Game\Game\CGamePlayerInfo.cs" />
+    <Compile Include="Game\Game\CGamePlayground.cs" />
+    <Compile Include="Game\Game\CGameRace.cs" />
+    <Compile Include="Game\Game\CGameRule.cs" />
     <Compile Include="Game\Game\CGameSystemOverlay.cs" />
     <Compile Include="Game\Game\EAccountType.cs" />
     <Compile Include="Game\Geom\GmNat2.cs" />
     <Compile Include="Game\Geom\GmVec2.cs" />
     <Compile Include="Game\Hms\CHmsPicker.cs" />
+    <Compile Include="Game\Input\SInputActionDesc.cs" />
     <Compile Include="Game\Input\SInputEvent.cs" />
     <Compile Include="Game\MwFoundations\CMwCmd.cs" />
     <Compile Include="Game\MwFoundations\CMwCmdBuffer.cs" />
     <Compile Include="Game\MwFoundations\CMwCmdFastCall.cs" />
     <Compile Include="Game\MwFoundations\CMwCmdFastCallUser.cs" />
+    <Compile Include="Game\MwFoundations\CMwTimer.cs" />
+    <Compile Include="Game\MwFoundations\CMwTimerAdapter.cs" />
     <Compile Include="Game\MwFoundations\SMwFiberContext.cs" />
+    <Compile Include="Game\MwFoundations\SMwTimedValueInstant.cs" />
     <Compile Include="Game\Plug\CPlug.cs" />
     <Compile Include="Game\Plug\CPlugAudio.cs" />
     <Compile Include="Game\Plug\CPlugMusic.cs" />
@@ -92,8 +108,21 @@
     <Compile Include="Game\Plug\CPlugSound.cs" />
     <Compile Include="Game\Scene\CSceneMobil.cs" />
     <Compile Include="Game\Scene\CSceneObject.cs" />
+    <Compile Include="Game\System\CSystemFidFile.cs" />
+    <Compile Include="Game\TrackMania\CTrackManiaControlPlayerInput.cs" />
+    <Compile Include="Game\TrackMania\CTrackManiaPlayer.cs" />
+    <Compile Include="Game\TrackMania\CTrackManiaPlayerInfo.cs" />
+    <Compile Include="Game\TrackMania\CTrackManiaRace.cs" />
+    <Compile Include="Game\Misc\GbxReplayFile.cs" />
+    <Compile Include="Game\TrackMania\CTrackManiaReplayRecord.cs" />
+    <Compile Include="Mods\UI\StatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mods\UI\StatsForm.Designer.cs">
+      <DependentUpon>StatsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrackmaniaLauncher.cs" />
-    <None Include="Analysis\Docs\Generated\StructSizes_Code.cs" />
+    <None Include="Analysis\Docs\CMwTimer.md" />
     <Compile Include="Game\Game\CGameApp.cs" />
     <Compile Include="Game\Game\CGameProcess.cs" />
     <Compile Include="Game\Gbx\CGbxApp.cs" />
@@ -157,43 +186,17 @@
     <Compile Include="Game\Vision\CVisionViewport.cs" />
     <Compile Include="Hook.cs" />
     <Compile Include="Analysis\SymbolsHelper.cs" />
-    <Compile Include="Mods\ModCore.cs" />
     <Compile Include="Mod.cs" />
-    <Compile Include="Mods\ModStackTraceFinder.cs" />
     <Compile Include="Mods\ModTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Analysis\Docs\DownloadLinks.md" />
-    <Content Include="Analysis\Docs\Generated\ClassHierarchy.txt" />
-    <Content Include="Analysis\Docs\Generated\ClassListByEngine.txt" />
-    <Content Include="Analysis\Docs\Generated\ClassMembers.txt" />
-    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncList.txt" />
-    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncListNonVirtual.txt" />
-    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncListNonVirtual_SHORT.txt" />
-    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncListVirtual.txt" />
-    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncListVirtual_SHORT.txt" />
-    <Content Include="Analysis\Docs\Generated\FuncsCMwNod\ClassFuncList_SHORT.txt" />
-    <Content Include="Analysis\Docs\Generated\Funcs\FuncAll_SHORT.txt" />
-    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscAll.txt" />
-    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscAll_SHORT.txt" />
-    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscUnscoped.txt" />
-    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscUnscoped_SHORT.txt" />
-    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscVirtual.txt" />
-    <Content Include="Analysis\Docs\Generated\Funcs\FuncMiscVirtual_SHORT.txt" />
     <None Include="Analysis\Docs\DesignPatterns.md" />
     <None Include="Analysis\Docs\Misc.md" />
     <None Include="Analysis\Docs\OtherProjects.md" />
     <None Include="Analysis\Docs\README.md" />
-    <Content Include="Analysis\Docs\Generated\NamespaceList.txt" />
-    <Content Include="Analysis\Docs\Generated\ObjList.txt" />
-    <Content Include="Analysis\Docs\Generated\ObjListByNamespace.txt" />
-    <Content Include="Analysis\Docs\Generated\StructSizes.txt" />
-    <Content Include="Analysis\Docs\Generated\TypeList.txt" />
-    <Content Include="Analysis\Docs\Generated\TypeListFlat.txt" />
-    <Content Include="Analysis\Docs\Generated\VirtualParam_Get.txt" />
-    <Content Include="Analysis\Docs\Generated\VTables.txt" />
     <Content Include="Analysis\Docs\SourceFileNames.txt" />
     <None Include="Analysis\Docs\TMN manual.pdf" />
     <None Include="Analysis\Docs\TMUnited-Game-Manual.pdf" />
@@ -202,7 +205,11 @@
   <ItemGroup>
     <None Include="Analysis\Docs\StructMembers.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Mods\UI\StatsForm.resx">
+      <DependentUpon>StatsForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

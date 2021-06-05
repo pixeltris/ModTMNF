@@ -54,8 +54,6 @@ namespace ModTMNF
             {
                 FT.Init();
                 VT.Init();
-                Mods.ModManager.Add(new Mods.ModCore());
-                Mods.ModManager.Add(new Mods.ModStackTraceFinder());
                 Mods.ModManager.Add(new Mods.ModTest());
             }
             catch (Exception e)

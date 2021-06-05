@@ -7,16 +7,21 @@ namespace ModTMNF.Game
 {
     public unsafe struct SInputEvent
     {
-        public IntPtr Address;
+        public SInputActionDesc Action;
+        public int Value;
 
-        public SInputEvent(IntPtr address)
+        public SInputEvent(SInputActionDesc action, int value)
         {
-            Address = address;
+            Action = action;
+            Value = value;
         }
 
-        public static implicit operator SInputEvent(IntPtr address)
+        /// <summary>
+        /// Use this when referencing a global static SInputActionDesc address (SInputActionDesc**)
+        /// </summary>
+        public static SInputEvent CreateStaticPtr(IntPtr staticActionPtrPtr, int value)
         {
-            return new SInputEvent(address);
+            return new SInputEvent(*(IntPtr*)staticActionPtrPtr, value);
         }
     }
 }
